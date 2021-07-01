@@ -2,12 +2,15 @@
 #include <image_transport/image_transport.h>
 #include <opencv2/highgui/highgui.hpp>
 #include <cv_bridge/cv_bridge.h>
+#include <sstream>
 
 void imageCallback(const sensor_msgs::ImageConstPtr& msg)
 {
   try
   {
     cv::imshow("view", cv_bridge::toCvShare(msg, "bgr8")->image);
+    std::stringstream sstream;
+    cv::imwrite("image.jpg", cv_bridge::toCvShare(msg, "bgr8")->image);
     cv::waitKey(10);
   }
   catch (cv_bridge::Exception& e)
