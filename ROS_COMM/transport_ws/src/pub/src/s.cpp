@@ -6,11 +6,19 @@
 
 void imageCallback(const sensor_msgs::ImageConstPtr& msg)
 {
+  cv_bridge::CvImagePtr cv_ptr;
   try
   {
-    cv::imshow("view", cv_bridge::toCvShare(msg, "bgr8")->image);
+    cv_ptr = cv_bridge::toCvCopy(msg, sensor_msgs::image_encodings::BGR8);
+    cv::imshow("view", cv_ptr->image);
     std::stringstream sstream;
-    cv::imwrite("image.jpg", cv_bridge::toCvShare(msg, "bgr8")->image);
+
+    static int count = 0;
+    if(count < 10){
+        sstream << "image/image" << count << ".jpg";
+   	cv::imwrite(sstream.str(), cv_ptr->image);
+    	count++;
+    }    
     cv::waitKey(10);
   }
   catch (cv_bridge::Exception& e)
@@ -30,3 +38,4 @@ int main(int argc, char **argv)
   ros::spin();
   cv::destroyWindow("view");
 }
+
