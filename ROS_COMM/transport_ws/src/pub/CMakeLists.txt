@@ -32,8 +32,8 @@ add_executable(pub src/p.cpp)
 target_link_libraries(pub ${catkin_LIBRARIES} ${OpenCV_LIBRARIES})
 
 #sub
-add_executable(pub src/s.cpp)
-target_link_libraries(pub ${catkin_LIBRARIES} ${OpenCV_LIBRARIES})
+add_executable(sub src/s.cpp)
+target_link_libraries(sub ${catkin_LIBRARIES} ${OpenCV_LIBRARIES})
 
 ## Add cmake target dependencies of the library
 ## as an example, code may need to be generated before libraries

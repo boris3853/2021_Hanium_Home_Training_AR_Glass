@@ -12,6 +12,18 @@ string
 sensor_msgs/CameraInfo.h
 -
 
+/home/kyung/21_hf271/ROS_COMM/transport_ws/src/image_common/camera_info_manager/include/camera_info_manager/camera_info_manager.h
+ros/ros.h
+-
+boost/thread/mutex.hpp
+-
+sensor_msgs/CameraInfo.h
+-
+sensor_msgs/SetCameraInfo.h
+-
+ros/macros.h
+-
+
 /home/kyung/21_hf271/ROS_COMM/transport_ws/src/image_common/camera_info_manager/src/camera_info_manager.cpp
 string
 -
@@ -35,18 +47,6 @@ camera_calibration_parsers/parse.h
 -
 camera_info_manager/camera_info_manager.h
 /home/kyung/21_hf271/ROS_COMM/transport_ws/src/image_common/camera_info_manager/src/camera_info_manager/camera_info_manager.h
-
-/opt/ros/noetic/include/camera_info_manager/camera_info_manager.h
-ros/ros.h
--
-boost/thread/mutex.hpp
--
-sensor_msgs/CameraInfo.h
--
-sensor_msgs/SetCameraInfo.h
--
-ros/macros.h
--
 
 /opt/ros/noetic/include/ros/advertise_options.h
 ros/forwards.h

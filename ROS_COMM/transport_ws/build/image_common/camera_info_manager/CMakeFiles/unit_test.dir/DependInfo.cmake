@@ -19,11 +19,11 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  "/home/kyung/21_hf271/ROS_COMM/transport_ws/src/image_common/camera_info_manager/include"
   "/home/kyung/21_hf271/ROS_COMM/transport_ws/src/image_common/camera_calibration_parsers/include"
   "/home/kyung/21_hf271/ROS_COMM/transport_ws/src/image_common/image_transport/include"
   "/opt/ros/noetic/include"
   "/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
-  "/home/kyung/21_hf271/ROS_COMM/transport_ws/src/image_common/camera_info_manager/include"
   "/usr/src/googletest/googletest/include"
   "/usr/src/googletest/googletest"
   )
