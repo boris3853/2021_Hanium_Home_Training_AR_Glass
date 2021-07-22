@@ -1,2 +1,0 @@
-cv_bridge:image_transport:pub
--DCATKIN_DEVEL_PREFIX=/home/pi/21_hf271/RPI/image_pub/devel -DCMAKE_INSTALL_PREFIX=/home/pi/21_hf271/RPI/image_pub/install -G Unix Makefiles
