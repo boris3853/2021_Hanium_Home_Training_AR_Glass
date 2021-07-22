@@ -103,8 +103,6 @@ opencv2/highgui/highgui.hpp
 -
 cv_bridge/cv_bridge.h
 -
-sstream
--
 
 /opt/ros/noetic/include/cv_bridge/cv_bridge.h
 sensor_msgs/Image.h
