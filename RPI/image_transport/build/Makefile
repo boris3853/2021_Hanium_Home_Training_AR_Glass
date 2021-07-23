@@ -896,30 +896,30 @@ image_transport_plugins/fast:
 .PHONY : image_transport_plugins/fast
 
 #=============================================================================
-# Target rules for targets named pub
+# Target rules for targets named webcam_sub
 
 # Build rule for target.
-pub: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 pub
-.PHONY : pub
+webcam_sub: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 webcam_sub
+.PHONY : webcam_sub
 
 # fast build rule for target.
-pub/fast:
-	$(MAKE) -f pub/CMakeFiles/pub.dir/build.make pub/CMakeFiles/pub.dir/build
-.PHONY : pub/fast
+webcam_sub/fast:
+	$(MAKE) -f webcam/CMakeFiles/webcam_sub.dir/build.make webcam/CMakeFiles/webcam_sub.dir/build
+.PHONY : webcam_sub/fast
 
 #=============================================================================
-# Target rules for targets named sub
+# Target rules for targets named webcam_pub
 
 # Build rule for target.
-sub: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 sub
-.PHONY : sub
+webcam_pub: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 webcam_pub
+.PHONY : webcam_pub
 
 # fast build rule for target.
-sub/fast:
-	$(MAKE) -f sub/CMakeFiles/sub.dir/build.make sub/CMakeFiles/sub.dir/build
-.PHONY : sub/fast
+webcam_pub/fast:
+	$(MAKE) -f webcam/CMakeFiles/webcam_pub.dir/build.make webcam/CMakeFiles/webcam_pub.dir/build
+.PHONY : webcam_pub/fast
 
 # Help Target
 help:
@@ -990,8 +990,8 @@ help:
 	@echo "... rosgraph_msgs_generate_messages_py"
 	@echo "... republish"
 	@echo "... image_transport_plugins"
-	@echo "... pub"
-	@echo "... sub"
+	@echo "... webcam_sub"
+	@echo "... webcam_pub"
 .PHONY : help
 
 

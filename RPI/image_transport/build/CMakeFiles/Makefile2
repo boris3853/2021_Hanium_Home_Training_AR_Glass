@@ -56,8 +56,7 @@ CMAKE_BINARY_DIR = /home/kyung/21_hf271/RPI/image_transport/build
 all: gtest/all
 all: cv_bridge/all
 all: image_transport/all
-all: pub/all
-all: sub/all
+all: webcam/all
 
 .PHONY : all
 
@@ -65,8 +64,7 @@ all: sub/all
 preinstall: gtest/preinstall
 preinstall: cv_bridge/preinstall
 preinstall: image_transport/preinstall
-preinstall: pub/preinstall
-preinstall: sub/preinstall
+preinstall: webcam/preinstall
 
 .PHONY : preinstall
 
@@ -79,8 +77,7 @@ clean: CMakeFiles/download_extra_data.dir/clean
 clean: gtest/clean
 clean: cv_bridge/clean
 clean: image_transport/clean
-clean: pub/clean
-clean: sub/clean
+clean: webcam/clean
 
 .PHONY : clean
 
@@ -286,40 +283,24 @@ image_transport/clean: image_transport/CMakeFiles/image_transport_plugins.dir/cl
 .PHONY : image_transport/clean
 
 #=============================================================================
-# Directory level rules for directory pub
+# Directory level rules for directory webcam
 
 # Recursive "all" directory target.
-pub/all: pub/CMakeFiles/pub.dir/all
+webcam/all: webcam/CMakeFiles/webcam_sub.dir/all
+webcam/all: webcam/CMakeFiles/webcam_pub.dir/all
 
-.PHONY : pub/all
-
-# Recursive "preinstall" directory target.
-pub/preinstall:
-
-.PHONY : pub/preinstall
-
-# Recursive "clean" directory target.
-pub/clean: pub/CMakeFiles/pub.dir/clean
-
-.PHONY : pub/clean
-
-#=============================================================================
-# Directory level rules for directory sub
-
-# Recursive "all" directory target.
-sub/all: sub/CMakeFiles/sub.dir/all
-
-.PHONY : sub/all
+.PHONY : webcam/all
 
 # Recursive "preinstall" directory target.
-sub/preinstall:
+webcam/preinstall:
 
-.PHONY : sub/preinstall
+.PHONY : webcam/preinstall
 
 # Recursive "clean" directory target.
-sub/clean: sub/CMakeFiles/sub.dir/clean
+webcam/clean: webcam/CMakeFiles/webcam_sub.dir/clean
+webcam/clean: webcam/CMakeFiles/webcam_pub.dir/clean
 
-.PHONY : sub/clean
+.PHONY : webcam/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/doxygen.dir
@@ -1837,7 +1818,7 @@ image_transport/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean:
 image_transport/CMakeFiles/republish.dir/all: image_transport/CMakeFiles/image_transport.dir/all
 	$(MAKE) -f image_transport/CMakeFiles/republish.dir/build.make image_transport/CMakeFiles/republish.dir/depend
 	$(MAKE) -f image_transport/CMakeFiles/republish.dir/build.make image_transport/CMakeFiles/republish.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kyung/21_hf271/RPI/image_transport/build/CMakeFiles --progress-num=36,37 "Built target republish"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kyung/21_hf271/RPI/image_transport/build/CMakeFiles --progress-num=34,35 "Built target republish"
 .PHONY : image_transport/CMakeFiles/republish.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1885,60 +1866,60 @@ image_transport/CMakeFiles/image_transport_plugins.dir/clean:
 .PHONY : image_transport/CMakeFiles/image_transport_plugins.dir/clean
 
 #=============================================================================
-# Target rules for target pub/CMakeFiles/pub.dir
+# Target rules for target webcam/CMakeFiles/webcam_sub.dir
 
 # All Build rule for target.
-pub/CMakeFiles/pub.dir/all: cv_bridge/src/CMakeFiles/cv_bridge.dir/all
-pub/CMakeFiles/pub.dir/all: image_transport/CMakeFiles/image_transport.dir/all
-	$(MAKE) -f pub/CMakeFiles/pub.dir/build.make pub/CMakeFiles/pub.dir/depend
-	$(MAKE) -f pub/CMakeFiles/pub.dir/build.make pub/CMakeFiles/pub.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kyung/21_hf271/RPI/image_transport/build/CMakeFiles --progress-num=34,35 "Built target pub"
-.PHONY : pub/CMakeFiles/pub.dir/all
+webcam/CMakeFiles/webcam_sub.dir/all: cv_bridge/src/CMakeFiles/cv_bridge.dir/all
+webcam/CMakeFiles/webcam_sub.dir/all: image_transport/CMakeFiles/image_transport.dir/all
+	$(MAKE) -f webcam/CMakeFiles/webcam_sub.dir/build.make webcam/CMakeFiles/webcam_sub.dir/depend
+	$(MAKE) -f webcam/CMakeFiles/webcam_sub.dir/build.make webcam/CMakeFiles/webcam_sub.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kyung/21_hf271/RPI/image_transport/build/CMakeFiles --progress-num=38,39 "Built target webcam_sub"
+.PHONY : webcam/CMakeFiles/webcam_sub.dir/all
 
 # Build rule for subdir invocation for target.
-pub/CMakeFiles/pub.dir/rule: cmake_check_build_system
+webcam/CMakeFiles/webcam_sub.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kyung/21_hf271/RPI/image_transport/build/CMakeFiles 13
-	$(MAKE) -f CMakeFiles/Makefile2 pub/CMakeFiles/pub.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 webcam/CMakeFiles/webcam_sub.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kyung/21_hf271/RPI/image_transport/build/CMakeFiles 0
-.PHONY : pub/CMakeFiles/pub.dir/rule
+.PHONY : webcam/CMakeFiles/webcam_sub.dir/rule
 
 # Convenience name for target.
-pub: pub/CMakeFiles/pub.dir/rule
+webcam_sub: webcam/CMakeFiles/webcam_sub.dir/rule
 
-.PHONY : pub
+.PHONY : webcam_sub
 
 # clean rule for target.
-pub/CMakeFiles/pub.dir/clean:
-	$(MAKE) -f pub/CMakeFiles/pub.dir/build.make pub/CMakeFiles/pub.dir/clean
-.PHONY : pub/CMakeFiles/pub.dir/clean
+webcam/CMakeFiles/webcam_sub.dir/clean:
+	$(MAKE) -f webcam/CMakeFiles/webcam_sub.dir/build.make webcam/CMakeFiles/webcam_sub.dir/clean
+.PHONY : webcam/CMakeFiles/webcam_sub.dir/clean
 
 #=============================================================================
-# Target rules for target sub/CMakeFiles/sub.dir
+# Target rules for target webcam/CMakeFiles/webcam_pub.dir
 
 # All Build rule for target.
-sub/CMakeFiles/sub.dir/all: cv_bridge/src/CMakeFiles/cv_bridge.dir/all
-sub/CMakeFiles/sub.dir/all: image_transport/CMakeFiles/image_transport.dir/all
-	$(MAKE) -f sub/CMakeFiles/sub.dir/build.make sub/CMakeFiles/sub.dir/depend
-	$(MAKE) -f sub/CMakeFiles/sub.dir/build.make sub/CMakeFiles/sub.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kyung/21_hf271/RPI/image_transport/build/CMakeFiles --progress-num=38,39 "Built target sub"
-.PHONY : sub/CMakeFiles/sub.dir/all
+webcam/CMakeFiles/webcam_pub.dir/all: cv_bridge/src/CMakeFiles/cv_bridge.dir/all
+webcam/CMakeFiles/webcam_pub.dir/all: image_transport/CMakeFiles/image_transport.dir/all
+	$(MAKE) -f webcam/CMakeFiles/webcam_pub.dir/build.make webcam/CMakeFiles/webcam_pub.dir/depend
+	$(MAKE) -f webcam/CMakeFiles/webcam_pub.dir/build.make webcam/CMakeFiles/webcam_pub.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kyung/21_hf271/RPI/image_transport/build/CMakeFiles --progress-num=36,37 "Built target webcam_pub"
+.PHONY : webcam/CMakeFiles/webcam_pub.dir/all
 
 # Build rule for subdir invocation for target.
-sub/CMakeFiles/sub.dir/rule: cmake_check_build_system
+webcam/CMakeFiles/webcam_pub.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kyung/21_hf271/RPI/image_transport/build/CMakeFiles 13
-	$(MAKE) -f CMakeFiles/Makefile2 sub/CMakeFiles/sub.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 webcam/CMakeFiles/webcam_pub.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kyung/21_hf271/RPI/image_transport/build/CMakeFiles 0
-.PHONY : sub/CMakeFiles/sub.dir/rule
+.PHONY : webcam/CMakeFiles/webcam_pub.dir/rule
 
 # Convenience name for target.
-sub: sub/CMakeFiles/sub.dir/rule
+webcam_pub: webcam/CMakeFiles/webcam_pub.dir/rule
 
-.PHONY : sub
+.PHONY : webcam_pub
 
 # clean rule for target.
-sub/CMakeFiles/sub.dir/clean:
-	$(MAKE) -f sub/CMakeFiles/sub.dir/build.make sub/CMakeFiles/sub.dir/clean
-.PHONY : sub/CMakeFiles/sub.dir/clean
+webcam/CMakeFiles/webcam_pub.dir/clean:
+	$(MAKE) -f webcam/CMakeFiles/webcam_pub.dir/build.make webcam/CMakeFiles/webcam_pub.dir/clean
+.PHONY : webcam/CMakeFiles/webcam_pub.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

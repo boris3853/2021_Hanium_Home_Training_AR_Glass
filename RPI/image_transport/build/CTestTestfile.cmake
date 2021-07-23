@@ -7,5 +7,4 @@
 subdirs("gtest")
 subdirs("cv_bridge")
 subdirs("image_transport")
-subdirs("pub")
-subdirs("sub")
+subdirs("webcam")

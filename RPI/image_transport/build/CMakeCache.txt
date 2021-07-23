@@ -384,6 +384,12 @@ SETUPTOOLS_DEB_LAYOUT:BOOL=ON
 //Name of the computer/site where compile is being run
 SITE:STRING=kyung-YogaSlim
 
+//Value Computed by CMake
+TP_BINARY_DIR:STATIC=/home/kyung/21_hf271/RPI/image_transport/build/TP
+
+//Value Computed by CMake
+TP_SOURCE_DIR:STATIC=/home/kyung/21_hf271/RPI/image_transport/src/TP
+
 //LSB Distrib tag
 UBUNTU:BOOL=TRUE
 
@@ -553,6 +559,12 @@ sub_BINARY_DIR:STATIC=/home/kyung/21_hf271/RPI/image_transport/build/sub
 //Value Computed by CMake
 sub_SOURCE_DIR:STATIC=/home/kyung/21_hf271/RPI/image_transport/src/sub
 
+//Value Computed by CMake
+webcam_BINARY_DIR:STATIC=/home/kyung/21_hf271/RPI/image_transport/build/webcam
+
+//Value Computed by CMake
+webcam_SOURCE_DIR:STATIC=/home/kyung/21_hf271/RPI/image_transport/src/webcam
+
 //The directory containing a CMake configuration file for xmlrpcpp.
 xmlrpcpp_DIR:PATH=/opt/ros/noetic/share/xmlrpcpp/cmake
 
@@ -706,7 +718,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=11
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=10
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

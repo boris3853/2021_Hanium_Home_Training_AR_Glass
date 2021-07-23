@@ -133,8 +133,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/kyung/21_hf271/RPI/image_transport/build/gtest/cmake_install.cmake")
   include("/home/kyung/21_hf271/RPI/image_transport/build/cv_bridge/cmake_install.cmake")
   include("/home/kyung/21_hf271/RPI/image_transport/build/image_transport/cmake_install.cmake")
-  include("/home/kyung/21_hf271/RPI/image_transport/build/pub/cmake_install.cmake")
-  include("/home/kyung/21_hf271/RPI/image_transport/build/sub/cmake_install.cmake")
+  include("/home/kyung/21_hf271/RPI/image_transport/build/webcam/cmake_install.cmake")
 
 endif()
 
