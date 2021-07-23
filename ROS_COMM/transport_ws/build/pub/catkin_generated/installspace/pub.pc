@@ -1,8 +1,0 @@
-prefix=/home/kyung/21_hf271/ROS_COMM/transport_ws/install
-
-Name: pub
-Description: Description of pub
-Version: 0.0.0
-Cflags: -I${prefix}/include
-Libs: -L${prefix}/lib -lpub
-Requires: cv_bridge image_transport message_runtime sensor_msgs std_msgs roscpp
