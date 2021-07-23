@@ -21,7 +21,7 @@ include_directories(
 	${catkin_INCLUDE_DIRS} ${OpenCV_INCLUDE_DIRS}
 )
 
-#add_executable(webcam_pub pub.cpp)
-#target_link_libraries(webcam_pub ${catkin_LIBRARIES} ${OpenCV_LIBRARIES})
+add_executable(webcam_pub pub.cpp)
+target_link_libraries(webcam_pub ${catkin_LIBRARIES} ${OpenCV_LIBRARIES})
 add_executable(webcam_sub sub.cpp)
 target_link_libraries(webcam_sub ${catkin_LIBRARIES} ${OpenCV_LIBRARIES})
