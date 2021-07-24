@@ -67,14 +67,14 @@ set(webcam_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("TRUE" STREQUAL "TRUE")
-  set(webcam_SOURCE_PREFIX /home/kyung/21_hf271/RPI/image_transport/src/webcam)
-  set(webcam_DEVEL_PREFIX /home/kyung/21_hf271/RPI/image_transport/devel)
+  set(webcam_SOURCE_PREFIX /home/kyung/21_hf271/image_transport/src/webcam)
+  set(webcam_DEVEL_PREFIX /home/kyung/21_hf271/image_transport/devel)
   set(webcam_INSTALL_PREFIX "")
   set(webcam_PREFIX ${webcam_DEVEL_PREFIX})
 else()
   set(webcam_SOURCE_PREFIX "")
   set(webcam_DEVEL_PREFIX "")
-  set(webcam_INSTALL_PREFIX /home/kyung/21_hf271/RPI/image_transport/install)
+  set(webcam_INSTALL_PREFIX /home/kyung/21_hf271/image_transport/install)
   set(webcam_PREFIX ${webcam_INSTALL_PREFIX})
 endif()
 
@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(webcam_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT "/home/kyung/21_hf271/RPI/image_transport/src/webcam/include " STREQUAL " ")
+if(NOT "/home/kyung/21_hf271/image_transport/src/webcam/include " STREQUAL " ")
   set(webcam_INCLUDE_DIRS "")
-  set(_include_dirs "/home/kyung/21_hf271/RPI/image_transport/src/webcam/include")
+  set(_include_dirs "/home/kyung/21_hf271/image_transport/src/webcam/include")
   if(NOT " " STREQUAL " ")
     set(_report "Check the issue tracker '' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT " " STREQUAL " ")
@@ -110,7 +110,7 @@ if(NOT "/home/kyung/21_hf271/RPI/image_transport/src/webcam/include " STREQUAL "
         message(FATAL_ERROR "Project 'webcam' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  ${_report}")
       endif()
     else()
-      message(FATAL_ERROR "Project 'webcam' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/kyung/21_hf271/RPI/image_transport/src/webcam/${idir}'.  ${_report}")
+      message(FATAL_ERROR "Project 'webcam' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/kyung/21_hf271/image_transport/src/webcam/${idir}'.  ${_report}")
     endif()
     _list_append_unique(webcam_INCLUDE_DIRS ${include})
   endforeach()
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/kyung/21_hf271/RPI/image_transport/devel/lib;/opt/ros/noetic/lib)
+    foreach(path /home/kyung/21_hf271/image_transport/devel/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

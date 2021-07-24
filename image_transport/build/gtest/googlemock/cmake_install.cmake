@@ -2,7 +2,7 @@
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/kyung/21_hf271/RPI/image_transport/install")
+  set(CMAKE_INSTALL_PREFIX "/home/kyung/21_hf271/image_transport/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -39,7 +39,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/kyung/21_hf271/RPI/image_transport/build/gtest/googletest/cmake_install.cmake")
+  include("/home/kyung/21_hf271/image_transport/build/gtest/googletest/cmake_install.cmake")
 
 endif()
 
