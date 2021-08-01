@@ -4,10 +4,10 @@
 #include <cv_bridge/cv_bridge.h>
 
 int main(int argc, char **argv){
-	ros::init(argc, argv, "image_pub"); // PI1: image_pub1
+	ros::init(argc, argv, "image_pub2"); // PI1: image_pub1
 	ros::NodeHandle nh;
 	image_transport::ImageTransport it(nh);
-	image_transport::Publisher pub = it.advertise("camera/image", 1);
+	image_transport::Publisher pub = it.advertise("camera/image2", 1);
 	// PI1: camera/image1 PI2: camera/image2
 
 
