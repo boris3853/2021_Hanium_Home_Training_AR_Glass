@@ -13,9 +13,9 @@
      
 ## 디렉토리 설명
 
-1 . image_transport : (PI->Jetson) ROS 통신을 이용한 이미지 전송    
-2 . json_parcers & crawling code : AIHub 데이터 파셔 + 유튜브 영상 crwaler ..
- 
+1. image_transport : (PI->Jetson) ROS 통신을 이용한 이미지 전송    
+2. TX2_main : AIHub 데이터 파셔 + 유튜브 영상 crwaler ..
+3. socket_comm : (Jetson -> Unity) WebSocket 통신
 
 
 ## 최근 변경점
@@ -26,15 +26,14 @@ image_transport 스크립트 추가 (21/07/24)
 2. tx2_update.sh: tx2 빌드 환경이 달라서 CMakeList.txt 및 헤더파일 수정 스크립트
 
 
+socket_comm / TX2_main 추가 (21/08/01)
 
+1. socket_comm: ROS-Sharp, Rosbridge 통해 TX2 -> Unity로 WebSocket 통신
+2. TX2_main : json_parcers & crawling code 통합 + jsoncpp 통해서 json-reader 개발중
 
 
 
 
 ##### 마크다운 문법 사용법
 다음 링크 참조: 
-<<<<<<< HEAD
 https://velog.io/@yuuuye/velog-%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4MarkDown-%EC%9E%91%EC%84%B1%EB%B2%95
-=======
-https://velog.io/@yuuuye/velog-%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4MarkDown-%EC%9E%91%EC%84%B1%EB%B2%95
->>>>>>> beba58d460e52e4b174077afd16407a1ffde2730
