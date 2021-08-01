@@ -33,4 +33,8 @@ image_transport 스크립트 추가 (21/07/24)
 
 ##### 마크다운 문법 사용법
 다음 링크 참조: 
+<<<<<<< HEAD
 https://velog.io/@yuuuye/velog-%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4MarkDown-%EC%9E%91%EC%84%B1%EB%B2%95
+=======
+https://velog.io/@yuuuye/velog-%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4MarkDown-%EC%9E%91%EC%84%B1%EB%B2%95
+>>>>>>> beba58d460e52e4b174077afd16407a1ffde2730
