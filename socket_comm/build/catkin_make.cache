@@ -1,0 +1,2 @@
+ros-sharp/ROS/file_server:ros-sharp/ROS/gazebo_simulation_scene:ros-sharp/ROS/unity_simulation_scene:rosbridge_suite/rosapi:rosbridge_suite/rosbridge_library:rosbridge_suite/rosbridge_msgs:rosbridge_suite/rosbridge_server:rosbridge_suite/rosbridge_suite
+-DCATKIN_DEVEL_PREFIX=/home/kyung/21_hf271/socket_comm/devel -DCMAKE_INSTALL_PREFIX=/home/kyung/21_hf271/socket_comm/install -G Unix Makefiles
