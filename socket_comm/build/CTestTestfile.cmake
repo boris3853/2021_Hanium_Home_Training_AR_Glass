@@ -7,6 +7,7 @@
 subdirs("gtest")
 subdirs("rosbridge_suite/rosapi")
 subdirs("rosbridge_suite/rosbridge_suite")
+subdirs("msg_creator")
 subdirs("rosbridge_suite/rosbridge_msgs")
 subdirs("ros-sharp/ROS/file_server")
 subdirs("rosbridge_suite/rosbridge_server")

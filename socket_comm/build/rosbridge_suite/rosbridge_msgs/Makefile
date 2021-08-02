@@ -56,6 +56,18 @@ CMAKE_BINARY_DIR = /home/kyung/21_hf271/socket_comm/build
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -88,18 +100,6 @@ test:
 test/fast: test
 
 .PHONY : test/fast
-
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install
-
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
 
 # Special rule for the target list_install_components
 list_install_components:
@@ -168,36 +168,6 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-rosbridge_suite/rosbridge_msgs/CMakeFiles/rosbridge_msgs_genpy.dir/rule:
-	cd /home/kyung/21_hf271/socket_comm/build && $(MAKE) -f CMakeFiles/Makefile2 rosbridge_suite/rosbridge_msgs/CMakeFiles/rosbridge_msgs_genpy.dir/rule
-.PHONY : rosbridge_suite/rosbridge_msgs/CMakeFiles/rosbridge_msgs_genpy.dir/rule
-
-# Convenience name for target.
-rosbridge_msgs_genpy: rosbridge_suite/rosbridge_msgs/CMakeFiles/rosbridge_msgs_genpy.dir/rule
-
-.PHONY : rosbridge_msgs_genpy
-
-# fast build rule for target.
-rosbridge_msgs_genpy/fast:
-	cd /home/kyung/21_hf271/socket_comm/build && $(MAKE) -f rosbridge_suite/rosbridge_msgs/CMakeFiles/rosbridge_msgs_genpy.dir/build.make rosbridge_suite/rosbridge_msgs/CMakeFiles/rosbridge_msgs_genpy.dir/build
-.PHONY : rosbridge_msgs_genpy/fast
-
-# Convenience name for target.
-rosbridge_suite/rosbridge_msgs/CMakeFiles/rosbridge_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/kyung/21_hf271/socket_comm/build && $(MAKE) -f CMakeFiles/Makefile2 rosbridge_suite/rosbridge_msgs/CMakeFiles/rosbridge_msgs_generate_messages_nodejs.dir/rule
-.PHONY : rosbridge_suite/rosbridge_msgs/CMakeFiles/rosbridge_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-rosbridge_msgs_generate_messages_nodejs: rosbridge_suite/rosbridge_msgs/CMakeFiles/rosbridge_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : rosbridge_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-rosbridge_msgs_generate_messages_nodejs/fast:
-	cd /home/kyung/21_hf271/socket_comm/build && $(MAKE) -f rosbridge_suite/rosbridge_msgs/CMakeFiles/rosbridge_msgs_generate_messages_nodejs.dir/build.make rosbridge_suite/rosbridge_msgs/CMakeFiles/rosbridge_msgs_generate_messages_nodejs.dir/build
-.PHONY : rosbridge_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
 rosbridge_suite/rosbridge_msgs/CMakeFiles/rosbridge_msgs_generate_messages.dir/rule:
 	cd /home/kyung/21_hf271/socket_comm/build && $(MAKE) -f CMakeFiles/Makefile2 rosbridge_suite/rosbridge_msgs/CMakeFiles/rosbridge_msgs_generate_messages.dir/rule
 .PHONY : rosbridge_suite/rosbridge_msgs/CMakeFiles/rosbridge_msgs_generate_messages.dir/rule
@@ -213,19 +183,19 @@ rosbridge_msgs_generate_messages/fast:
 .PHONY : rosbridge_msgs_generate_messages/fast
 
 # Convenience name for target.
-rosbridge_suite/rosbridge_msgs/CMakeFiles/std_msgs_generate_messages_eus.dir/rule:
-	cd /home/kyung/21_hf271/socket_comm/build && $(MAKE) -f CMakeFiles/Makefile2 rosbridge_suite/rosbridge_msgs/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
-.PHONY : rosbridge_suite/rosbridge_msgs/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
+rosbridge_suite/rosbridge_msgs/CMakeFiles/rosbridge_msgs_genpy.dir/rule:
+	cd /home/kyung/21_hf271/socket_comm/build && $(MAKE) -f CMakeFiles/Makefile2 rosbridge_suite/rosbridge_msgs/CMakeFiles/rosbridge_msgs_genpy.dir/rule
+.PHONY : rosbridge_suite/rosbridge_msgs/CMakeFiles/rosbridge_msgs_genpy.dir/rule
 
 # Convenience name for target.
-std_msgs_generate_messages_eus: rosbridge_suite/rosbridge_msgs/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
+rosbridge_msgs_genpy: rosbridge_suite/rosbridge_msgs/CMakeFiles/rosbridge_msgs_genpy.dir/rule
 
-.PHONY : std_msgs_generate_messages_eus
+.PHONY : rosbridge_msgs_genpy
 
 # fast build rule for target.
-std_msgs_generate_messages_eus/fast:
-	cd /home/kyung/21_hf271/socket_comm/build && $(MAKE) -f rosbridge_suite/rosbridge_msgs/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make rosbridge_suite/rosbridge_msgs/CMakeFiles/std_msgs_generate_messages_eus.dir/build
-.PHONY : std_msgs_generate_messages_eus/fast
+rosbridge_msgs_genpy/fast:
+	cd /home/kyung/21_hf271/socket_comm/build && $(MAKE) -f rosbridge_suite/rosbridge_msgs/CMakeFiles/rosbridge_msgs_genpy.dir/build.make rosbridge_suite/rosbridge_msgs/CMakeFiles/rosbridge_msgs_genpy.dir/build
+.PHONY : rosbridge_msgs_genpy/fast
 
 # Convenience name for target.
 rosbridge_suite/rosbridge_msgs/CMakeFiles/_rosbridge_msgs_generate_messages_check_deps_ConnectedClient.dir/rule:
@@ -243,21 +213,6 @@ _rosbridge_msgs_generate_messages_check_deps_ConnectedClient/fast:
 .PHONY : _rosbridge_msgs_generate_messages_check_deps_ConnectedClient/fast
 
 # Convenience name for target.
-rosbridge_suite/rosbridge_msgs/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/kyung/21_hf271/socket_comm/build && $(MAKE) -f CMakeFiles/Makefile2 rosbridge_suite/rosbridge_msgs/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
-.PHONY : rosbridge_suite/rosbridge_msgs/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_nodejs: rosbridge_suite/rosbridge_msgs/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : std_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-std_msgs_generate_messages_nodejs/fast:
-	cd /home/kyung/21_hf271/socket_comm/build && $(MAKE) -f rosbridge_suite/rosbridge_msgs/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make rosbridge_suite/rosbridge_msgs/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build
-.PHONY : std_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
 rosbridge_suite/rosbridge_msgs/CMakeFiles/_rosbridge_msgs_generate_messages_check_deps_ConnectedClients.dir/rule:
 	cd /home/kyung/21_hf271/socket_comm/build && $(MAKE) -f CMakeFiles/Makefile2 rosbridge_suite/rosbridge_msgs/CMakeFiles/_rosbridge_msgs_generate_messages_check_deps_ConnectedClients.dir/rule
 .PHONY : rosbridge_suite/rosbridge_msgs/CMakeFiles/_rosbridge_msgs_generate_messages_check_deps_ConnectedClients.dir/rule
@@ -273,21 +228,6 @@ _rosbridge_msgs_generate_messages_check_deps_ConnectedClients/fast:
 .PHONY : _rosbridge_msgs_generate_messages_check_deps_ConnectedClients/fast
 
 # Convenience name for target.
-rosbridge_suite/rosbridge_msgs/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule:
-	cd /home/kyung/21_hf271/socket_comm/build && $(MAKE) -f CMakeFiles/Makefile2 rosbridge_suite/rosbridge_msgs/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
-.PHONY : rosbridge_suite/rosbridge_msgs/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_lisp: rosbridge_suite/rosbridge_msgs/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : std_msgs_generate_messages_lisp
-
-# fast build rule for target.
-std_msgs_generate_messages_lisp/fast:
-	cd /home/kyung/21_hf271/socket_comm/build && $(MAKE) -f rosbridge_suite/rosbridge_msgs/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make rosbridge_suite/rosbridge_msgs/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
-.PHONY : std_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
 rosbridge_suite/rosbridge_msgs/CMakeFiles/rosbridge_msgs_generate_messages_cpp.dir/rule:
 	cd /home/kyung/21_hf271/socket_comm/build && $(MAKE) -f CMakeFiles/Makefile2 rosbridge_suite/rosbridge_msgs/CMakeFiles/rosbridge_msgs_generate_messages_cpp.dir/rule
 .PHONY : rosbridge_suite/rosbridge_msgs/CMakeFiles/rosbridge_msgs_generate_messages_cpp.dir/rule
@@ -301,36 +241,6 @@ rosbridge_msgs_generate_messages_cpp: rosbridge_suite/rosbridge_msgs/CMakeFiles/
 rosbridge_msgs_generate_messages_cpp/fast:
 	cd /home/kyung/21_hf271/socket_comm/build && $(MAKE) -f rosbridge_suite/rosbridge_msgs/CMakeFiles/rosbridge_msgs_generate_messages_cpp.dir/build.make rosbridge_suite/rosbridge_msgs/CMakeFiles/rosbridge_msgs_generate_messages_cpp.dir/build
 .PHONY : rosbridge_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-rosbridge_suite/rosbridge_msgs/CMakeFiles/rosbridge_msgs_genlisp.dir/rule:
-	cd /home/kyung/21_hf271/socket_comm/build && $(MAKE) -f CMakeFiles/Makefile2 rosbridge_suite/rosbridge_msgs/CMakeFiles/rosbridge_msgs_genlisp.dir/rule
-.PHONY : rosbridge_suite/rosbridge_msgs/CMakeFiles/rosbridge_msgs_genlisp.dir/rule
-
-# Convenience name for target.
-rosbridge_msgs_genlisp: rosbridge_suite/rosbridge_msgs/CMakeFiles/rosbridge_msgs_genlisp.dir/rule
-
-.PHONY : rosbridge_msgs_genlisp
-
-# fast build rule for target.
-rosbridge_msgs_genlisp/fast:
-	cd /home/kyung/21_hf271/socket_comm/build && $(MAKE) -f rosbridge_suite/rosbridge_msgs/CMakeFiles/rosbridge_msgs_genlisp.dir/build.make rosbridge_suite/rosbridge_msgs/CMakeFiles/rosbridge_msgs_genlisp.dir/build
-.PHONY : rosbridge_msgs_genlisp/fast
-
-# Convenience name for target.
-rosbridge_suite/rosbridge_msgs/CMakeFiles/rosbridge_msgs_gencpp.dir/rule:
-	cd /home/kyung/21_hf271/socket_comm/build && $(MAKE) -f CMakeFiles/Makefile2 rosbridge_suite/rosbridge_msgs/CMakeFiles/rosbridge_msgs_gencpp.dir/rule
-.PHONY : rosbridge_suite/rosbridge_msgs/CMakeFiles/rosbridge_msgs_gencpp.dir/rule
-
-# Convenience name for target.
-rosbridge_msgs_gencpp: rosbridge_suite/rosbridge_msgs/CMakeFiles/rosbridge_msgs_gencpp.dir/rule
-
-.PHONY : rosbridge_msgs_gencpp
-
-# fast build rule for target.
-rosbridge_msgs_gencpp/fast:
-	cd /home/kyung/21_hf271/socket_comm/build && $(MAKE) -f rosbridge_suite/rosbridge_msgs/CMakeFiles/rosbridge_msgs_gencpp.dir/build.make rosbridge_suite/rosbridge_msgs/CMakeFiles/rosbridge_msgs_gencpp.dir/build
-.PHONY : rosbridge_msgs_gencpp/fast
 
 # Convenience name for target.
 rosbridge_suite/rosbridge_msgs/CMakeFiles/rosbridge_msgs_generate_messages_eus.dir/rule:
@@ -363,21 +273,6 @@ rosbridge_msgs_generate_messages_py/fast:
 .PHONY : rosbridge_msgs_generate_messages_py/fast
 
 # Convenience name for target.
-rosbridge_suite/rosbridge_msgs/CMakeFiles/std_msgs_generate_messages_py.dir/rule:
-	cd /home/kyung/21_hf271/socket_comm/build && $(MAKE) -f CMakeFiles/Makefile2 rosbridge_suite/rosbridge_msgs/CMakeFiles/std_msgs_generate_messages_py.dir/rule
-.PHONY : rosbridge_suite/rosbridge_msgs/CMakeFiles/std_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_py: rosbridge_suite/rosbridge_msgs/CMakeFiles/std_msgs_generate_messages_py.dir/rule
-
-.PHONY : std_msgs_generate_messages_py
-
-# fast build rule for target.
-std_msgs_generate_messages_py/fast:
-	cd /home/kyung/21_hf271/socket_comm/build && $(MAKE) -f rosbridge_suite/rosbridge_msgs/CMakeFiles/std_msgs_generate_messages_py.dir/build.make rosbridge_suite/rosbridge_msgs/CMakeFiles/std_msgs_generate_messages_py.dir/build
-.PHONY : std_msgs_generate_messages_py/fast
-
-# Convenience name for target.
 rosbridge_suite/rosbridge_msgs/CMakeFiles/rosbridge_msgs_generate_messages_lisp.dir/rule:
 	cd /home/kyung/21_hf271/socket_comm/build && $(MAKE) -f CMakeFiles/Makefile2 rosbridge_suite/rosbridge_msgs/CMakeFiles/rosbridge_msgs_generate_messages_lisp.dir/rule
 .PHONY : rosbridge_suite/rosbridge_msgs/CMakeFiles/rosbridge_msgs_generate_messages_lisp.dir/rule
@@ -393,34 +288,49 @@ rosbridge_msgs_generate_messages_lisp/fast:
 .PHONY : rosbridge_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
-rosbridge_suite/rosbridge_msgs/CMakeFiles/rosbridge_msgs_gennodejs.dir/rule:
-	cd /home/kyung/21_hf271/socket_comm/build && $(MAKE) -f CMakeFiles/Makefile2 rosbridge_suite/rosbridge_msgs/CMakeFiles/rosbridge_msgs_gennodejs.dir/rule
-.PHONY : rosbridge_suite/rosbridge_msgs/CMakeFiles/rosbridge_msgs_gennodejs.dir/rule
+rosbridge_suite/rosbridge_msgs/CMakeFiles/rosbridge_msgs_gencpp.dir/rule:
+	cd /home/kyung/21_hf271/socket_comm/build && $(MAKE) -f CMakeFiles/Makefile2 rosbridge_suite/rosbridge_msgs/CMakeFiles/rosbridge_msgs_gencpp.dir/rule
+.PHONY : rosbridge_suite/rosbridge_msgs/CMakeFiles/rosbridge_msgs_gencpp.dir/rule
 
 # Convenience name for target.
-rosbridge_msgs_gennodejs: rosbridge_suite/rosbridge_msgs/CMakeFiles/rosbridge_msgs_gennodejs.dir/rule
+rosbridge_msgs_gencpp: rosbridge_suite/rosbridge_msgs/CMakeFiles/rosbridge_msgs_gencpp.dir/rule
 
-.PHONY : rosbridge_msgs_gennodejs
+.PHONY : rosbridge_msgs_gencpp
 
 # fast build rule for target.
-rosbridge_msgs_gennodejs/fast:
-	cd /home/kyung/21_hf271/socket_comm/build && $(MAKE) -f rosbridge_suite/rosbridge_msgs/CMakeFiles/rosbridge_msgs_gennodejs.dir/build.make rosbridge_suite/rosbridge_msgs/CMakeFiles/rosbridge_msgs_gennodejs.dir/build
-.PHONY : rosbridge_msgs_gennodejs/fast
+rosbridge_msgs_gencpp/fast:
+	cd /home/kyung/21_hf271/socket_comm/build && $(MAKE) -f rosbridge_suite/rosbridge_msgs/CMakeFiles/rosbridge_msgs_gencpp.dir/build.make rosbridge_suite/rosbridge_msgs/CMakeFiles/rosbridge_msgs_gencpp.dir/build
+.PHONY : rosbridge_msgs_gencpp/fast
 
 # Convenience name for target.
-rosbridge_suite/rosbridge_msgs/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule:
-	cd /home/kyung/21_hf271/socket_comm/build && $(MAKE) -f CMakeFiles/Makefile2 rosbridge_suite/rosbridge_msgs/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
-.PHONY : rosbridge_suite/rosbridge_msgs/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
+rosbridge_suite/rosbridge_msgs/CMakeFiles/rosbridge_msgs_genlisp.dir/rule:
+	cd /home/kyung/21_hf271/socket_comm/build && $(MAKE) -f CMakeFiles/Makefile2 rosbridge_suite/rosbridge_msgs/CMakeFiles/rosbridge_msgs_genlisp.dir/rule
+.PHONY : rosbridge_suite/rosbridge_msgs/CMakeFiles/rosbridge_msgs_genlisp.dir/rule
 
 # Convenience name for target.
-std_msgs_generate_messages_cpp: rosbridge_suite/rosbridge_msgs/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
+rosbridge_msgs_genlisp: rosbridge_suite/rosbridge_msgs/CMakeFiles/rosbridge_msgs_genlisp.dir/rule
 
-.PHONY : std_msgs_generate_messages_cpp
+.PHONY : rosbridge_msgs_genlisp
 
 # fast build rule for target.
-std_msgs_generate_messages_cpp/fast:
-	cd /home/kyung/21_hf271/socket_comm/build && $(MAKE) -f rosbridge_suite/rosbridge_msgs/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make rosbridge_suite/rosbridge_msgs/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
-.PHONY : std_msgs_generate_messages_cpp/fast
+rosbridge_msgs_genlisp/fast:
+	cd /home/kyung/21_hf271/socket_comm/build && $(MAKE) -f rosbridge_suite/rosbridge_msgs/CMakeFiles/rosbridge_msgs_genlisp.dir/build.make rosbridge_suite/rosbridge_msgs/CMakeFiles/rosbridge_msgs_genlisp.dir/build
+.PHONY : rosbridge_msgs_genlisp/fast
+
+# Convenience name for target.
+rosbridge_suite/rosbridge_msgs/CMakeFiles/rosbridge_msgs_generate_messages_nodejs.dir/rule:
+	cd /home/kyung/21_hf271/socket_comm/build && $(MAKE) -f CMakeFiles/Makefile2 rosbridge_suite/rosbridge_msgs/CMakeFiles/rosbridge_msgs_generate_messages_nodejs.dir/rule
+.PHONY : rosbridge_suite/rosbridge_msgs/CMakeFiles/rosbridge_msgs_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+rosbridge_msgs_generate_messages_nodejs: rosbridge_suite/rosbridge_msgs/CMakeFiles/rosbridge_msgs_generate_messages_nodejs.dir/rule
+
+.PHONY : rosbridge_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+rosbridge_msgs_generate_messages_nodejs/fast:
+	cd /home/kyung/21_hf271/socket_comm/build && $(MAKE) -f rosbridge_suite/rosbridge_msgs/CMakeFiles/rosbridge_msgs_generate_messages_nodejs.dir/build.make rosbridge_suite/rosbridge_msgs/CMakeFiles/rosbridge_msgs_generate_messages_nodejs.dir/build
+.PHONY : rosbridge_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
 rosbridge_suite/rosbridge_msgs/CMakeFiles/rosbridge_msgs_geneus.dir/rule:
@@ -437,37 +347,47 @@ rosbridge_msgs_geneus/fast:
 	cd /home/kyung/21_hf271/socket_comm/build && $(MAKE) -f rosbridge_suite/rosbridge_msgs/CMakeFiles/rosbridge_msgs_geneus.dir/build.make rosbridge_suite/rosbridge_msgs/CMakeFiles/rosbridge_msgs_geneus.dir/build
 .PHONY : rosbridge_msgs_geneus/fast
 
+# Convenience name for target.
+rosbridge_suite/rosbridge_msgs/CMakeFiles/rosbridge_msgs_gennodejs.dir/rule:
+	cd /home/kyung/21_hf271/socket_comm/build && $(MAKE) -f CMakeFiles/Makefile2 rosbridge_suite/rosbridge_msgs/CMakeFiles/rosbridge_msgs_gennodejs.dir/rule
+.PHONY : rosbridge_suite/rosbridge_msgs/CMakeFiles/rosbridge_msgs_gennodejs.dir/rule
+
+# Convenience name for target.
+rosbridge_msgs_gennodejs: rosbridge_suite/rosbridge_msgs/CMakeFiles/rosbridge_msgs_gennodejs.dir/rule
+
+.PHONY : rosbridge_msgs_gennodejs
+
+# fast build rule for target.
+rosbridge_msgs_gennodejs/fast:
+	cd /home/kyung/21_hf271/socket_comm/build && $(MAKE) -f rosbridge_suite/rosbridge_msgs/CMakeFiles/rosbridge_msgs_gennodejs.dir/build.make rosbridge_suite/rosbridge_msgs/CMakeFiles/rosbridge_msgs_gennodejs.dir/build
+.PHONY : rosbridge_msgs_gennodejs/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... install"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... test"
-	@echo "... rosbridge_msgs_genpy"
-	@echo "... rosbridge_msgs_generate_messages_nodejs"
 	@echo "... rosbridge_msgs_generate_messages"
-	@echo "... install"
-	@echo "... std_msgs_generate_messages_eus"
+	@echo "... rosbridge_msgs_genpy"
 	@echo "... _rosbridge_msgs_generate_messages_check_deps_ConnectedClient"
-	@echo "... std_msgs_generate_messages_nodejs"
 	@echo "... _rosbridge_msgs_generate_messages_check_deps_ConnectedClients"
 	@echo "... list_install_components"
-	@echo "... std_msgs_generate_messages_lisp"
 	@echo "... rosbridge_msgs_generate_messages_cpp"
-	@echo "... install/local"
-	@echo "... rosbridge_msgs_genlisp"
-	@echo "... rosbridge_msgs_gencpp"
 	@echo "... rosbridge_msgs_generate_messages_eus"
 	@echo "... rosbridge_msgs_generate_messages_py"
-	@echo "... std_msgs_generate_messages_py"
 	@echo "... rosbridge_msgs_generate_messages_lisp"
+	@echo "... install/local"
+	@echo "... rosbridge_msgs_gencpp"
+	@echo "... rosbridge_msgs_genlisp"
+	@echo "... rosbridge_msgs_generate_messages_nodejs"
 	@echo "... install/strip"
-	@echo "... rosbridge_msgs_gennodejs"
-	@echo "... std_msgs_generate_messages_cpp"
 	@echo "... rosbridge_msgs_geneus"
+	@echo "... rosbridge_msgs_gennodejs"
 .PHONY : help
 
 
