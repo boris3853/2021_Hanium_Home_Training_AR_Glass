@@ -12,21 +12,23 @@ int main(int argc, char **argv){
 
 
 	// 4 for Yoga-Slim
-	cv::VideoCapture cap(0, cv::CAP_V4L);
+	cv::VideoCapture cap(4, cv::CAP_V4L);
 	if(!cap.isOpened()) return 1;
 	cv::Mat frame;
 	sensor_msgs::ImagePtr msg;
-	std_msgs::Header header;
 
 	ros::Rate loop_rate(5);
 	while(nh.ok()){
 		cap >> frame;
-		header.stamp = ros::Time::now();
 		imshow("test", frame); // TEST
 		
 		if(!frame.empty()){
+			std_msgs::Header header;
+			header.stamp = ros::Time::now();
+
 			msg = cv_bridge::CvImage(header, "bgr8", frame).toImageMsg();
 			pub.publish(msg);
+			ROS_INFO("send");
 		}
 
 

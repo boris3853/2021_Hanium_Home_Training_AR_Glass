@@ -52,6 +52,8 @@ be404e87c85471d943b45a2c589c78e4 /home/kyung/21_hf271/socket_comm/devel/include/
 e686452e23c12acfe03182024495958f /home/kyung/21_hf271/socket_comm/devel/lib/python3/dist-packages/file_server/srv/_GetBinaryFile.py
 0aeae60c2735a8ac17c19842322c2eda /home/kyung/21_hf271/socket_comm/devel/lib/python3/dist-packages/file_server/srv/_SaveBinaryFile.py
 9202dd73f8c132037f60d888180a3ae7 /home/kyung/21_hf271/socket_comm/devel/lib/python3/dist-packages/file_server/srv/__init__.py
+3d98e5cbb2e656e8c2706e9ae833af85 /home/kyung/21_hf271/socket_comm/devel/lib/python3/dist-packages/json_publisher/msg/_KeypointArray.py
+87e7a39773ba9d0b3d6fe908cd06d563 /home/kyung/21_hf271/socket_comm/devel/lib/python3/dist-packages/json_publisher/msg/__init__.py
 aa4eecd566180b7a1403fa23ca3b945c /home/kyung/21_hf271/socket_comm/devel/lib/python3/dist-packages/msg_creator/msg/_KeypointArray.py
 c82d05571ac93659074da15a24f81d5d /home/kyung/21_hf271/socket_comm/devel/lib/python3/dist-packages/msg_creator/msg/__init__.py
 7fb1456925df937a4d7a125727813bbc /home/kyung/21_hf271/socket_comm/devel/lib/python3/dist-packages/rosapi/msg/_TypeDef.py
@@ -108,6 +110,7 @@ dfc17aad5fb045033685fe5b854bc033 /home/kyung/21_hf271/socket_comm/devel/lib/pyth
 234a8c714a96d4bfd47e7c7eb14c43fe /home/kyung/21_hf271/socket_comm/devel/lib/python3/dist-packages/rosbridge_msgs/msg/__init__.py
 7bddce0bc625246dc7ba772b392bd170 /home/kyung/21_hf271/socket_comm/devel/share/common-lisp/ros/file_server/srv/GetBinaryFile.lisp
 de24e3eeda2aa2826ea82103e492a696 /home/kyung/21_hf271/socket_comm/devel/share/common-lisp/ros/file_server/srv/SaveBinaryFile.lisp
+b9e7ce2b248533f45703fc543456836d /home/kyung/21_hf271/socket_comm/devel/share/common-lisp/ros/json_publisher/msg/KeypointArray.lisp
 7406c7620430e2143bb04d32eab23b80 /home/kyung/21_hf271/socket_comm/devel/share/common-lisp/ros/msg_creator/msg/KeypointArray.lisp
 9bb9834e9ff75a6910ba31b8dce97f64 /home/kyung/21_hf271/socket_comm/devel/share/common-lisp/ros/rosapi/msg/TypeDef.lisp
 b49f1b53b01a257b020598e87bd77865 /home/kyung/21_hf271/socket_comm/devel/share/common-lisp/ros/rosapi/srv/DeleteParam.lisp
@@ -158,6 +161,7 @@ bca55a34e92c48ebecadf90c4b725457 /home/kyung/21_hf271/socket_comm/devel/share/co
 677bf6d0249e90631926684cd94f4b92 /home/kyung/21_hf271/socket_comm/devel/share/common-lisp/ros/rosbridge_msgs/msg/ConnectedClients.lisp
 33dc664f6b5c466080d487c929499b06 /home/kyung/21_hf271/socket_comm/devel/share/gennodejs/ros/file_server/srv/GetBinaryFile.js
 96f5c11ce1419a53d753108aa35b6d30 /home/kyung/21_hf271/socket_comm/devel/share/gennodejs/ros/file_server/srv/SaveBinaryFile.js
+e9fd9f07f6f3aeb79dcd3723a0c61625 /home/kyung/21_hf271/socket_comm/devel/share/gennodejs/ros/json_publisher/msg/KeypointArray.js
 db63c6d615e8c6da382176e695c56a0d /home/kyung/21_hf271/socket_comm/devel/share/gennodejs/ros/msg_creator/msg/KeypointArray.js
 c3dfd1f503fff32481b6eb30eb580f8e /home/kyung/21_hf271/socket_comm/devel/share/gennodejs/ros/rosapi/msg/TypeDef.js
 8eec90fd3371e7a376806e264db2b9a0 /home/kyung/21_hf271/socket_comm/devel/share/gennodejs/ros/rosapi/srv/DeleteParam.js
@@ -209,6 +213,8 @@ c4a89ca86ba764dd67f03e9c06a234ca /home/kyung/21_hf271/socket_comm/devel/share/ge
 56f3df6c2c39d8805c619f6e3517e966 /home/kyung/21_hf271/socket_comm/devel/share/roseus/ros/file_server/manifest.l
 cb4ccff09ea2b63597787c356995ba39 /home/kyung/21_hf271/socket_comm/devel/share/roseus/ros/file_server/srv/GetBinaryFile.l
 2ec2eb5a5556609fa45f074e08082cad /home/kyung/21_hf271/socket_comm/devel/share/roseus/ros/file_server/srv/SaveBinaryFile.l
+c39bb6fa6b850730414d491413f58d83 /home/kyung/21_hf271/socket_comm/devel/share/roseus/ros/json_publisher/manifest.l
+6a401f3329104d03a624f4d96067cc7b /home/kyung/21_hf271/socket_comm/devel/share/roseus/ros/json_publisher/msg/KeypointArray.l
 20eb8f7e2536efed1d6bc9113acf19d2 /home/kyung/21_hf271/socket_comm/devel/share/roseus/ros/msg_creator/manifest.l
 d818d280a1dbc31132d0a11c03cd07b4 /home/kyung/21_hf271/socket_comm/devel/share/roseus/ros/msg_creator/msg/KeypointArray.l
 b89650386c5b2dd71c7ac57c13389b4b /home/kyung/21_hf271/socket_comm/devel/share/roseus/ros/rosapi/manifest.l
@@ -318,7 +324,7 @@ ac0768619c4e0f872cefdc6c6726eb9d rosbridge_suite/rosbridge_library/CMakeFiles/_r
 1b7a02896250353678674c18d66fa144 rosbridge_suite/rosbridge_library/CMakeFiles/_rosbridge_library_generate_messages_check_deps_TestHeaderTwo
 9490f91bde24becb5d5e3a4dbd1804db rosbridge_suite/rosbridge_library/CMakeFiles/_rosbridge_library_generate_messages_check_deps_TestMultipleRequestFields
 4ea076b992c68473070f52d2efbaf959 rosbridge_suite/rosbridge_library/CMakeFiles/_rosbridge_library_generate_messages_check_deps_TestMultipleResponseFields
-6ef72d6acfa77c417d9827d39a0ac11e rosbridge_suite/rosbridge_library/CMakeFiles/_rosbridge_library_generate_messages_check_deps_TestNestedService
+9ec63b02da8c3aaa6ffd5529e7fb9090 rosbridge_suite/rosbridge_library/CMakeFiles/_rosbridge_library_generate_messages_check_deps_TestNestedService
 dd41d65be002e3414ff6b7790d4b7014 rosbridge_suite/rosbridge_library/CMakeFiles/_rosbridge_library_generate_messages_check_deps_TestRequestAndResponse
 a65cab9a3ea837c3e0343a86d5b93cb5 rosbridge_suite/rosbridge_library/CMakeFiles/_rosbridge_library_generate_messages_check_deps_TestRequestOnly
 e8d18c6c546bae7c9e8806c576cff41b rosbridge_suite/rosbridge_library/CMakeFiles/_rosbridge_library_generate_messages_check_deps_TestResponseOnly

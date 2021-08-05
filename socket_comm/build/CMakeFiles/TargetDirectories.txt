@@ -121,6 +121,14 @@
 /home/kyung/21_hf271/socket_comm/build/msg_creator/CMakeFiles/test.dir
 /home/kyung/21_hf271/socket_comm/build/msg_creator/CMakeFiles/msg_creator_generate_messages.dir
 /home/kyung/21_hf271/socket_comm/build/msg_creator/CMakeFiles/edit_cache.dir
+/home/kyung/21_hf271/socket_comm/build/json_publisher/CMakeFiles/install/strip.dir
+/home/kyung/21_hf271/socket_comm/build/json_publisher/CMakeFiles/install/local.dir
+/home/kyung/21_hf271/socket_comm/build/json_publisher/CMakeFiles/install.dir
+/home/kyung/21_hf271/socket_comm/build/json_publisher/CMakeFiles/list_install_components.dir
+/home/kyung/21_hf271/socket_comm/build/json_publisher/CMakeFiles/rebuild_cache.dir
+/home/kyung/21_hf271/socket_comm/build/json_publisher/CMakeFiles/edit_cache.dir
+/home/kyung/21_hf271/socket_comm/build/json_publisher/CMakeFiles/test.dir
+/home/kyung/21_hf271/socket_comm/build/json_publisher/CMakeFiles/tx2_publisher.dir
 /home/kyung/21_hf271/socket_comm/build/rosbridge_suite/rosbridge_msgs/CMakeFiles/install.dir
 /home/kyung/21_hf271/socket_comm/build/rosbridge_suite/rosbridge_msgs/CMakeFiles/rebuild_cache.dir
 /home/kyung/21_hf271/socket_comm/build/rosbridge_suite/rosbridge_msgs/CMakeFiles/edit_cache.dir

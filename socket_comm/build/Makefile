@@ -1130,6 +1130,19 @@ msg_creator_generate_messages/fast:
 .PHONY : msg_creator_generate_messages/fast
 
 #=============================================================================
+# Target rules for targets named tx2_publisher
+
+# Build rule for target.
+tx2_publisher: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 tx2_publisher
+.PHONY : tx2_publisher
+
+# fast build rule for target.
+tx2_publisher/fast:
+	$(MAKE) -f json_publisher/CMakeFiles/tx2_publisher.dir/build.make json_publisher/CMakeFiles/tx2_publisher.dir/build
+.PHONY : tx2_publisher/fast
+
+#=============================================================================
 # Target rules for targets named rosbridge_msgs_generate_messages
 
 # Build rule for target.
@@ -2295,6 +2308,7 @@ help:
 	@echo "... rosgraph_msgs_generate_messages_cpp"
 	@echo "... msg_creator_generate_messages_eus"
 	@echo "... msg_creator_generate_messages"
+	@echo "... tx2_publisher"
 	@echo "... rosbridge_msgs_generate_messages"
 	@echo "... rosbridge_msgs_genpy"
 	@echo "... _rosbridge_msgs_generate_messages_check_deps_ConnectedClient"

@@ -467,6 +467,12 @@ gtest_hide_internal_symbols:BOOL=OFF
 //Dependencies for the target
 gtest_main_LIB_DEPENDS:STATIC=general;gtest;
 
+//Value Computed by CMake
+json_publisher_BINARY_DIR:STATIC=/home/kyung/21_hf271/socket_comm/build/json_publisher
+
+//Value Computed by CMake
+json_publisher_SOURCE_DIR:STATIC=/home/kyung/21_hf271/socket_comm/src/json_publisher
+
 //Path to a library.
 lib:FILEPATH=/opt/ros/noetic/lib/libxmlrpcpp.so
 
@@ -478,6 +484,9 @@ message_runtime_DIR:PATH=/opt/ros/noetic/share/message_runtime/cmake
 
 //Value Computed by CMake
 msg_creator_BINARY_DIR:STATIC=/home/kyung/21_hf271/socket_comm/build/msg_creator
+
+//The directory containing a CMake configuration file for msg_creator.
+msg_creator_DIR:PATH=/home/kyung/21_hf271/socket_comm/devel/share/msg_creator/cmake
 
 //Value Computed by CMake
 msg_creator_SOURCE_DIR:STATIC=/home/kyung/21_hf271/socket_comm/src/msg_creator
@@ -708,7 +717,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=13
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=14
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
