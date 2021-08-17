@@ -89,6 +89,17 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
+
 # Special rule for the target install
 install: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
@@ -123,17 +134,6 @@ test:
 test/fast: test
 
 .PHONY : test/fast
-
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -243,6 +243,21 @@ roscpp_generate_messages_nodejs/fast:
 .PHONY : roscpp_generate_messages_nodejs/fast
 
 # Convenience name for target.
+msg_creator/CMakeFiles/std_msgs_generate_messages_eus.dir/rule:
+	cd /home/kyung/21_hf271/socket_comm/build && $(MAKE) -f CMakeFiles/Makefile2 msg_creator/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
+.PHONY : msg_creator/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+std_msgs_generate_messages_eus: msg_creator/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
+
+.PHONY : std_msgs_generate_messages_eus
+
+# fast build rule for target.
+std_msgs_generate_messages_eus/fast:
+	cd /home/kyung/21_hf271/socket_comm/build && $(MAKE) -f msg_creator/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make msg_creator/CMakeFiles/std_msgs_generate_messages_eus.dir/build
+.PHONY : std_msgs_generate_messages_eus/fast
+
+# Convenience name for target.
 msg_creator/CMakeFiles/roscpp_generate_messages_py.dir/rule:
 	cd /home/kyung/21_hf271/socket_comm/build && $(MAKE) -f CMakeFiles/Makefile2 msg_creator/CMakeFiles/roscpp_generate_messages_py.dir/rule
 .PHONY : msg_creator/CMakeFiles/roscpp_generate_messages_py.dir/rule
@@ -348,34 +363,34 @@ std_msgs_generate_messages_py/fast:
 .PHONY : std_msgs_generate_messages_py/fast
 
 # Convenience name for target.
-msg_creator/CMakeFiles/std_msgs_generate_messages_eus.dir/rule:
-	cd /home/kyung/21_hf271/socket_comm/build && $(MAKE) -f CMakeFiles/Makefile2 msg_creator/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
-.PHONY : msg_creator/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
+msg_creator/CMakeFiles/_msg_creator_generate_messages_check_deps_Keypoints.dir/rule:
+	cd /home/kyung/21_hf271/socket_comm/build && $(MAKE) -f CMakeFiles/Makefile2 msg_creator/CMakeFiles/_msg_creator_generate_messages_check_deps_Keypoints.dir/rule
+.PHONY : msg_creator/CMakeFiles/_msg_creator_generate_messages_check_deps_Keypoints.dir/rule
 
 # Convenience name for target.
-std_msgs_generate_messages_eus: msg_creator/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
+_msg_creator_generate_messages_check_deps_Keypoints: msg_creator/CMakeFiles/_msg_creator_generate_messages_check_deps_Keypoints.dir/rule
 
-.PHONY : std_msgs_generate_messages_eus
+.PHONY : _msg_creator_generate_messages_check_deps_Keypoints
 
 # fast build rule for target.
-std_msgs_generate_messages_eus/fast:
-	cd /home/kyung/21_hf271/socket_comm/build && $(MAKE) -f msg_creator/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make msg_creator/CMakeFiles/std_msgs_generate_messages_eus.dir/build
-.PHONY : std_msgs_generate_messages_eus/fast
+_msg_creator_generate_messages_check_deps_Keypoints/fast:
+	cd /home/kyung/21_hf271/socket_comm/build && $(MAKE) -f msg_creator/CMakeFiles/_msg_creator_generate_messages_check_deps_Keypoints.dir/build.make msg_creator/CMakeFiles/_msg_creator_generate_messages_check_deps_Keypoints.dir/build
+.PHONY : _msg_creator_generate_messages_check_deps_Keypoints/fast
 
 # Convenience name for target.
-msg_creator/CMakeFiles/_msg_creator_generate_messages_check_deps_KeypointArray.dir/rule:
-	cd /home/kyung/21_hf271/socket_comm/build && $(MAKE) -f CMakeFiles/Makefile2 msg_creator/CMakeFiles/_msg_creator_generate_messages_check_deps_KeypointArray.dir/rule
-.PHONY : msg_creator/CMakeFiles/_msg_creator_generate_messages_check_deps_KeypointArray.dir/rule
+msg_creator/CMakeFiles/msg_creator_generate_messages.dir/rule:
+	cd /home/kyung/21_hf271/socket_comm/build && $(MAKE) -f CMakeFiles/Makefile2 msg_creator/CMakeFiles/msg_creator_generate_messages.dir/rule
+.PHONY : msg_creator/CMakeFiles/msg_creator_generate_messages.dir/rule
 
 # Convenience name for target.
-_msg_creator_generate_messages_check_deps_KeypointArray: msg_creator/CMakeFiles/_msg_creator_generate_messages_check_deps_KeypointArray.dir/rule
+msg_creator_generate_messages: msg_creator/CMakeFiles/msg_creator_generate_messages.dir/rule
 
-.PHONY : _msg_creator_generate_messages_check_deps_KeypointArray
+.PHONY : msg_creator_generate_messages
 
 # fast build rule for target.
-_msg_creator_generate_messages_check_deps_KeypointArray/fast:
-	cd /home/kyung/21_hf271/socket_comm/build && $(MAKE) -f msg_creator/CMakeFiles/_msg_creator_generate_messages_check_deps_KeypointArray.dir/build.make msg_creator/CMakeFiles/_msg_creator_generate_messages_check_deps_KeypointArray.dir/build
-.PHONY : _msg_creator_generate_messages_check_deps_KeypointArray/fast
+msg_creator_generate_messages/fast:
+	cd /home/kyung/21_hf271/socket_comm/build && $(MAKE) -f msg_creator/CMakeFiles/msg_creator_generate_messages.dir/build.make msg_creator/CMakeFiles/msg_creator_generate_messages.dir/build
+.PHONY : msg_creator_generate_messages/fast
 
 # Convenience name for target.
 msg_creator/CMakeFiles/msg_creator_generate_messages_lisp.dir/rule:
@@ -557,21 +572,6 @@ msg_creator_generate_messages_eus/fast:
 	cd /home/kyung/21_hf271/socket_comm/build && $(MAKE) -f msg_creator/CMakeFiles/msg_creator_generate_messages_eus.dir/build.make msg_creator/CMakeFiles/msg_creator_generate_messages_eus.dir/build
 .PHONY : msg_creator_generate_messages_eus/fast
 
-# Convenience name for target.
-msg_creator/CMakeFiles/msg_creator_generate_messages.dir/rule:
-	cd /home/kyung/21_hf271/socket_comm/build && $(MAKE) -f CMakeFiles/Makefile2 msg_creator/CMakeFiles/msg_creator_generate_messages.dir/rule
-.PHONY : msg_creator/CMakeFiles/msg_creator_generate_messages.dir/rule
-
-# Convenience name for target.
-msg_creator_generate_messages: msg_creator/CMakeFiles/msg_creator_generate_messages.dir/rule
-
-.PHONY : msg_creator_generate_messages
-
-# fast build rule for target.
-msg_creator_generate_messages/fast:
-	cd /home/kyung/21_hf271/socket_comm/build && $(MAKE) -f msg_creator/CMakeFiles/msg_creator_generate_messages.dir/build.make msg_creator/CMakeFiles/msg_creator_generate_messages.dir/build
-.PHONY : msg_creator_generate_messages/fast
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -585,6 +585,7 @@ help:
 	@echo "... rosgraph_msgs_generate_messages_eus"
 	@echo "... std_msgs_generate_messages_cpp"
 	@echo "... roscpp_generate_messages_nodejs"
+	@echo "... std_msgs_generate_messages_eus"
 	@echo "... roscpp_generate_messages_py"
 	@echo "... std_msgs_generate_messages_lisp"
 	@echo "... rosgraph_msgs_generate_messages_nodejs"
@@ -593,8 +594,9 @@ help:
 	@echo "... roscpp_generate_messages_cpp"
 	@echo "... std_msgs_generate_messages_nodejs"
 	@echo "... std_msgs_generate_messages_py"
-	@echo "... std_msgs_generate_messages_eus"
-	@echo "... _msg_creator_generate_messages_check_deps_KeypointArray"
+	@echo "... _msg_creator_generate_messages_check_deps_Keypoints"
+	@echo "... msg_creator_generate_messages"
+	@echo "... edit_cache"
 	@echo "... install"
 	@echo "... msg_creator_generate_messages_lisp"
 	@echo "... msg_creator_gencpp"
@@ -610,8 +612,6 @@ help:
 	@echo "... rosgraph_msgs_generate_messages_cpp"
 	@echo "... msg_creator_generate_messages_eus"
 	@echo "... test"
-	@echo "... msg_creator_generate_messages"
-	@echo "... edit_cache"
 .PHONY : help
 
 

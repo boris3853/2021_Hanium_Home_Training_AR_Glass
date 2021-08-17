@@ -211,7 +211,7 @@ foreach(depend ${depends})
   _unpack_libraries_with_build_configuration(image_transport_LIBRARIES ${image_transport_LIBRARIES})
 
   _list_append_unique(image_transport_LIBRARY_DIRS ${${image_transport_dep}_LIBRARY_DIRS})
-  list(APPEND image_transport_EXPORTED_TARGETS ${${image_transport_dep}_EXPORTED_TARGETS})
+  _list_append_deduplicate(image_transport_EXPORTED_TARGETS ${${image_transport_dep}_EXPORTED_TARGETS})
 endforeach()
 
 set(pkg_cfg_extras "")

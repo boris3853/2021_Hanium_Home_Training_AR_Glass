@@ -139,7 +139,7 @@ cv_bridge__utest_EXTERNAL_OBJECTS =
 /home/kyung/21_hf271/image_transport/devel/lib/cv_bridge/cv_bridge-utest: cv_bridge/test/CMakeFiles/cv_bridge-utest.dir/utest2.cpp.o
 /home/kyung/21_hf271/image_transport/devel/lib/cv_bridge/cv_bridge-utest: cv_bridge/test/CMakeFiles/cv_bridge-utest.dir/test_rgb_colors.cpp.o
 /home/kyung/21_hf271/image_transport/devel/lib/cv_bridge/cv_bridge-utest: cv_bridge/test/CMakeFiles/cv_bridge-utest.dir/build.make
-/home/kyung/21_hf271/image_transport/devel/lib/cv_bridge/cv_bridge-utest: lib/libgtest.so
+/home/kyung/21_hf271/image_transport/devel/lib/cv_bridge/cv_bridge-utest: gtest/lib/libgtest.so
 /home/kyung/21_hf271/image_transport/devel/lib/cv_bridge/cv_bridge-utest: /home/kyung/21_hf271/image_transport/devel/lib/libcv_bridge.so
 /home/kyung/21_hf271/image_transport/devel/lib/cv_bridge/cv_bridge-utest: /usr/lib/x86_64-linux-gnu/libopencv_stitching.so.4.2.0
 /home/kyung/21_hf271/image_transport/devel/lib/cv_bridge/cv_bridge-utest: /usr/lib/x86_64-linux-gnu/libopencv_aruco.so.4.2.0

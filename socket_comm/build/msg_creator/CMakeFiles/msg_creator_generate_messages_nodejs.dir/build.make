@@ -53,16 +53,16 @@ CMAKE_BINARY_DIR = /home/kyung/21_hf271/socket_comm/build
 # Include the progress variables for this target.
 include msg_creator/CMakeFiles/msg_creator_generate_messages_nodejs.dir/progress.make
 
-msg_creator/CMakeFiles/msg_creator_generate_messages_nodejs: /home/kyung/21_hf271/socket_comm/devel/share/gennodejs/ros/msg_creator/msg/KeypointArray.js
+msg_creator/CMakeFiles/msg_creator_generate_messages_nodejs: /home/kyung/21_hf271/socket_comm/devel/share/gennodejs/ros/msg_creator/msg/Keypoints.js
 
 
-/home/kyung/21_hf271/socket_comm/devel/share/gennodejs/ros/msg_creator/msg/KeypointArray.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
-/home/kyung/21_hf271/socket_comm/devel/share/gennodejs/ros/msg_creator/msg/KeypointArray.js: /home/kyung/21_hf271/socket_comm/src/msg_creator/msg/KeypointArray.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/kyung/21_hf271/socket_comm/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Javascript code from msg_creator/KeypointArray.msg"
-	cd /home/kyung/21_hf271/socket_comm/build/msg_creator && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/kyung/21_hf271/socket_comm/src/msg_creator/msg/KeypointArray.msg -Imsg_creator:/home/kyung/21_hf271/socket_comm/src/msg_creator/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p msg_creator -o /home/kyung/21_hf271/socket_comm/devel/share/gennodejs/ros/msg_creator/msg
+/home/kyung/21_hf271/socket_comm/devel/share/gennodejs/ros/msg_creator/msg/Keypoints.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
+/home/kyung/21_hf271/socket_comm/devel/share/gennodejs/ros/msg_creator/msg/Keypoints.js: /home/kyung/21_hf271/socket_comm/src/msg_creator/msg/Keypoints.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/kyung/21_hf271/socket_comm/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Javascript code from msg_creator/Keypoints.msg"
+	cd /home/kyung/21_hf271/socket_comm/build/msg_creator && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/kyung/21_hf271/socket_comm/src/msg_creator/msg/Keypoints.msg -Imsg_creator:/home/kyung/21_hf271/socket_comm/src/msg_creator/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p msg_creator -o /home/kyung/21_hf271/socket_comm/devel/share/gennodejs/ros/msg_creator/msg
 
 msg_creator_generate_messages_nodejs: msg_creator/CMakeFiles/msg_creator_generate_messages_nodejs
-msg_creator_generate_messages_nodejs: /home/kyung/21_hf271/socket_comm/devel/share/gennodejs/ros/msg_creator/msg/KeypointArray.js
+msg_creator_generate_messages_nodejs: /home/kyung/21_hf271/socket_comm/devel/share/gennodejs/ros/msg_creator/msg/Keypoints.js
 msg_creator_generate_messages_nodejs: msg_creator/CMakeFiles/msg_creator_generate_messages_nodejs.dir/build.make
 
 .PHONY : msg_creator_generate_messages_nodejs

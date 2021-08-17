@@ -1,6 +1,6 @@
 # generated from genmsg/cmake/pkg-genmsg.context.in
 
-messages_str = "/home/kyung/21_hf271/socket_comm/src/msg_creator/msg/KeypointArray.msg"
+messages_str = "/home/kyung/21_hf271/socket_comm/src/msg_creator/msg/Keypoints.msg"
 services_str = ""
 pkg_name = "msg_creator"
 dependencies_str = "std_msgs"

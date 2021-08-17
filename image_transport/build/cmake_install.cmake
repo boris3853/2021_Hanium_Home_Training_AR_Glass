@@ -131,8 +131,12 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/kyung/21_hf271/image_transport/build/gtest/cmake_install.cmake")
+  include("/home/kyung/21_hf271/image_transport/build/image_transport_plugins/image_transport_plugins/cmake_install.cmake")
   include("/home/kyung/21_hf271/image_transport/build/cv_bridge/cmake_install.cmake")
   include("/home/kyung/21_hf271/image_transport/build/image_transport/cmake_install.cmake")
+  include("/home/kyung/21_hf271/image_transport/build/image_transport_plugins/compressed_depth_image_transport/cmake_install.cmake")
+  include("/home/kyung/21_hf271/image_transport/build/image_transport_plugins/compressed_image_transport/cmake_install.cmake")
+  include("/home/kyung/21_hf271/image_transport/build/image_transport_plugins/theora_image_transport/cmake_install.cmake")
   include("/home/kyung/21_hf271/image_transport/build/webcam/cmake_install.cmake")
 
 endif()

@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "/home/kyung/21_hf271/socket_comm/devel/share/common-lisp/ros/msg_creator/msg/KeypointArray.lisp"
+  "/home/kyung/21_hf271/socket_comm/devel/share/common-lisp/ros/msg_creator/msg/Keypoints.lisp"
   "CMakeFiles/msg_creator_generate_messages_lisp"
 )
 

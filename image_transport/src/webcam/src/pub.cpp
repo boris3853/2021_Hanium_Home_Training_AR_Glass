@@ -17,7 +17,7 @@ int main(int argc, char **argv){
 	cv::Mat frame;
 	sensor_msgs::ImagePtr msg;
 
-	ros::Rate loop_rate(5);
+	ros::Rate loop_rate(10);
 	while(nh.ok()){
 		cap >> frame;
 		imshow("test", frame); // TEST

@@ -2,7 +2,7 @@
 <package format="2">
 	<name>msg_creator</name>
 	<version>0.1.0</version>
-	<description>msg_creator for KeypointArray</description>
+	<description>msg_creator for Keypoints</description>
 	<maintainer email="kkj3853@gmail.com">Kyung</maintainer>
 	<license>TODO</license>
 

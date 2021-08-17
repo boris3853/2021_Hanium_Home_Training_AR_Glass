@@ -211,7 +211,7 @@ foreach(depend ${depends})
   _unpack_libraries_with_build_configuration(webcam_LIBRARIES ${webcam_LIBRARIES})
 
   _list_append_unique(webcam_LIBRARY_DIRS ${${webcam_dep}_LIBRARY_DIRS})
-  list(APPEND webcam_EXPORTED_TARGETS ${${webcam_dep}_EXPORTED_TARGETS})
+  _list_append_deduplicate(webcam_EXPORTED_TARGETS ${${webcam_dep}_EXPORTED_TARGETS})
 endforeach()
 
 set(pkg_cfg_extras "")

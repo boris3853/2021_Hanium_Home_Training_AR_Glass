@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "/home/kyung/21_hf271/socket_comm/devel/share/gennodejs/ros/msg_creator/msg/KeypointArray.js"
+  "/home/kyung/21_hf271/socket_comm/devel/share/gennodejs/ros/msg_creator/msg/Keypoints.js"
   "CMakeFiles/msg_creator_generate_messages_nodejs"
 )
 
