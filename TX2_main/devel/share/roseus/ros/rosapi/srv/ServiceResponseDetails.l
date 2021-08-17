@@ -62,7 +62,7 @@
 (defmethod rosapi::ServiceResponseDetailsResponse
   (:init
    (&key
-    ((:typedefs __typedefs) ())
+    ((:typedefs __typedefs) (let (r) (dotimes (i 0) (push (instance rosapi::TypeDef :init) r)) r))
     )
    (send-super :init)
    (setq _typedefs __typedefs)

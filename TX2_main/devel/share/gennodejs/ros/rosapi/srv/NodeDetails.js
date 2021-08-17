@@ -51,7 +51,7 @@ class NodeDetailsRequest {
 
   static getMessageSize(object) {
     let length = 0;
-    length += _getByteLength(object.node);
+    length += object.node.length;
     return length + 4;
   }
 
@@ -147,13 +147,13 @@ class NodeDetailsResponse {
   static getMessageSize(object) {
     let length = 0;
     object.subscribing.forEach((val) => {
-      length += 4 + _getByteLength(val);
+      length += 4 + val.length;
     });
     object.publishing.forEach((val) => {
-      length += 4 + _getByteLength(val);
+      length += 4 + val.length;
     });
     object.services.forEach((val) => {
-      length += 4 + _getByteLength(val);
+      length += 4 + val.length;
     });
     return length + 12;
   }

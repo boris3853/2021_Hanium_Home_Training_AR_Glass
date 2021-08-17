@@ -52,7 +52,7 @@ class ServiceResponseDetailsRequest {
 
   static getMessageSize(object) {
     let length = 0;
-    length += _getByteLength(object.type);
+    length += object.type.length;
     return length + 4;
   }
 

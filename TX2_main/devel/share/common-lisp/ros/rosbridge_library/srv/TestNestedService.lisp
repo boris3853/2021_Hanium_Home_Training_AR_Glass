@@ -49,10 +49,10 @@
   "063d2b71e58b5225a457d4ee09dab6f6")
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql '<TestNestedService-request>)))
   "Returns full string definition for message of type '<TestNestedService-request>"
-  (cl:format cl:nil "#request definition~%geometry_msgs/Pose pose~%~%================================================================================~%MSG: geometry_msgs/Pose~%# A representation of pose in free space, composed of position and orientation. ~%Point position~%Quaternion orientation~%~%================================================================================~%MSG: geometry_msgs/Point~%# This contains the position of a point in free space~%float64 x~%float64 y~%float64 z~%~%================================================================================~%MSG: geometry_msgs/Quaternion~%# This represents an orientation in free space in quaternion form.~%~%float64 x~%float64 y~%float64 z~%float64 w~%~%~%"))
+  (cl:format cl:nil "~%geometry_msgs/Pose pose~%~%================================================================================~%MSG: geometry_msgs/Pose~%# A representation of pose in free space, composed of position and orientation. ~%Point position~%Quaternion orientation~%~%================================================================================~%MSG: geometry_msgs/Point~%# This contains the position of a point in free space~%float64 x~%float64 y~%float64 z~%~%================================================================================~%MSG: geometry_msgs/Quaternion~%# This represents an orientation in free space in quaternion form.~%~%float64 x~%float64 y~%float64 z~%float64 w~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql 'TestNestedService-request)))
   "Returns full string definition for message of type 'TestNestedService-request"
-  (cl:format cl:nil "#request definition~%geometry_msgs/Pose pose~%~%================================================================================~%MSG: geometry_msgs/Pose~%# A representation of pose in free space, composed of position and orientation. ~%Point position~%Quaternion orientation~%~%================================================================================~%MSG: geometry_msgs/Point~%# This contains the position of a point in free space~%float64 x~%float64 y~%float64 z~%~%================================================================================~%MSG: geometry_msgs/Quaternion~%# This represents an orientation in free space in quaternion form.~%~%float64 x~%float64 y~%float64 z~%float64 w~%~%~%"))
+  (cl:format cl:nil "~%geometry_msgs/Pose pose~%~%================================================================================~%MSG: geometry_msgs/Pose~%# A representation of pose in free space, composed of position and orientation. ~%Point position~%Quaternion orientation~%~%================================================================================~%MSG: geometry_msgs/Point~%# This contains the position of a point in free space~%float64 x~%float64 y~%float64 z~%~%================================================================================~%MSG: geometry_msgs/Quaternion~%# This represents an orientation in free space in quaternion form.~%~%float64 x~%float64 y~%float64 z~%float64 w~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:serialization-length ((msg <TestNestedService-request>))
   (cl:+ 0
      (roslisp-msg-protocol:serialization-length (cl:slot-value msg 'pose))
@@ -107,10 +107,10 @@
   "063d2b71e58b5225a457d4ee09dab6f6")
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql '<TestNestedService-response>)))
   "Returns full string definition for message of type '<TestNestedService-response>"
-  (cl:format cl:nil "#response definition~%std_msgs/Float64 data~%~%~%================================================================================~%MSG: std_msgs/Float64~%float64 data~%~%"))
+  (cl:format cl:nil "~%std_msgs/Float64 data~%~%~%================================================================================~%MSG: std_msgs/Float64~%float64 data~%~%"))
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql 'TestNestedService-response)))
   "Returns full string definition for message of type 'TestNestedService-response"
-  (cl:format cl:nil "#response definition~%std_msgs/Float64 data~%~%~%================================================================================~%MSG: std_msgs/Float64~%float64 data~%~%"))
+  (cl:format cl:nil "~%std_msgs/Float64 data~%~%~%================================================================================~%MSG: std_msgs/Float64~%float64 data~%~%"))
 (cl:defmethod roslisp-msg-protocol:serialization-length ((msg <TestNestedService-response>))
   (cl:+ 0
      (roslisp-msg-protocol:serialization-length (cl:slot-value msg 'data))

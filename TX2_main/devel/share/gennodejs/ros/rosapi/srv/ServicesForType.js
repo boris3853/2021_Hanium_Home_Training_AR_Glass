@@ -51,7 +51,7 @@ class ServicesForTypeRequest {
 
   static getMessageSize(object) {
     let length = 0;
-    length += _getByteLength(object.type);
+    length += object.type.length;
     return length + 4;
   }
 
@@ -125,7 +125,7 @@ class ServicesForTypeResponse {
   static getMessageSize(object) {
     let length = 0;
     object.services.forEach((val) => {
-      length += 4 + _getByteLength(val);
+      length += 4 + val.length;
     });
     return length + 4;
   }

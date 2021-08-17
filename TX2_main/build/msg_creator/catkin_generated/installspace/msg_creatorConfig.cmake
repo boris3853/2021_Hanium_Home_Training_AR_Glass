@@ -67,14 +67,14 @@ set(msg_creator_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(msg_creator_SOURCE_PREFIX /home/kyung/21_hf271/TX2_main/src/msg_creator)
-  set(msg_creator_DEVEL_PREFIX /home/kyung/21_hf271/TX2_main/devel)
+  set(msg_creator_SOURCE_PREFIX /home/nvidia/21_hf271/TX2_main/src/msg_creator)
+  set(msg_creator_DEVEL_PREFIX /home/nvidia/21_hf271/TX2_main/devel)
   set(msg_creator_INSTALL_PREFIX "")
   set(msg_creator_PREFIX ${msg_creator_DEVEL_PREFIX})
 else()
   set(msg_creator_SOURCE_PREFIX "")
   set(msg_creator_DEVEL_PREFIX "")
-  set(msg_creator_INSTALL_PREFIX /home/kyung/21_hf271/TX2_main/install)
+  set(msg_creator_INSTALL_PREFIX /home/nvidia/21_hf271/TX2_main/install)
   set(msg_creator_PREFIX ${msg_creator_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/kyung/21_hf271/TX2_main/install/lib;/opt/ros/noetic/lib)
+    foreach(path /home/nvidia/21_hf271/TX2_main/install/lib;/opt/ros/kinetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)
@@ -211,7 +211,7 @@ foreach(depend ${depends})
   _unpack_libraries_with_build_configuration(msg_creator_LIBRARIES ${msg_creator_LIBRARIES})
 
   _list_append_unique(msg_creator_LIBRARY_DIRS ${${msg_creator_dep}_LIBRARY_DIRS})
-  _list_append_deduplicate(msg_creator_EXPORTED_TARGETS ${${msg_creator_dep}_EXPORTED_TARGETS})
+  list(APPEND msg_creator_EXPORTED_TARGETS ${${msg_creator_dep}_EXPORTED_TARGETS})
 endforeach()
 
 set(pkg_cfg_extras "msg_creator-msg-extras.cmake")

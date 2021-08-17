@@ -68,7 +68,7 @@ class TestNestedServiceRequest {
   static messageDefinition() {
     // Returns full string definition for message
     return `
-    #request definition
+    
     geometry_msgs/Pose pose
     
     ================================================================================
@@ -162,7 +162,7 @@ class TestNestedServiceResponse {
   static messageDefinition() {
     // Returns full string definition for message
     return `
-    #response definition
+    
     std_msgs/Float64 data
     
     

@@ -127,13 +127,13 @@ class TopicsAndRawTypesResponse {
   static getMessageSize(object) {
     let length = 0;
     object.topics.forEach((val) => {
-      length += 4 + _getByteLength(val);
+      length += 4 + val.length;
     });
     object.types.forEach((val) => {
-      length += 4 + _getByteLength(val);
+      length += 4 + val.length;
     });
     object.typedefs_full_text.forEach((val) => {
-      length += 4 + _getByteLength(val);
+      length += 4 + val.length;
     });
     return length + 12;
   }

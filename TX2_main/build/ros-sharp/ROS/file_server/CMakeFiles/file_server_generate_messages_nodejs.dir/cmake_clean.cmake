@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "/home/kyung/21_hf271/TX2_main/devel/share/gennodejs/ros/file_server/srv/GetBinaryFile.js"
-  "/home/kyung/21_hf271/TX2_main/devel/share/gennodejs/ros/file_server/srv/SaveBinaryFile.js"
   "CMakeFiles/file_server_generate_messages_nodejs"
+  "/home/nvidia/21_hf271/TX2_main/devel/share/gennodejs/ros/file_server/srv/SaveBinaryFile.js"
+  "/home/nvidia/21_hf271/TX2_main/devel/share/gennodejs/ros/file_server/srv/GetBinaryFile.js"
 )
 
 # Per-language clean rules from dependency scanning.

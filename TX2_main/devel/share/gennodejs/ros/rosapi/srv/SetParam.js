@@ -62,8 +62,8 @@ class SetParamRequest {
 
   static getMessageSize(object) {
     let length = 0;
-    length += _getByteLength(object.name);
-    length += _getByteLength(object.value);
+    length += object.name.length;
+    length += object.value.length;
     return length + 8;
   }
 

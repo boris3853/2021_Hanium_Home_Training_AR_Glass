@@ -57,8 +57,8 @@ struct DataType< ::rosapi::DeleteParam > {
 };
 
 
-// service_traits::MD5Sum< ::rosapi::DeleteParamRequest> should match
-// service_traits::MD5Sum< ::rosapi::DeleteParam >
+// service_traits::MD5Sum< ::rosapi::DeleteParamRequest> should match 
+// service_traits::MD5Sum< ::rosapi::DeleteParam > 
 template<>
 struct MD5Sum< ::rosapi::DeleteParamRequest>
 {
@@ -72,8 +72,8 @@ struct MD5Sum< ::rosapi::DeleteParamRequest>
   }
 };
 
-// service_traits::DataType< ::rosapi::DeleteParamRequest> should match
-// service_traits::DataType< ::rosapi::DeleteParam >
+// service_traits::DataType< ::rosapi::DeleteParamRequest> should match 
+// service_traits::DataType< ::rosapi::DeleteParam > 
 template<>
 struct DataType< ::rosapi::DeleteParamRequest>
 {
@@ -87,8 +87,8 @@ struct DataType< ::rosapi::DeleteParamRequest>
   }
 };
 
-// service_traits::MD5Sum< ::rosapi::DeleteParamResponse> should match
-// service_traits::MD5Sum< ::rosapi::DeleteParam >
+// service_traits::MD5Sum< ::rosapi::DeleteParamResponse> should match 
+// service_traits::MD5Sum< ::rosapi::DeleteParam > 
 template<>
 struct MD5Sum< ::rosapi::DeleteParamResponse>
 {
@@ -102,8 +102,8 @@ struct MD5Sum< ::rosapi::DeleteParamResponse>
   }
 };
 
-// service_traits::DataType< ::rosapi::DeleteParamResponse> should match
-// service_traits::DataType< ::rosapi::DeleteParam >
+// service_traits::DataType< ::rosapi::DeleteParamResponse> should match 
+// service_traits::DataType< ::rosapi::DeleteParam > 
 template<>
 struct DataType< ::rosapi::DeleteParamResponse>
 {

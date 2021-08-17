@@ -114,22 +114,22 @@ class TypeDef {
 
   static getMessageSize(object) {
     let length = 0;
-    length += _getByteLength(object.type);
+    length += object.type.length;
     object.fieldnames.forEach((val) => {
-      length += 4 + _getByteLength(val);
+      length += 4 + val.length;
     });
     object.fieldtypes.forEach((val) => {
-      length += 4 + _getByteLength(val);
+      length += 4 + val.length;
     });
     length += 4 * object.fieldarraylen.length;
     object.examples.forEach((val) => {
-      length += 4 + _getByteLength(val);
+      length += 4 + val.length;
     });
     object.constnames.forEach((val) => {
-      length += 4 + _getByteLength(val);
+      length += 4 + val.length;
     });
     object.constvalues.forEach((val) => {
-      length += 4 + _getByteLength(val);
+      length += 4 + val.length;
     });
     return length + 28;
   }

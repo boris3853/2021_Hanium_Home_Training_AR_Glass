@@ -2,7 +2,7 @@
 
 message(STATUS "rosbridge_msgs: 2 messages, 0 services")
 
-set(MSG_I_FLAGS "-Irosbridge_msgs:/home/kyung/21_hf271/TX2_main/src/rosbridge_suite/rosbridge_msgs/msg;-Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg")
+set(MSG_I_FLAGS "-Irosbridge_msgs:/home/nvidia/21_hf271/TX2_main/src/rosbridge_suite/rosbridge_msgs/msg;-Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg")
 
 # Find all generators
 find_package(gencpp REQUIRED)
@@ -17,14 +17,14 @@ add_custom_target(rosbridge_msgs_generate_messages ALL)
 
 
 
-get_filename_component(_filename "/home/kyung/21_hf271/TX2_main/src/rosbridge_suite/rosbridge_msgs/msg/ConnectedClient.msg" NAME_WE)
+get_filename_component(_filename "/home/nvidia/21_hf271/TX2_main/src/rosbridge_suite/rosbridge_msgs/msg/ConnectedClients.msg" NAME_WE)
 add_custom_target(_rosbridge_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rosbridge_msgs" "/home/kyung/21_hf271/TX2_main/src/rosbridge_suite/rosbridge_msgs/msg/ConnectedClient.msg" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rosbridge_msgs" "/home/nvidia/21_hf271/TX2_main/src/rosbridge_suite/rosbridge_msgs/msg/ConnectedClients.msg" "rosbridge_msgs/ConnectedClient"
 )
 
-get_filename_component(_filename "/home/kyung/21_hf271/TX2_main/src/rosbridge_suite/rosbridge_msgs/msg/ConnectedClients.msg" NAME_WE)
+get_filename_component(_filename "/home/nvidia/21_hf271/TX2_main/src/rosbridge_suite/rosbridge_msgs/msg/ConnectedClient.msg" NAME_WE)
 add_custom_target(_rosbridge_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rosbridge_msgs" "/home/kyung/21_hf271/TX2_main/src/rosbridge_suite/rosbridge_msgs/msg/ConnectedClients.msg" "rosbridge_msgs/ConnectedClient"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rosbridge_msgs" "/home/nvidia/21_hf271/TX2_main/src/rosbridge_suite/rosbridge_msgs/msg/ConnectedClient.msg" ""
 )
 
 #
@@ -34,15 +34,15 @@ add_custom_target(_rosbridge_msgs_generate_messages_check_deps_${_filename}
 ### Section generating for lang: gencpp
 ### Generating Messages
 _generate_msg_cpp(rosbridge_msgs
-  "/home/kyung/21_hf271/TX2_main/src/rosbridge_suite/rosbridge_msgs/msg/ConnectedClient.msg"
+  "/home/nvidia/21_hf271/TX2_main/src/rosbridge_suite/rosbridge_msgs/msg/ConnectedClients.msg"
   "${MSG_I_FLAGS}"
-  ""
+  "/home/nvidia/21_hf271/TX2_main/src/rosbridge_suite/rosbridge_msgs/msg/ConnectedClient.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/rosbridge_msgs
 )
 _generate_msg_cpp(rosbridge_msgs
-  "/home/kyung/21_hf271/TX2_main/src/rosbridge_suite/rosbridge_msgs/msg/ConnectedClients.msg"
+  "/home/nvidia/21_hf271/TX2_main/src/rosbridge_suite/rosbridge_msgs/msg/ConnectedClient.msg"
   "${MSG_I_FLAGS}"
-  "/home/kyung/21_hf271/TX2_main/src/rosbridge_suite/rosbridge_msgs/msg/ConnectedClient.msg"
+  ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/rosbridge_msgs
 )
 
@@ -60,9 +60,9 @@ add_custom_target(rosbridge_msgs_generate_messages_cpp
 add_dependencies(rosbridge_msgs_generate_messages rosbridge_msgs_generate_messages_cpp)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/kyung/21_hf271/TX2_main/src/rosbridge_suite/rosbridge_msgs/msg/ConnectedClient.msg" NAME_WE)
+get_filename_component(_filename "/home/nvidia/21_hf271/TX2_main/src/rosbridge_suite/rosbridge_msgs/msg/ConnectedClients.msg" NAME_WE)
 add_dependencies(rosbridge_msgs_generate_messages_cpp _rosbridge_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/kyung/21_hf271/TX2_main/src/rosbridge_suite/rosbridge_msgs/msg/ConnectedClients.msg" NAME_WE)
+get_filename_component(_filename "/home/nvidia/21_hf271/TX2_main/src/rosbridge_suite/rosbridge_msgs/msg/ConnectedClient.msg" NAME_WE)
 add_dependencies(rosbridge_msgs_generate_messages_cpp _rosbridge_msgs_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -75,15 +75,15 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS rosbridge_msgs_generate_messages_cp
 ### Section generating for lang: geneus
 ### Generating Messages
 _generate_msg_eus(rosbridge_msgs
-  "/home/kyung/21_hf271/TX2_main/src/rosbridge_suite/rosbridge_msgs/msg/ConnectedClient.msg"
+  "/home/nvidia/21_hf271/TX2_main/src/rosbridge_suite/rosbridge_msgs/msg/ConnectedClients.msg"
   "${MSG_I_FLAGS}"
-  ""
+  "/home/nvidia/21_hf271/TX2_main/src/rosbridge_suite/rosbridge_msgs/msg/ConnectedClient.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/rosbridge_msgs
 )
 _generate_msg_eus(rosbridge_msgs
-  "/home/kyung/21_hf271/TX2_main/src/rosbridge_suite/rosbridge_msgs/msg/ConnectedClients.msg"
+  "/home/nvidia/21_hf271/TX2_main/src/rosbridge_suite/rosbridge_msgs/msg/ConnectedClient.msg"
   "${MSG_I_FLAGS}"
-  "/home/kyung/21_hf271/TX2_main/src/rosbridge_suite/rosbridge_msgs/msg/ConnectedClient.msg"
+  ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/rosbridge_msgs
 )
 
@@ -101,9 +101,9 @@ add_custom_target(rosbridge_msgs_generate_messages_eus
 add_dependencies(rosbridge_msgs_generate_messages rosbridge_msgs_generate_messages_eus)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/kyung/21_hf271/TX2_main/src/rosbridge_suite/rosbridge_msgs/msg/ConnectedClient.msg" NAME_WE)
+get_filename_component(_filename "/home/nvidia/21_hf271/TX2_main/src/rosbridge_suite/rosbridge_msgs/msg/ConnectedClients.msg" NAME_WE)
 add_dependencies(rosbridge_msgs_generate_messages_eus _rosbridge_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/kyung/21_hf271/TX2_main/src/rosbridge_suite/rosbridge_msgs/msg/ConnectedClients.msg" NAME_WE)
+get_filename_component(_filename "/home/nvidia/21_hf271/TX2_main/src/rosbridge_suite/rosbridge_msgs/msg/ConnectedClient.msg" NAME_WE)
 add_dependencies(rosbridge_msgs_generate_messages_eus _rosbridge_msgs_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -116,15 +116,15 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS rosbridge_msgs_generate_messages_eu
 ### Section generating for lang: genlisp
 ### Generating Messages
 _generate_msg_lisp(rosbridge_msgs
-  "/home/kyung/21_hf271/TX2_main/src/rosbridge_suite/rosbridge_msgs/msg/ConnectedClient.msg"
+  "/home/nvidia/21_hf271/TX2_main/src/rosbridge_suite/rosbridge_msgs/msg/ConnectedClients.msg"
   "${MSG_I_FLAGS}"
-  ""
+  "/home/nvidia/21_hf271/TX2_main/src/rosbridge_suite/rosbridge_msgs/msg/ConnectedClient.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/rosbridge_msgs
 )
 _generate_msg_lisp(rosbridge_msgs
-  "/home/kyung/21_hf271/TX2_main/src/rosbridge_suite/rosbridge_msgs/msg/ConnectedClients.msg"
+  "/home/nvidia/21_hf271/TX2_main/src/rosbridge_suite/rosbridge_msgs/msg/ConnectedClient.msg"
   "${MSG_I_FLAGS}"
-  "/home/kyung/21_hf271/TX2_main/src/rosbridge_suite/rosbridge_msgs/msg/ConnectedClient.msg"
+  ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/rosbridge_msgs
 )
 
@@ -142,9 +142,9 @@ add_custom_target(rosbridge_msgs_generate_messages_lisp
 add_dependencies(rosbridge_msgs_generate_messages rosbridge_msgs_generate_messages_lisp)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/kyung/21_hf271/TX2_main/src/rosbridge_suite/rosbridge_msgs/msg/ConnectedClient.msg" NAME_WE)
+get_filename_component(_filename "/home/nvidia/21_hf271/TX2_main/src/rosbridge_suite/rosbridge_msgs/msg/ConnectedClients.msg" NAME_WE)
 add_dependencies(rosbridge_msgs_generate_messages_lisp _rosbridge_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/kyung/21_hf271/TX2_main/src/rosbridge_suite/rosbridge_msgs/msg/ConnectedClients.msg" NAME_WE)
+get_filename_component(_filename "/home/nvidia/21_hf271/TX2_main/src/rosbridge_suite/rosbridge_msgs/msg/ConnectedClient.msg" NAME_WE)
 add_dependencies(rosbridge_msgs_generate_messages_lisp _rosbridge_msgs_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -157,15 +157,15 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS rosbridge_msgs_generate_messages_li
 ### Section generating for lang: gennodejs
 ### Generating Messages
 _generate_msg_nodejs(rosbridge_msgs
-  "/home/kyung/21_hf271/TX2_main/src/rosbridge_suite/rosbridge_msgs/msg/ConnectedClient.msg"
+  "/home/nvidia/21_hf271/TX2_main/src/rosbridge_suite/rosbridge_msgs/msg/ConnectedClients.msg"
   "${MSG_I_FLAGS}"
-  ""
+  "/home/nvidia/21_hf271/TX2_main/src/rosbridge_suite/rosbridge_msgs/msg/ConnectedClient.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/rosbridge_msgs
 )
 _generate_msg_nodejs(rosbridge_msgs
-  "/home/kyung/21_hf271/TX2_main/src/rosbridge_suite/rosbridge_msgs/msg/ConnectedClients.msg"
+  "/home/nvidia/21_hf271/TX2_main/src/rosbridge_suite/rosbridge_msgs/msg/ConnectedClient.msg"
   "${MSG_I_FLAGS}"
-  "/home/kyung/21_hf271/TX2_main/src/rosbridge_suite/rosbridge_msgs/msg/ConnectedClient.msg"
+  ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/rosbridge_msgs
 )
 
@@ -183,9 +183,9 @@ add_custom_target(rosbridge_msgs_generate_messages_nodejs
 add_dependencies(rosbridge_msgs_generate_messages rosbridge_msgs_generate_messages_nodejs)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/kyung/21_hf271/TX2_main/src/rosbridge_suite/rosbridge_msgs/msg/ConnectedClient.msg" NAME_WE)
+get_filename_component(_filename "/home/nvidia/21_hf271/TX2_main/src/rosbridge_suite/rosbridge_msgs/msg/ConnectedClients.msg" NAME_WE)
 add_dependencies(rosbridge_msgs_generate_messages_nodejs _rosbridge_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/kyung/21_hf271/TX2_main/src/rosbridge_suite/rosbridge_msgs/msg/ConnectedClients.msg" NAME_WE)
+get_filename_component(_filename "/home/nvidia/21_hf271/TX2_main/src/rosbridge_suite/rosbridge_msgs/msg/ConnectedClient.msg" NAME_WE)
 add_dependencies(rosbridge_msgs_generate_messages_nodejs _rosbridge_msgs_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -198,15 +198,15 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS rosbridge_msgs_generate_messages_no
 ### Section generating for lang: genpy
 ### Generating Messages
 _generate_msg_py(rosbridge_msgs
-  "/home/kyung/21_hf271/TX2_main/src/rosbridge_suite/rosbridge_msgs/msg/ConnectedClient.msg"
+  "/home/nvidia/21_hf271/TX2_main/src/rosbridge_suite/rosbridge_msgs/msg/ConnectedClients.msg"
   "${MSG_I_FLAGS}"
-  ""
+  "/home/nvidia/21_hf271/TX2_main/src/rosbridge_suite/rosbridge_msgs/msg/ConnectedClient.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/rosbridge_msgs
 )
 _generate_msg_py(rosbridge_msgs
-  "/home/kyung/21_hf271/TX2_main/src/rosbridge_suite/rosbridge_msgs/msg/ConnectedClients.msg"
+  "/home/nvidia/21_hf271/TX2_main/src/rosbridge_suite/rosbridge_msgs/msg/ConnectedClient.msg"
   "${MSG_I_FLAGS}"
-  "/home/kyung/21_hf271/TX2_main/src/rosbridge_suite/rosbridge_msgs/msg/ConnectedClient.msg"
+  ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/rosbridge_msgs
 )
 
@@ -224,9 +224,9 @@ add_custom_target(rosbridge_msgs_generate_messages_py
 add_dependencies(rosbridge_msgs_generate_messages rosbridge_msgs_generate_messages_py)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/kyung/21_hf271/TX2_main/src/rosbridge_suite/rosbridge_msgs/msg/ConnectedClient.msg" NAME_WE)
+get_filename_component(_filename "/home/nvidia/21_hf271/TX2_main/src/rosbridge_suite/rosbridge_msgs/msg/ConnectedClients.msg" NAME_WE)
 add_dependencies(rosbridge_msgs_generate_messages_py _rosbridge_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/kyung/21_hf271/TX2_main/src/rosbridge_suite/rosbridge_msgs/msg/ConnectedClients.msg" NAME_WE)
+get_filename_component(_filename "/home/nvidia/21_hf271/TX2_main/src/rosbridge_suite/rosbridge_msgs/msg/ConnectedClient.msg" NAME_WE)
 add_dependencies(rosbridge_msgs_generate_messages_py _rosbridge_msgs_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -283,7 +283,7 @@ if(TARGET std_msgs_generate_messages_nodejs)
 endif()
 
 if(genpy_INSTALL_DIR AND EXISTS ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/rosbridge_msgs)
-  install(CODE "execute_process(COMMAND \"/usr/bin/python3\" -m compileall \"${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/rosbridge_msgs\")")
+  install(CODE "execute_process(COMMAND \"/usr/bin/python2\" -m compileall \"${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/rosbridge_msgs\")")
   # install generated code
   install(
     DIRECTORY ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/rosbridge_msgs

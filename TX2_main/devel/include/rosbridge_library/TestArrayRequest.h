@@ -57,8 +57,8 @@ struct DataType< ::rosbridge_library::TestArrayRequest > {
 };
 
 
-// service_traits::MD5Sum< ::rosbridge_library::TestArrayRequestRequest> should match
-// service_traits::MD5Sum< ::rosbridge_library::TestArrayRequest >
+// service_traits::MD5Sum< ::rosbridge_library::TestArrayRequestRequest> should match 
+// service_traits::MD5Sum< ::rosbridge_library::TestArrayRequest > 
 template<>
 struct MD5Sum< ::rosbridge_library::TestArrayRequestRequest>
 {
@@ -72,8 +72,8 @@ struct MD5Sum< ::rosbridge_library::TestArrayRequestRequest>
   }
 };
 
-// service_traits::DataType< ::rosbridge_library::TestArrayRequestRequest> should match
-// service_traits::DataType< ::rosbridge_library::TestArrayRequest >
+// service_traits::DataType< ::rosbridge_library::TestArrayRequestRequest> should match 
+// service_traits::DataType< ::rosbridge_library::TestArrayRequest > 
 template<>
 struct DataType< ::rosbridge_library::TestArrayRequestRequest>
 {
@@ -87,8 +87,8 @@ struct DataType< ::rosbridge_library::TestArrayRequestRequest>
   }
 };
 
-// service_traits::MD5Sum< ::rosbridge_library::TestArrayRequestResponse> should match
-// service_traits::MD5Sum< ::rosbridge_library::TestArrayRequest >
+// service_traits::MD5Sum< ::rosbridge_library::TestArrayRequestResponse> should match 
+// service_traits::MD5Sum< ::rosbridge_library::TestArrayRequest > 
 template<>
 struct MD5Sum< ::rosbridge_library::TestArrayRequestResponse>
 {
@@ -102,8 +102,8 @@ struct MD5Sum< ::rosbridge_library::TestArrayRequestResponse>
   }
 };
 
-// service_traits::DataType< ::rosbridge_library::TestArrayRequestResponse> should match
-// service_traits::DataType< ::rosbridge_library::TestArrayRequest >
+// service_traits::DataType< ::rosbridge_library::TestArrayRequestResponse> should match 
+// service_traits::DataType< ::rosbridge_library::TestArrayRequest > 
 template<>
 struct DataType< ::rosbridge_library::TestArrayRequestResponse>
 {

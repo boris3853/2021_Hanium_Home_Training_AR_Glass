@@ -4,5 +4,5 @@ PROJECT_PKG_CONFIG_INCLUDE_DIRS = "${prefix}/include".split(';') if "${prefix}/i
 PROJECT_CATKIN_DEPENDS = "message_runtime;std_msgs;geometry_msgs".replace(';', ' ')
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "".split(';') if "" != "" else []
 PROJECT_NAME = "rosbridge_library"
-PROJECT_SPACE_DIR = "/home/kyung/21_hf271/TX2_main/install"
+PROJECT_SPACE_DIR = "/home/nvidia/21_hf271/TX2_main/install"
 PROJECT_VERSION = "0.11.13"

@@ -1,5 +1,5 @@
 set(_CATKIN_CURRENT_PACKAGE "webcam")
-set(webcam_VERSION "0.1.0")
+set(webcam_VERSION "1.0.0")
 set(webcam_MAINTAINER "Kyung <kkj3853@gmail.com>")
 set(webcam_PACKAGE_FORMAT "2")
 set(webcam_BUILD_DEPENDS "cv_bridge" "image_transport" "std_msgs" "sensor_msgs" "roscpp")

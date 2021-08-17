@@ -1,4 +1,4 @@
-prefix=/home/kyung/21_hf271/TX2_main/install
+prefix=/home/nvidia/21_hf271/TX2_main/install
 
 Name: rosbridge_msgs
 Description: Description of rosbridge_msgs

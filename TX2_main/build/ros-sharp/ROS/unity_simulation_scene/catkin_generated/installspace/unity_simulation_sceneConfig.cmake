@@ -67,14 +67,14 @@ set(unity_simulation_scene_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(unity_simulation_scene_SOURCE_PREFIX /home/kyung/21_hf271/TX2_main/src/ros-sharp/ROS/unity_simulation_scene)
-  set(unity_simulation_scene_DEVEL_PREFIX /home/kyung/21_hf271/TX2_main/devel)
+  set(unity_simulation_scene_SOURCE_PREFIX /home/nvidia/21_hf271/TX2_main/src/ros-sharp/ROS/unity_simulation_scene)
+  set(unity_simulation_scene_DEVEL_PREFIX /home/nvidia/21_hf271/TX2_main/devel)
   set(unity_simulation_scene_INSTALL_PREFIX "")
   set(unity_simulation_scene_PREFIX ${unity_simulation_scene_DEVEL_PREFIX})
 else()
   set(unity_simulation_scene_SOURCE_PREFIX "")
   set(unity_simulation_scene_DEVEL_PREFIX "")
-  set(unity_simulation_scene_INSTALL_PREFIX /home/kyung/21_hf271/TX2_main/install)
+  set(unity_simulation_scene_INSTALL_PREFIX /home/nvidia/21_hf271/TX2_main/install)
   set(unity_simulation_scene_PREFIX ${unity_simulation_scene_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/kyung/21_hf271/TX2_main/install/lib;/opt/ros/noetic/lib)
+    foreach(path /home/nvidia/21_hf271/TX2_main/install/lib;/opt/ros/kinetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)
@@ -211,7 +211,7 @@ foreach(depend ${depends})
   _unpack_libraries_with_build_configuration(unity_simulation_scene_LIBRARIES ${unity_simulation_scene_LIBRARIES})
 
   _list_append_unique(unity_simulation_scene_LIBRARY_DIRS ${${unity_simulation_scene_dep}_LIBRARY_DIRS})
-  _list_append_deduplicate(unity_simulation_scene_EXPORTED_TARGETS ${${unity_simulation_scene_dep}_EXPORTED_TARGETS})
+  list(APPEND unity_simulation_scene_EXPORTED_TARGETS ${${unity_simulation_scene_dep}_EXPORTED_TARGETS})
 endforeach()
 
 set(pkg_cfg_extras "")

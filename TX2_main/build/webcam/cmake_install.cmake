@@ -1,8 +1,8 @@
-# Install script for directory: /home/kyung/21_hf271/TX2_main/src/webcam
+# Install script for directory: /home/nvidia/21_hf271/TX2_main/src/webcam
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/kyung/21_hf271/TX2_main/install")
+  set(CMAKE_INSTALL_PREFIX "/home/nvidia/21_hf271/TX2_main/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -32,23 +32,18 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
   set(CMAKE_INSTALL_SO_NO_EXE "1")
 endif()
 
-# Is this installation the result of a crosscompile?
-if(NOT DEFINED CMAKE_CROSSCOMPILING)
-  set(CMAKE_CROSSCOMPILING "FALSE")
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/nvidia/21_hf271/TX2_main/build/webcam/catkin_generated/installspace/webcam.pc")
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/kyung/21_hf271/TX2_main/build/webcam/catkin_generated/installspace/webcam.pc")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/webcam/cmake" TYPE FILE FILES
-    "/home/kyung/21_hf271/TX2_main/build/webcam/catkin_generated/installspace/webcamConfig.cmake"
-    "/home/kyung/21_hf271/TX2_main/build/webcam/catkin_generated/installspace/webcamConfig-version.cmake"
+    "/home/nvidia/21_hf271/TX2_main/build/webcam/catkin_generated/installspace/webcamConfig.cmake"
+    "/home/nvidia/21_hf271/TX2_main/build/webcam/catkin_generated/installspace/webcamConfig-version.cmake"
     )
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/webcam" TYPE FILE FILES "/home/kyung/21_hf271/TX2_main/src/webcam/package.xml")
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/webcam" TYPE FILE FILES "/home/nvidia/21_hf271/TX2_main/src/webcam/package.xml")
 endif()
 

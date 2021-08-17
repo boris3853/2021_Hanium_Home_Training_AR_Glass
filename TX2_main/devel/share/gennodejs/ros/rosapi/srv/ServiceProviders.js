@@ -51,7 +51,7 @@ class ServiceProvidersRequest {
 
   static getMessageSize(object) {
     let length = 0;
-    length += _getByteLength(object.service);
+    length += object.service.length;
     return length + 4;
   }
 
@@ -125,7 +125,7 @@ class ServiceProvidersResponse {
   static getMessageSize(object) {
     let length = 0;
     object.providers.forEach((val) => {
-      length += 4 + _getByteLength(val);
+      length += 4 + val.length;
     });
     return length + 4;
   }

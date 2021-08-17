@@ -62,7 +62,7 @@ class SaveBinaryFileRequest {
 
   static getMessageSize(object) {
     let length = 0;
-    length += _getByteLength(object.name);
+    length += object.name.length;
     length += object.value.length;
     return length + 8;
   }
@@ -144,7 +144,7 @@ class SaveBinaryFileResponse {
 
   static getMessageSize(object) {
     let length = 0;
-    length += _getByteLength(object.name);
+    length += object.name.length;
     return length + 4;
   }
 

@@ -51,7 +51,7 @@ class TopicTypeRequest {
 
   static getMessageSize(object) {
     let length = 0;
-    length += _getByteLength(object.topic);
+    length += object.topic.length;
     return length + 4;
   }
 
@@ -124,7 +124,7 @@ class TopicTypeResponse {
 
   static getMessageSize(object) {
     let length = 0;
-    length += _getByteLength(object.type);
+    length += object.type.length;
     return length + 4;
   }
 

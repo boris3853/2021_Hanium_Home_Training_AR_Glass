@@ -1,8 +1,8 @@
-# Install script for directory: /home/kyung/21_hf271/TX2_main/src/rosbridge_suite/rosapi
+# Install script for directory: /home/nvidia/21_hf271/TX2_main/src/rosbridge_suite/rosapi
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/kyung/21_hf271/TX2_main/install")
+  set(CMAKE_INSTALL_PREFIX "/home/nvidia/21_hf271/TX2_main/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -32,101 +32,96 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
   set(CMAKE_INSTALL_SO_NO_EXE "1")
 endif()
 
-# Is this installation the result of a crosscompile?
-if(NOT DEFINED CMAKE_CROSSCOMPILING)
-  set(CMAKE_CROSSCOMPILING "FALSE")
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  include("/home/nvidia/21_hf271/TX2_main/build/rosbridge_suite/rosapi/catkin_generated/safe_execute_install.cmake")
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  include("/home/kyung/21_hf271/TX2_main/build/rosbridge_suite/rosapi/catkin_generated/safe_execute_install.cmake")
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rosapi/msg" TYPE FILE FILES "/home/nvidia/21_hf271/TX2_main/src/rosbridge_suite/rosapi/msg/TypeDef.msg")
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rosapi/msg" TYPE FILE FILES "/home/kyung/21_hf271/TX2_main/src/rosbridge_suite/rosapi/msg/TypeDef.msg")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rosapi/srv" TYPE FILE FILES
-    "/home/kyung/21_hf271/TX2_main/src/rosbridge_suite/rosapi/srv/DeleteParam.srv"
-    "/home/kyung/21_hf271/TX2_main/src/rosbridge_suite/rosapi/srv/GetActionServers.srv"
-    "/home/kyung/21_hf271/TX2_main/src/rosbridge_suite/rosapi/srv/GetParam.srv"
-    "/home/kyung/21_hf271/TX2_main/src/rosbridge_suite/rosapi/srv/GetParamNames.srv"
-    "/home/kyung/21_hf271/TX2_main/src/rosbridge_suite/rosapi/srv/GetTime.srv"
-    "/home/kyung/21_hf271/TX2_main/src/rosbridge_suite/rosapi/srv/HasParam.srv"
-    "/home/kyung/21_hf271/TX2_main/src/rosbridge_suite/rosapi/srv/MessageDetails.srv"
-    "/home/kyung/21_hf271/TX2_main/src/rosbridge_suite/rosapi/srv/Nodes.srv"
-    "/home/kyung/21_hf271/TX2_main/src/rosbridge_suite/rosapi/srv/NodeDetails.srv"
-    "/home/kyung/21_hf271/TX2_main/src/rosbridge_suite/rosapi/srv/Publishers.srv"
-    "/home/kyung/21_hf271/TX2_main/src/rosbridge_suite/rosapi/srv/SearchParam.srv"
-    "/home/kyung/21_hf271/TX2_main/src/rosbridge_suite/rosapi/srv/ServiceHost.srv"
-    "/home/kyung/21_hf271/TX2_main/src/rosbridge_suite/rosapi/srv/ServiceNode.srv"
-    "/home/kyung/21_hf271/TX2_main/src/rosbridge_suite/rosapi/srv/ServiceProviders.srv"
-    "/home/kyung/21_hf271/TX2_main/src/rosbridge_suite/rosapi/srv/ServiceRequestDetails.srv"
-    "/home/kyung/21_hf271/TX2_main/src/rosbridge_suite/rosapi/srv/ServiceResponseDetails.srv"
-    "/home/kyung/21_hf271/TX2_main/src/rosbridge_suite/rosapi/srv/Services.srv"
-    "/home/kyung/21_hf271/TX2_main/src/rosbridge_suite/rosapi/srv/ServicesForType.srv"
-    "/home/kyung/21_hf271/TX2_main/src/rosbridge_suite/rosapi/srv/ServiceType.srv"
-    "/home/kyung/21_hf271/TX2_main/src/rosbridge_suite/rosapi/srv/SetParam.srv"
-    "/home/kyung/21_hf271/TX2_main/src/rosbridge_suite/rosapi/srv/Subscribers.srv"
-    "/home/kyung/21_hf271/TX2_main/src/rosbridge_suite/rosapi/srv/Topics.srv"
-    "/home/kyung/21_hf271/TX2_main/src/rosbridge_suite/rosapi/srv/TopicsAndRawTypes.srv"
-    "/home/kyung/21_hf271/TX2_main/src/rosbridge_suite/rosapi/srv/TopicsForType.srv"
-    "/home/kyung/21_hf271/TX2_main/src/rosbridge_suite/rosapi/srv/TopicType.srv"
+    "/home/nvidia/21_hf271/TX2_main/src/rosbridge_suite/rosapi/srv/DeleteParam.srv"
+    "/home/nvidia/21_hf271/TX2_main/src/rosbridge_suite/rosapi/srv/GetActionServers.srv"
+    "/home/nvidia/21_hf271/TX2_main/src/rosbridge_suite/rosapi/srv/GetParam.srv"
+    "/home/nvidia/21_hf271/TX2_main/src/rosbridge_suite/rosapi/srv/GetParamNames.srv"
+    "/home/nvidia/21_hf271/TX2_main/src/rosbridge_suite/rosapi/srv/GetTime.srv"
+    "/home/nvidia/21_hf271/TX2_main/src/rosbridge_suite/rosapi/srv/HasParam.srv"
+    "/home/nvidia/21_hf271/TX2_main/src/rosbridge_suite/rosapi/srv/MessageDetails.srv"
+    "/home/nvidia/21_hf271/TX2_main/src/rosbridge_suite/rosapi/srv/Nodes.srv"
+    "/home/nvidia/21_hf271/TX2_main/src/rosbridge_suite/rosapi/srv/NodeDetails.srv"
+    "/home/nvidia/21_hf271/TX2_main/src/rosbridge_suite/rosapi/srv/Publishers.srv"
+    "/home/nvidia/21_hf271/TX2_main/src/rosbridge_suite/rosapi/srv/SearchParam.srv"
+    "/home/nvidia/21_hf271/TX2_main/src/rosbridge_suite/rosapi/srv/ServiceHost.srv"
+    "/home/nvidia/21_hf271/TX2_main/src/rosbridge_suite/rosapi/srv/ServiceNode.srv"
+    "/home/nvidia/21_hf271/TX2_main/src/rosbridge_suite/rosapi/srv/ServiceProviders.srv"
+    "/home/nvidia/21_hf271/TX2_main/src/rosbridge_suite/rosapi/srv/ServiceRequestDetails.srv"
+    "/home/nvidia/21_hf271/TX2_main/src/rosbridge_suite/rosapi/srv/ServiceResponseDetails.srv"
+    "/home/nvidia/21_hf271/TX2_main/src/rosbridge_suite/rosapi/srv/Services.srv"
+    "/home/nvidia/21_hf271/TX2_main/src/rosbridge_suite/rosapi/srv/ServicesForType.srv"
+    "/home/nvidia/21_hf271/TX2_main/src/rosbridge_suite/rosapi/srv/ServiceType.srv"
+    "/home/nvidia/21_hf271/TX2_main/src/rosbridge_suite/rosapi/srv/SetParam.srv"
+    "/home/nvidia/21_hf271/TX2_main/src/rosbridge_suite/rosapi/srv/Subscribers.srv"
+    "/home/nvidia/21_hf271/TX2_main/src/rosbridge_suite/rosapi/srv/Topics.srv"
+    "/home/nvidia/21_hf271/TX2_main/src/rosbridge_suite/rosapi/srv/TopicsAndRawTypes.srv"
+    "/home/nvidia/21_hf271/TX2_main/src/rosbridge_suite/rosapi/srv/TopicsForType.srv"
+    "/home/nvidia/21_hf271/TX2_main/src/rosbridge_suite/rosapi/srv/TopicType.srv"
     )
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rosapi/cmake" TYPE FILE FILES "/home/kyung/21_hf271/TX2_main/build/rosbridge_suite/rosapi/catkin_generated/installspace/rosapi-msg-paths.cmake")
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rosapi/cmake" TYPE FILE FILES "/home/nvidia/21_hf271/TX2_main/build/rosbridge_suite/rosapi/catkin_generated/installspace/rosapi-msg-paths.cmake")
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/kyung/21_hf271/TX2_main/devel/include/rosapi")
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/nvidia/21_hf271/TX2_main/devel/include/rosapi")
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/kyung/21_hf271/TX2_main/devel/share/roseus/ros/rosapi")
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/nvidia/21_hf271/TX2_main/devel/share/roseus/ros/rosapi")
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/home/kyung/21_hf271/TX2_main/devel/share/common-lisp/ros/rosapi")
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/home/nvidia/21_hf271/TX2_main/devel/share/common-lisp/ros/rosapi")
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gennodejs/ros" TYPE DIRECTORY FILES "/home/kyung/21_hf271/TX2_main/devel/share/gennodejs/ros/rosapi")
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gennodejs/ros" TYPE DIRECTORY FILES "/home/nvidia/21_hf271/TX2_main/devel/share/gennodejs/ros/rosapi")
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  execute_process(COMMAND "/usr/bin/python3" -m compileall "/home/kyung/21_hf271/TX2_main/devel/lib/python3/dist-packages/rosapi")
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  execute_process(COMMAND "/usr/bin/python2" -m compileall "/home/nvidia/21_hf271/TX2_main/devel/lib/python2.7/dist-packages/rosapi")
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3/dist-packages" TYPE DIRECTORY FILES "/home/kyung/21_hf271/TX2_main/devel/lib/python3/dist-packages/rosapi" REGEX "/\\_\\_init\\_\\_\\.py$" EXCLUDE REGEX "/\\_\\_init\\_\\_\\.pyc$" EXCLUDE)
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python2.7/dist-packages" TYPE DIRECTORY FILES "/home/nvidia/21_hf271/TX2_main/devel/lib/python2.7/dist-packages/rosapi" REGEX "/\\_\\_init\\_\\_\\.py$" EXCLUDE REGEX "/\\_\\_init\\_\\_\\.pyc$" EXCLUDE)
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3/dist-packages" TYPE DIRECTORY FILES "/home/kyung/21_hf271/TX2_main/devel/lib/python3/dist-packages/rosapi" FILES_MATCHING REGEX "/home/kyung/21_hf271/TX2_main/devel/lib/python3/dist-packages/rosapi/.+/__init__.pyc?$")
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python2.7/dist-packages" TYPE DIRECTORY FILES "/home/nvidia/21_hf271/TX2_main/devel/lib/python2.7/dist-packages/rosapi" FILES_MATCHING REGEX "/home/nvidia/21_hf271/TX2_main/devel/lib/python2.7/dist-packages/rosapi/.+/__init__.pyc?$")
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/kyung/21_hf271/TX2_main/build/rosbridge_suite/rosapi/catkin_generated/installspace/rosapi.pc")
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/nvidia/21_hf271/TX2_main/build/rosbridge_suite/rosapi/catkin_generated/installspace/rosapi.pc")
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rosapi/cmake" TYPE FILE FILES "/home/kyung/21_hf271/TX2_main/build/rosbridge_suite/rosapi/catkin_generated/installspace/rosapi-msg-extras.cmake")
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rosapi/cmake" TYPE FILE FILES "/home/nvidia/21_hf271/TX2_main/build/rosbridge_suite/rosapi/catkin_generated/installspace/rosapi-msg-extras.cmake")
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rosapi/cmake" TYPE FILE FILES
-    "/home/kyung/21_hf271/TX2_main/build/rosbridge_suite/rosapi/catkin_generated/installspace/rosapiConfig.cmake"
-    "/home/kyung/21_hf271/TX2_main/build/rosbridge_suite/rosapi/catkin_generated/installspace/rosapiConfig-version.cmake"
+    "/home/nvidia/21_hf271/TX2_main/build/rosbridge_suite/rosapi/catkin_generated/installspace/rosapiConfig.cmake"
+    "/home/nvidia/21_hf271/TX2_main/build/rosbridge_suite/rosapi/catkin_generated/installspace/rosapiConfig-version.cmake"
     )
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rosapi" TYPE FILE FILES "/home/kyung/21_hf271/TX2_main/src/rosbridge_suite/rosapi/package.xml")
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rosapi" TYPE FILE FILES "/home/nvidia/21_hf271/TX2_main/src/rosbridge_suite/rosapi/package.xml")
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/rosapi" TYPE PROGRAM FILES "/home/kyung/21_hf271/TX2_main/build/rosbridge_suite/rosapi/catkin_generated/installspace/rosapi_node")
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/rosapi" TYPE PROGRAM FILES "/home/nvidia/21_hf271/TX2_main/build/rosbridge_suite/rosapi/catkin_generated/installspace/rosapi_node")
 endif()
 

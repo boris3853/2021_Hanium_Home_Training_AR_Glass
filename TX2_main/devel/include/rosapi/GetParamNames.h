@@ -57,8 +57,8 @@ struct DataType< ::rosapi::GetParamNames > {
 };
 
 
-// service_traits::MD5Sum< ::rosapi::GetParamNamesRequest> should match
-// service_traits::MD5Sum< ::rosapi::GetParamNames >
+// service_traits::MD5Sum< ::rosapi::GetParamNamesRequest> should match 
+// service_traits::MD5Sum< ::rosapi::GetParamNames > 
 template<>
 struct MD5Sum< ::rosapi::GetParamNamesRequest>
 {
@@ -72,8 +72,8 @@ struct MD5Sum< ::rosapi::GetParamNamesRequest>
   }
 };
 
-// service_traits::DataType< ::rosapi::GetParamNamesRequest> should match
-// service_traits::DataType< ::rosapi::GetParamNames >
+// service_traits::DataType< ::rosapi::GetParamNamesRequest> should match 
+// service_traits::DataType< ::rosapi::GetParamNames > 
 template<>
 struct DataType< ::rosapi::GetParamNamesRequest>
 {
@@ -87,8 +87,8 @@ struct DataType< ::rosapi::GetParamNamesRequest>
   }
 };
 
-// service_traits::MD5Sum< ::rosapi::GetParamNamesResponse> should match
-// service_traits::MD5Sum< ::rosapi::GetParamNames >
+// service_traits::MD5Sum< ::rosapi::GetParamNamesResponse> should match 
+// service_traits::MD5Sum< ::rosapi::GetParamNames > 
 template<>
 struct MD5Sum< ::rosapi::GetParamNamesResponse>
 {
@@ -102,8 +102,8 @@ struct MD5Sum< ::rosapi::GetParamNamesResponse>
   }
 };
 
-// service_traits::DataType< ::rosapi::GetParamNamesResponse> should match
-// service_traits::DataType< ::rosapi::GetParamNames >
+// service_traits::DataType< ::rosapi::GetParamNamesResponse> should match 
+// service_traits::DataType< ::rosapi::GetParamNames > 
 template<>
 struct DataType< ::rosapi::GetParamNamesResponse>
 {

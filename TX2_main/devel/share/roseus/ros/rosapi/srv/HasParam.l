@@ -68,8 +68,8 @@
    (setq _exists __exists)
    self)
   (:exists
-   (&optional (__exists :null))
-   (if (not (eq __exists :null)) (setq _exists __exists)) _exists)
+   (&optional __exists)
+   (if __exists (setq _exists __exists)) _exists)
   (:serialization-length
    ()
    (+

@@ -4,5 +4,5 @@ PROJECT_PKG_CONFIG_INCLUDE_DIRS = "${prefix}/include".split(';') if "${prefix}/i
 PROJECT_CATKIN_DEPENDS = "message_filters;pluginlib;rosconsole;roscpp;roslib;sensor_msgs".replace(';', ' ')
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "-limage_transport".split(';') if "-limage_transport" != "" else []
 PROJECT_NAME = "image_transport"
-PROJECT_SPACE_DIR = "/home/kyung/21_hf271/TX2_main/install"
+PROJECT_SPACE_DIR = "/home/nvidia/21_hf271/TX2_main/install"
 PROJECT_VERSION = "1.12.0"

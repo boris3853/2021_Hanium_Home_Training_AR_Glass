@@ -57,8 +57,8 @@ struct DataType< ::rosbridge_library::TestNestedService > {
 };
 
 
-// service_traits::MD5Sum< ::rosbridge_library::TestNestedServiceRequest> should match
-// service_traits::MD5Sum< ::rosbridge_library::TestNestedService >
+// service_traits::MD5Sum< ::rosbridge_library::TestNestedServiceRequest> should match 
+// service_traits::MD5Sum< ::rosbridge_library::TestNestedService > 
 template<>
 struct MD5Sum< ::rosbridge_library::TestNestedServiceRequest>
 {
@@ -72,8 +72,8 @@ struct MD5Sum< ::rosbridge_library::TestNestedServiceRequest>
   }
 };
 
-// service_traits::DataType< ::rosbridge_library::TestNestedServiceRequest> should match
-// service_traits::DataType< ::rosbridge_library::TestNestedService >
+// service_traits::DataType< ::rosbridge_library::TestNestedServiceRequest> should match 
+// service_traits::DataType< ::rosbridge_library::TestNestedService > 
 template<>
 struct DataType< ::rosbridge_library::TestNestedServiceRequest>
 {
@@ -87,8 +87,8 @@ struct DataType< ::rosbridge_library::TestNestedServiceRequest>
   }
 };
 
-// service_traits::MD5Sum< ::rosbridge_library::TestNestedServiceResponse> should match
-// service_traits::MD5Sum< ::rosbridge_library::TestNestedService >
+// service_traits::MD5Sum< ::rosbridge_library::TestNestedServiceResponse> should match 
+// service_traits::MD5Sum< ::rosbridge_library::TestNestedService > 
 template<>
 struct MD5Sum< ::rosbridge_library::TestNestedServiceResponse>
 {
@@ -102,8 +102,8 @@ struct MD5Sum< ::rosbridge_library::TestNestedServiceResponse>
   }
 };
 
-// service_traits::DataType< ::rosbridge_library::TestNestedServiceResponse> should match
-// service_traits::DataType< ::rosbridge_library::TestNestedService >
+// service_traits::DataType< ::rosbridge_library::TestNestedServiceResponse> should match 
+// service_traits::DataType< ::rosbridge_library::TestNestedService > 
 template<>
 struct DataType< ::rosbridge_library::TestNestedServiceResponse>
 {

@@ -51,7 +51,7 @@ class ServiceHostRequest {
 
   static getMessageSize(object) {
     let length = 0;
-    length += _getByteLength(object.service);
+    length += object.service.length;
     return length + 4;
   }
 
@@ -124,7 +124,7 @@ class ServiceHostResponse {
 
   static getMessageSize(object) {
     let length = 0;
-    length += _getByteLength(object.host);
+    length += object.host.length;
     return length + 4;
   }
 

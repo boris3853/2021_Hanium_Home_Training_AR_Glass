@@ -1,6 +1,4 @@
 file(REMOVE_RECURSE
-  "/home/kyung/21_hf271/TX2_main/devel/lib/libimage_transport.pdb"
-  "/home/kyung/21_hf271/TX2_main/devel/lib/libimage_transport.so"
   "CMakeFiles/image_transport.dir/src/camera_common.cpp.o"
   "CMakeFiles/image_transport.dir/src/camera_publisher.cpp.o"
   "CMakeFiles/image_transport.dir/src/camera_subscriber.cpp.o"
@@ -8,6 +6,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/image_transport.dir/src/publisher.cpp.o"
   "CMakeFiles/image_transport.dir/src/single_subscriber_publisher.cpp.o"
   "CMakeFiles/image_transport.dir/src/subscriber.cpp.o"
+  "/home/nvidia/21_hf271/TX2_main/devel/lib/libimage_transport.pdb"
+  "/home/nvidia/21_hf271/TX2_main/devel/lib/libimage_transport.so"
 )
 
 # Per-language clean rules from dependency scanning.

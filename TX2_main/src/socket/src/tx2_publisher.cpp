@@ -2,7 +2,7 @@
 #include <map>
 #include <fstream>
 #include <sstream>
-#include "jsoncpp/json/json.h"
+#include "json/json.h"
 #include "ros/ros.h"
 #include "msg_creator/Keypoints.h"
 
@@ -19,7 +19,7 @@ std::map<int, Keypoint> Keypoints;
 
 int read_json(std::string str){
         Json::Value root;
-        std::ifstream ifs(str, std::ifstream::in);
+        std::ifstream ifs("test", std::ifstream::in);
         Json::CharReaderBuilder builder;
         builder["collectComments"] = false;
         JSONCPP_STRING errs;

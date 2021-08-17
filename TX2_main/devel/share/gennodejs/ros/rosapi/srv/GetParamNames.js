@@ -104,7 +104,7 @@ class GetParamNamesResponse {
   static getMessageSize(object) {
     let length = 0;
     object.names.forEach((val) => {
-      length += 4 + _getByteLength(val);
+      length += 4 + val.length;
     });
     return length + 4;
   }

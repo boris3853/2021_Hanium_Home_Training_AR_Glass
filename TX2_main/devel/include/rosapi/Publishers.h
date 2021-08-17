@@ -57,8 +57,8 @@ struct DataType< ::rosapi::Publishers > {
 };
 
 
-// service_traits::MD5Sum< ::rosapi::PublishersRequest> should match
-// service_traits::MD5Sum< ::rosapi::Publishers >
+// service_traits::MD5Sum< ::rosapi::PublishersRequest> should match 
+// service_traits::MD5Sum< ::rosapi::Publishers > 
 template<>
 struct MD5Sum< ::rosapi::PublishersRequest>
 {
@@ -72,8 +72,8 @@ struct MD5Sum< ::rosapi::PublishersRequest>
   }
 };
 
-// service_traits::DataType< ::rosapi::PublishersRequest> should match
-// service_traits::DataType< ::rosapi::Publishers >
+// service_traits::DataType< ::rosapi::PublishersRequest> should match 
+// service_traits::DataType< ::rosapi::Publishers > 
 template<>
 struct DataType< ::rosapi::PublishersRequest>
 {
@@ -87,8 +87,8 @@ struct DataType< ::rosapi::PublishersRequest>
   }
 };
 
-// service_traits::MD5Sum< ::rosapi::PublishersResponse> should match
-// service_traits::MD5Sum< ::rosapi::Publishers >
+// service_traits::MD5Sum< ::rosapi::PublishersResponse> should match 
+// service_traits::MD5Sum< ::rosapi::Publishers > 
 template<>
 struct MD5Sum< ::rosapi::PublishersResponse>
 {
@@ -102,8 +102,8 @@ struct MD5Sum< ::rosapi::PublishersResponse>
   }
 };
 
-// service_traits::DataType< ::rosapi::PublishersResponse> should match
-// service_traits::DataType< ::rosapi::Publishers >
+// service_traits::DataType< ::rosapi::PublishersResponse> should match 
+// service_traits::DataType< ::rosapi::Publishers > 
 template<>
 struct DataType< ::rosapi::PublishersResponse>
 {

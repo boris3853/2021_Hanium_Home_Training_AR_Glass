@@ -8,6 +8,7 @@
 
 	<buildtool_depend>catkin</buildtool_depend>
 
+	<depend>roscpp</depend>
 	<depend>std_msgs</depend>
 	<build_depend>msg_creator</build_depend>
 	<build_export_depend>msg_creator</build_export_depend>

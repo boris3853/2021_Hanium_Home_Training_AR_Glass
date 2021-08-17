@@ -67,14 +67,14 @@ set(image_transport_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(image_transport_SOURCE_PREFIX /home/kyung/21_hf271/TX2_main/src/image_transport)
-  set(image_transport_DEVEL_PREFIX /home/kyung/21_hf271/TX2_main/devel)
+  set(image_transport_SOURCE_PREFIX /home/nvidia/21_hf271/TX2_main/src/image_transport)
+  set(image_transport_DEVEL_PREFIX /home/nvidia/21_hf271/TX2_main/devel)
   set(image_transport_INSTALL_PREFIX "")
   set(image_transport_PREFIX ${image_transport_DEVEL_PREFIX})
 else()
   set(image_transport_SOURCE_PREFIX "")
   set(image_transport_DEVEL_PREFIX "")
-  set(image_transport_INSTALL_PREFIX /home/kyung/21_hf271/TX2_main/install)
+  set(image_transport_INSTALL_PREFIX /home/nvidia/21_hf271/TX2_main/install)
   set(image_transport_PREFIX ${image_transport_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/kyung/21_hf271/TX2_main/install/lib;/opt/ros/noetic/lib)
+    foreach(path /home/nvidia/21_hf271/TX2_main/install/lib;/opt/ros/kinetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)
@@ -211,7 +211,7 @@ foreach(depend ${depends})
   _unpack_libraries_with_build_configuration(image_transport_LIBRARIES ${image_transport_LIBRARIES})
 
   _list_append_unique(image_transport_LIBRARY_DIRS ${${image_transport_dep}_LIBRARY_DIRS})
-  _list_append_deduplicate(image_transport_EXPORTED_TARGETS ${${image_transport_dep}_EXPORTED_TARGETS})
+  list(APPEND image_transport_EXPORTED_TARGETS ${${image_transport_dep}_EXPORTED_TARGETS})
 endforeach()
 
 set(pkg_cfg_extras "")

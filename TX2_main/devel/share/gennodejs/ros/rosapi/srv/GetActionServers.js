@@ -105,7 +105,7 @@ class GetActionServersResponse {
   static getMessageSize(object) {
     let length = 0;
     object.action_servers.forEach((val) => {
-      length += 4 + _getByteLength(val);
+      length += 4 + val.length;
     });
     return length + 4;
   }

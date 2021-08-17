@@ -105,7 +105,7 @@ class ServicesResponse {
   static getMessageSize(object) {
     let length = 0;
     object.services.forEach((val) => {
-      length += 4 + _getByteLength(val);
+      length += 4 + val.length;
     });
     return length + 4;
   }

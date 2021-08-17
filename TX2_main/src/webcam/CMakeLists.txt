@@ -1,6 +1,8 @@
 cmake_minimum_required(VERSION 3.0.2)
 project(webcam)
 
+set(OpenCV_DIR /home/nvidia/opencv)
+
 find_package(catkin REQUIRED COMPONENTS
 	cv_bridge
 	image_transport
@@ -9,7 +11,7 @@ find_package(catkin REQUIRED COMPONENTS
 	roscpp
 )
 
-find_package (OpenCV REQUIRED)
+find_package (OpenCV 3.4.1 REQUIRED)
 
 catkin_package(
 	CATKIN_DEPENDS cv_bridge image_transport std_msgs sensor_msgs roscpp

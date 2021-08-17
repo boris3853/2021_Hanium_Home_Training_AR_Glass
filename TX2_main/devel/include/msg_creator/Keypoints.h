@@ -95,24 +95,6 @@ ros::message_operations::Printer< ::msg_creator::Keypoints_<ContainerAllocator> 
 return s;
 }
 
-
-template<typename ContainerAllocator1, typename ContainerAllocator2>
-bool operator==(const ::msg_creator::Keypoints_<ContainerAllocator1> & lhs, const ::msg_creator::Keypoints_<ContainerAllocator2> & rhs)
-{
-  return lhs.x == rhs.x &&
-    lhs.y == rhs.y &&
-    lhs.prob == rhs.prob &&
-    lhs.KeyTrue == rhs.KeyTrue &&
-    lhs.type_ex == rhs.type_ex;
-}
-
-template<typename ContainerAllocator1, typename ContainerAllocator2>
-bool operator!=(const ::msg_creator::Keypoints_<ContainerAllocator1> & lhs, const ::msg_creator::Keypoints_<ContainerAllocator2> & rhs)
-{
-  return !(lhs == rhs);
-}
-
-
 } // namespace msg_creator
 
 namespace ros
@@ -122,17 +104,13 @@ namespace message_traits
 
 
 
+// BOOLTRAITS {'IsFixedSize': True, 'IsMessage': True, 'HasHeader': False}
+// {'msg_creator': ['/home/nvidia/21_hf271/TX2_main/src/msg_creator/msg'], 'std_msgs': ['/opt/ros/kinetic/share/std_msgs/cmake/../msg']}
+
+// !!!!!!!!!!! ['__class__', '__delattr__', '__dict__', '__doc__', '__eq__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_parsed_fields', 'constants', 'fields', 'full_name', 'has_header', 'header_present', 'names', 'package', 'parsed_fields', 'short_name', 'text', 'types']
 
 
-template <class ContainerAllocator>
-struct IsMessage< ::msg_creator::Keypoints_<ContainerAllocator> >
-  : TrueType
-  { };
 
-template <class ContainerAllocator>
-struct IsMessage< ::msg_creator::Keypoints_<ContainerAllocator> const>
-  : TrueType
-  { };
 
 template <class ContainerAllocator>
 struct IsFixedSize< ::msg_creator::Keypoints_<ContainerAllocator> >
@@ -141,6 +119,16 @@ struct IsFixedSize< ::msg_creator::Keypoints_<ContainerAllocator> >
 
 template <class ContainerAllocator>
 struct IsFixedSize< ::msg_creator::Keypoints_<ContainerAllocator> const>
+  : TrueType
+  { };
+
+template <class ContainerAllocator>
+struct IsMessage< ::msg_creator::Keypoints_<ContainerAllocator> >
+  : TrueType
+  { };
+
+template <class ContainerAllocator>
+struct IsMessage< ::msg_creator::Keypoints_<ContainerAllocator> const>
   : TrueType
   { };
 
@@ -184,13 +172,13 @@ struct Definition< ::msg_creator::Keypoints_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "float64[25] x\n"
-"float64[25] y\n"
-"float64[25] prob\n"
-"\n"
-"float64[25] KeyTrue\n"
-"uint8 type_ex\n"
-;
+    return "float64[25] x\n\
+float64[25] y\n\
+float64[25] prob\n\
+\n\
+float64[25] KeyTrue\n\
+uint8 type_ex\n\
+";
   }
 
   static const char* value(const ::msg_creator::Keypoints_<ContainerAllocator>&) { return value(); }

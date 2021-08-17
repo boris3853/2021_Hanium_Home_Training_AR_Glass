@@ -136,7 +136,7 @@ class TestMultipleResponseFieldsResponse {
 
   static getMessageSize(object) {
     let length = 0;
-    length += _getByteLength(object.string);
+    length += object.string.length;
     return length + 13;
   }
 

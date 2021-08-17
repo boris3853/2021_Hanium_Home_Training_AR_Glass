@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
-  "/home/kyung/21_hf271/TX2_main/devel/lib/python3/dist-packages/rosbridge_msgs/msg/_ConnectedClient.py"
-  "/home/kyung/21_hf271/TX2_main/devel/lib/python3/dist-packages/rosbridge_msgs/msg/_ConnectedClients.py"
-  "/home/kyung/21_hf271/TX2_main/devel/lib/python3/dist-packages/rosbridge_msgs/msg/__init__.py"
   "CMakeFiles/rosbridge_msgs_generate_messages_py"
+  "/home/nvidia/21_hf271/TX2_main/devel/lib/python2.7/dist-packages/rosbridge_msgs/msg/_ConnectedClients.py"
+  "/home/nvidia/21_hf271/TX2_main/devel/lib/python2.7/dist-packages/rosbridge_msgs/msg/_ConnectedClient.py"
+  "/home/nvidia/21_hf271/TX2_main/devel/lib/python2.7/dist-packages/rosbridge_msgs/msg/__init__.py"
 )
 
 # Per-language clean rules from dependency scanning.

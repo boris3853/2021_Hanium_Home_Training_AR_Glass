@@ -6,22 +6,22 @@ import stat
 import sys
 
 # find the import for catkin's python package - either from source space or from an installed underlay
-if os.path.exists(os.path.join('/opt/ros/noetic/share/catkin/cmake', 'catkinConfig.cmake.in')):
-    sys.path.insert(0, os.path.join('/opt/ros/noetic/share/catkin/cmake', '..', 'python'))
+if os.path.exists(os.path.join('/opt/ros/kinetic/share/catkin/cmake', 'catkinConfig.cmake.in')):
+    sys.path.insert(0, os.path.join('/opt/ros/kinetic/share/catkin/cmake', '..', 'python'))
 try:
     from catkin.environment_cache import generate_environment_script
 except ImportError:
     # search for catkin package in all workspaces and prepend to path
-    for workspace in '/opt/ros/noetic'.split(';'):
-        python_path = os.path.join(workspace, 'lib/python3/dist-packages')
+    for workspace in '/opt/ros/kinetic'.split(';'):
+        python_path = os.path.join(workspace, 'lib/python2.7/dist-packages')
         if os.path.isdir(os.path.join(python_path, 'catkin')):
             sys.path.insert(0, python_path)
             break
     from catkin.environment_cache import generate_environment_script
 
-code = generate_environment_script('/home/kyung/21_hf271/TX2_main/devel/env.sh')
+code = generate_environment_script('/home/nvidia/21_hf271/TX2_main/devel/env.sh')
 
-output_filename = '/home/kyung/21_hf271/TX2_main/build/catkin_generated/setup_cached.sh'
+output_filename = '/home/nvidia/21_hf271/TX2_main/build/catkin_generated/setup_cached.sh'
 with open(output_filename, 'w') as f:
     # print('Generate script for cached setup "%s"' % output_filename)
     f.write('\n'.join(code))

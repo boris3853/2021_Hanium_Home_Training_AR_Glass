@@ -63,20 +63,6 @@ ros::message_operations::Printer< ::rosbridge_library::TestUInt8FixedSizeArray16
 return s;
 }
 
-
-template<typename ContainerAllocator1, typename ContainerAllocator2>
-bool operator==(const ::rosbridge_library::TestUInt8FixedSizeArray16_<ContainerAllocator1> & lhs, const ::rosbridge_library::TestUInt8FixedSizeArray16_<ContainerAllocator2> & rhs)
-{
-  return lhs.data == rhs.data;
-}
-
-template<typename ContainerAllocator1, typename ContainerAllocator2>
-bool operator!=(const ::rosbridge_library::TestUInt8FixedSizeArray16_<ContainerAllocator1> & lhs, const ::rosbridge_library::TestUInt8FixedSizeArray16_<ContainerAllocator2> & rhs)
-{
-  return !(lhs == rhs);
-}
-
-
 } // namespace rosbridge_library
 
 namespace ros
@@ -86,17 +72,13 @@ namespace message_traits
 
 
 
+// BOOLTRAITS {'IsFixedSize': True, 'IsMessage': True, 'HasHeader': False}
+// {'geometry_msgs': ['/opt/ros/kinetic/share/geometry_msgs/cmake/../msg'], 'rosbridge_library': ['/home/nvidia/21_hf271/TX2_main/src/rosbridge_suite/rosbridge_library/msg'], 'std_msgs': ['/opt/ros/kinetic/share/std_msgs/cmake/../msg']}
+
+// !!!!!!!!!!! ['__class__', '__delattr__', '__dict__', '__doc__', '__eq__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_parsed_fields', 'constants', 'fields', 'full_name', 'has_header', 'header_present', 'names', 'package', 'parsed_fields', 'short_name', 'text', 'types']
 
 
-template <class ContainerAllocator>
-struct IsMessage< ::rosbridge_library::TestUInt8FixedSizeArray16_<ContainerAllocator> >
-  : TrueType
-  { };
 
-template <class ContainerAllocator>
-struct IsMessage< ::rosbridge_library::TestUInt8FixedSizeArray16_<ContainerAllocator> const>
-  : TrueType
-  { };
 
 template <class ContainerAllocator>
 struct IsFixedSize< ::rosbridge_library::TestUInt8FixedSizeArray16_<ContainerAllocator> >
@@ -105,6 +87,16 @@ struct IsFixedSize< ::rosbridge_library::TestUInt8FixedSizeArray16_<ContainerAll
 
 template <class ContainerAllocator>
 struct IsFixedSize< ::rosbridge_library::TestUInt8FixedSizeArray16_<ContainerAllocator> const>
+  : TrueType
+  { };
+
+template <class ContainerAllocator>
+struct IsMessage< ::rosbridge_library::TestUInt8FixedSizeArray16_<ContainerAllocator> >
+  : TrueType
+  { };
+
+template <class ContainerAllocator>
+struct IsMessage< ::rosbridge_library::TestUInt8FixedSizeArray16_<ContainerAllocator> const>
   : TrueType
   { };
 
@@ -148,8 +140,8 @@ struct Definition< ::rosbridge_library::TestUInt8FixedSizeArray16_<ContainerAllo
 {
   static const char* value()
   {
-    return "uint8[16] data\n"
-;
+    return "uint8[16] data\n\
+";
   }
 
   static const char* value(const ::rosbridge_library::TestUInt8FixedSizeArray16_<ContainerAllocator>&) { return value(); }

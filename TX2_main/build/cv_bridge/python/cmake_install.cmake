@@ -1,8 +1,8 @@
-# Install script for directory: /home/kyung/21_hf271/TX2_main/src/cv_bridge/python
+# Install script for directory: /home/nvidia/21_hf271/TX2_main/src/cv_bridge/python
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/kyung/21_hf271/TX2_main/install")
+  set(CMAKE_INSTALL_PREFIX "/home/nvidia/21_hf271/TX2_main/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -32,12 +32,7 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
   set(CMAKE_INSTALL_SO_NO_EXE "1")
 endif()
 
-# Is this installation the result of a crosscompile?
-if(NOT DEFINED CMAKE_CROSSCOMPILING)
-  set(CMAKE_CROSSCOMPILING "FALSE")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3/dist-packages/cv_bridge/boost" TYPE FILE FILES "/home/kyung/21_hf271/TX2_main/devel/lib/python3/dist-packages/cv_bridge/boost/__init__.py")
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python2.7/dist-packages/cv_bridge/boost" TYPE FILE FILES "/home/nvidia/21_hf271/TX2_main/devel/lib/python2.7/dist-packages/cv_bridge/boost/__init__.py")
 endif()
 

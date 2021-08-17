@@ -62,20 +62,6 @@ ros::message_operations::Printer< ::rosbridge_library::TestNestedServiceRequest_
 return s;
 }
 
-
-template<typename ContainerAllocator1, typename ContainerAllocator2>
-bool operator==(const ::rosbridge_library::TestNestedServiceRequest_<ContainerAllocator1> & lhs, const ::rosbridge_library::TestNestedServiceRequest_<ContainerAllocator2> & rhs)
-{
-  return lhs.pose == rhs.pose;
-}
-
-template<typename ContainerAllocator1, typename ContainerAllocator2>
-bool operator!=(const ::rosbridge_library::TestNestedServiceRequest_<ContainerAllocator1> & lhs, const ::rosbridge_library::TestNestedServiceRequest_<ContainerAllocator2> & rhs)
-{
-  return !(lhs == rhs);
-}
-
-
 } // namespace rosbridge_library
 
 namespace ros
@@ -85,17 +71,13 @@ namespace message_traits
 
 
 
+// BOOLTRAITS {'IsFixedSize': True, 'IsMessage': True, 'HasHeader': False}
+// {'geometry_msgs': ['/opt/ros/kinetic/share/geometry_msgs/cmake/../msg'], 'rosbridge_library': ['/home/nvidia/21_hf271/TX2_main/src/rosbridge_suite/rosbridge_library/msg'], 'std_msgs': ['/opt/ros/kinetic/share/std_msgs/cmake/../msg']}
+
+// !!!!!!!!!!! ['__class__', '__delattr__', '__dict__', '__doc__', '__eq__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_parsed_fields', 'constants', 'fields', 'full_name', 'has_header', 'header_present', 'names', 'package', 'parsed_fields', 'short_name', 'text', 'types']
 
 
-template <class ContainerAllocator>
-struct IsMessage< ::rosbridge_library::TestNestedServiceRequest_<ContainerAllocator> >
-  : TrueType
-  { };
 
-template <class ContainerAllocator>
-struct IsMessage< ::rosbridge_library::TestNestedServiceRequest_<ContainerAllocator> const>
-  : TrueType
-  { };
 
 template <class ContainerAllocator>
 struct IsFixedSize< ::rosbridge_library::TestNestedServiceRequest_<ContainerAllocator> >
@@ -104,6 +86,16 @@ struct IsFixedSize< ::rosbridge_library::TestNestedServiceRequest_<ContainerAllo
 
 template <class ContainerAllocator>
 struct IsFixedSize< ::rosbridge_library::TestNestedServiceRequest_<ContainerAllocator> const>
+  : TrueType
+  { };
+
+template <class ContainerAllocator>
+struct IsMessage< ::rosbridge_library::TestNestedServiceRequest_<ContainerAllocator> >
+  : TrueType
+  { };
+
+template <class ContainerAllocator>
+struct IsMessage< ::rosbridge_library::TestNestedServiceRequest_<ContainerAllocator> const>
   : TrueType
   { };
 
@@ -147,31 +139,31 @@ struct Definition< ::rosbridge_library::TestNestedServiceRequest_<ContainerAlloc
 {
   static const char* value()
   {
-    return "#request definition\n"
-"geometry_msgs/Pose pose\n"
-"\n"
-"================================================================================\n"
-"MSG: geometry_msgs/Pose\n"
-"# A representation of pose in free space, composed of position and orientation. \n"
-"Point position\n"
-"Quaternion orientation\n"
-"\n"
-"================================================================================\n"
-"MSG: geometry_msgs/Point\n"
-"# This contains the position of a point in free space\n"
-"float64 x\n"
-"float64 y\n"
-"float64 z\n"
-"\n"
-"================================================================================\n"
-"MSG: geometry_msgs/Quaternion\n"
-"# This represents an orientation in free space in quaternion form.\n"
-"\n"
-"float64 x\n"
-"float64 y\n"
-"float64 z\n"
-"float64 w\n"
-;
+    return "\n\
+geometry_msgs/Pose pose\n\
+\n\
+================================================================================\n\
+MSG: geometry_msgs/Pose\n\
+# A representation of pose in free space, composed of position and orientation. \n\
+Point position\n\
+Quaternion orientation\n\
+\n\
+================================================================================\n\
+MSG: geometry_msgs/Point\n\
+# This contains the position of a point in free space\n\
+float64 x\n\
+float64 y\n\
+float64 z\n\
+\n\
+================================================================================\n\
+MSG: geometry_msgs/Quaternion\n\
+# This represents an orientation in free space in quaternion form.\n\
+\n\
+float64 x\n\
+float64 y\n\
+float64 z\n\
+float64 w\n\
+";
   }
 
   static const char* value(const ::rosbridge_library::TestNestedServiceRequest_<ContainerAllocator>&) { return value(); }

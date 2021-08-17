@@ -59,7 +59,7 @@ class ConnectedClient {
 
   static getMessageSize(object) {
     let length = 0;
-    length += _getByteLength(object.ip_address);
+    length += object.ip_address.length;
     return length + 12;
   }
 

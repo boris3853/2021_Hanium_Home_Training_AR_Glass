@@ -57,8 +57,8 @@ struct DataType< ::rosapi::Services > {
 };
 
 
-// service_traits::MD5Sum< ::rosapi::ServicesRequest> should match
-// service_traits::MD5Sum< ::rosapi::Services >
+// service_traits::MD5Sum< ::rosapi::ServicesRequest> should match 
+// service_traits::MD5Sum< ::rosapi::Services > 
 template<>
 struct MD5Sum< ::rosapi::ServicesRequest>
 {
@@ -72,8 +72,8 @@ struct MD5Sum< ::rosapi::ServicesRequest>
   }
 };
 
-// service_traits::DataType< ::rosapi::ServicesRequest> should match
-// service_traits::DataType< ::rosapi::Services >
+// service_traits::DataType< ::rosapi::ServicesRequest> should match 
+// service_traits::DataType< ::rosapi::Services > 
 template<>
 struct DataType< ::rosapi::ServicesRequest>
 {
@@ -87,8 +87,8 @@ struct DataType< ::rosapi::ServicesRequest>
   }
 };
 
-// service_traits::MD5Sum< ::rosapi::ServicesResponse> should match
-// service_traits::MD5Sum< ::rosapi::Services >
+// service_traits::MD5Sum< ::rosapi::ServicesResponse> should match 
+// service_traits::MD5Sum< ::rosapi::Services > 
 template<>
 struct MD5Sum< ::rosapi::ServicesResponse>
 {
@@ -102,8 +102,8 @@ struct MD5Sum< ::rosapi::ServicesResponse>
   }
 };
 
-// service_traits::DataType< ::rosapi::ServicesResponse> should match
-// service_traits::DataType< ::rosapi::Services >
+// service_traits::DataType< ::rosapi::ServicesResponse> should match 
+// service_traits::DataType< ::rosapi::Services > 
 template<>
 struct DataType< ::rosapi::ServicesResponse>
 {

@@ -57,8 +57,8 @@ struct DataType< ::rosapi::GetTime > {
 };
 
 
-// service_traits::MD5Sum< ::rosapi::GetTimeRequest> should match
-// service_traits::MD5Sum< ::rosapi::GetTime >
+// service_traits::MD5Sum< ::rosapi::GetTimeRequest> should match 
+// service_traits::MD5Sum< ::rosapi::GetTime > 
 template<>
 struct MD5Sum< ::rosapi::GetTimeRequest>
 {
@@ -72,8 +72,8 @@ struct MD5Sum< ::rosapi::GetTimeRequest>
   }
 };
 
-// service_traits::DataType< ::rosapi::GetTimeRequest> should match
-// service_traits::DataType< ::rosapi::GetTime >
+// service_traits::DataType< ::rosapi::GetTimeRequest> should match 
+// service_traits::DataType< ::rosapi::GetTime > 
 template<>
 struct DataType< ::rosapi::GetTimeRequest>
 {
@@ -87,8 +87,8 @@ struct DataType< ::rosapi::GetTimeRequest>
   }
 };
 
-// service_traits::MD5Sum< ::rosapi::GetTimeResponse> should match
-// service_traits::MD5Sum< ::rosapi::GetTime >
+// service_traits::MD5Sum< ::rosapi::GetTimeResponse> should match 
+// service_traits::MD5Sum< ::rosapi::GetTime > 
 template<>
 struct MD5Sum< ::rosapi::GetTimeResponse>
 {
@@ -102,8 +102,8 @@ struct MD5Sum< ::rosapi::GetTimeResponse>
   }
 };
 
-// service_traits::DataType< ::rosapi::GetTimeResponse> should match
-// service_traits::DataType< ::rosapi::GetTime >
+// service_traits::DataType< ::rosapi::GetTimeResponse> should match 
+// service_traits::DataType< ::rosapi::GetTime > 
 template<>
 struct DataType< ::rosapi::GetTimeResponse>
 {

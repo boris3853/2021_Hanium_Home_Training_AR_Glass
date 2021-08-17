@@ -1,8 +1,8 @@
-# Install script for directory: /home/kyung/21_hf271/TX2_main/src/rosbridge_suite/rosbridge_server
+# Install script for directory: /home/nvidia/21_hf271/TX2_main/src/rosbridge_suite/rosbridge_server
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/kyung/21_hf271/TX2_main/install")
+  set(CMAKE_INSTALL_PREFIX "/home/nvidia/21_hf271/TX2_main/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -32,59 +32,54 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
   set(CMAKE_INSTALL_SO_NO_EXE "1")
 endif()
 
-# Is this installation the result of a crosscompile?
-if(NOT DEFINED CMAKE_CROSSCOMPILING)
-  set(CMAKE_CROSSCOMPILING "FALSE")
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  include("/home/nvidia/21_hf271/TX2_main/build/rosbridge_suite/rosbridge_server/catkin_generated/safe_execute_install.cmake")
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  include("/home/kyung/21_hf271/TX2_main/build/rosbridge_suite/rosbridge_server/catkin_generated/safe_execute_install.cmake")
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/nvidia/21_hf271/TX2_main/build/rosbridge_suite/rosbridge_server/catkin_generated/installspace/rosbridge_server.pc")
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/kyung/21_hf271/TX2_main/build/rosbridge_suite/rosbridge_server/catkin_generated/installspace/rosbridge_server.pc")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rosbridge_server/cmake" TYPE FILE FILES
-    "/home/kyung/21_hf271/TX2_main/build/rosbridge_suite/rosbridge_server/catkin_generated/installspace/rosbridge_serverConfig.cmake"
-    "/home/kyung/21_hf271/TX2_main/build/rosbridge_suite/rosbridge_server/catkin_generated/installspace/rosbridge_serverConfig-version.cmake"
+    "/home/nvidia/21_hf271/TX2_main/build/rosbridge_suite/rosbridge_server/catkin_generated/installspace/rosbridge_serverConfig.cmake"
+    "/home/nvidia/21_hf271/TX2_main/build/rosbridge_suite/rosbridge_server/catkin_generated/installspace/rosbridge_serverConfig-version.cmake"
     )
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rosbridge_server" TYPE FILE FILES "/home/kyung/21_hf271/TX2_main/src/rosbridge_suite/rosbridge_server/package.xml")
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rosbridge_server" TYPE FILE FILES "/home/nvidia/21_hf271/TX2_main/src/rosbridge_suite/rosbridge_server/package.xml")
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/rosbridge_server" TYPE PROGRAM FILES "/home/kyung/21_hf271/TX2_main/build/rosbridge_suite/rosbridge_server/catkin_generated/installspace/rosbridge_websocket.py")
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/rosbridge_server" TYPE PROGRAM FILES "/home/nvidia/21_hf271/TX2_main/build/rosbridge_suite/rosbridge_server/catkin_generated/installspace/rosbridge_websocket.py")
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/rosbridge_server" TYPE PROGRAM FILES "/home/kyung/21_hf271/TX2_main/build/rosbridge_suite/rosbridge_server/catkin_generated/installspace/rosbridge_websocket")
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/rosbridge_server" TYPE PROGRAM FILES "/home/nvidia/21_hf271/TX2_main/build/rosbridge_suite/rosbridge_server/catkin_generated/installspace/rosbridge_websocket")
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/rosbridge_server" TYPE PROGRAM FILES "/home/kyung/21_hf271/TX2_main/build/rosbridge_suite/rosbridge_server/catkin_generated/installspace/rosbridge_tcp.py")
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/rosbridge_server" TYPE PROGRAM FILES "/home/nvidia/21_hf271/TX2_main/build/rosbridge_suite/rosbridge_server/catkin_generated/installspace/rosbridge_tcp.py")
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/rosbridge_server" TYPE PROGRAM FILES "/home/kyung/21_hf271/TX2_main/build/rosbridge_suite/rosbridge_server/catkin_generated/installspace/rosbridge_tcp")
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/rosbridge_server" TYPE PROGRAM FILES "/home/nvidia/21_hf271/TX2_main/build/rosbridge_suite/rosbridge_server/catkin_generated/installspace/rosbridge_tcp")
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/rosbridge_server" TYPE PROGRAM FILES "/home/kyung/21_hf271/TX2_main/build/rosbridge_suite/rosbridge_server/catkin_generated/installspace/rosbridge_udp")
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/rosbridge_server" TYPE PROGRAM FILES "/home/nvidia/21_hf271/TX2_main/build/rosbridge_suite/rosbridge_server/catkin_generated/installspace/rosbridge_udp")
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/rosbridge_server" TYPE PROGRAM FILES "/home/kyung/21_hf271/TX2_main/build/rosbridge_suite/rosbridge_server/catkin_generated/installspace/rosbridge_udp.py")
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/rosbridge_server" TYPE PROGRAM FILES "/home/nvidia/21_hf271/TX2_main/build/rosbridge_suite/rosbridge_server/catkin_generated/installspace/rosbridge_udp.py")
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rosbridge_server/launch" TYPE FILE FILES
-    "/home/kyung/21_hf271/TX2_main/src/rosbridge_suite/rosbridge_server/launch/rosbridge_websocket.launch"
-    "/home/kyung/21_hf271/TX2_main/src/rosbridge_suite/rosbridge_server/launch/rosbridge_tcp.launch"
-    "/home/kyung/21_hf271/TX2_main/src/rosbridge_suite/rosbridge_server/launch/rosbridge_udp.launch"
+    "/home/nvidia/21_hf271/TX2_main/src/rosbridge_suite/rosbridge_server/launch/rosbridge_websocket.launch"
+    "/home/nvidia/21_hf271/TX2_main/src/rosbridge_suite/rosbridge_server/launch/rosbridge_tcp.launch"
+    "/home/nvidia/21_hf271/TX2_main/src/rosbridge_suite/rosbridge_server/launch/rosbridge_udp.launch"
     )
 endif()
 

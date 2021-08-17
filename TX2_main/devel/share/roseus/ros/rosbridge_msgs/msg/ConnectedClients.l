@@ -19,7 +19,7 @@
 (defmethod rosbridge_msgs::ConnectedClients
   (:init
    (&key
-    ((:clients __clients) ())
+    ((:clients __clients) (let (r) (dotimes (i 0) (push (instance rosbridge_msgs::ConnectedClient :init) r)) r))
     )
    (send-super :init)
    (setq _clients __clients)

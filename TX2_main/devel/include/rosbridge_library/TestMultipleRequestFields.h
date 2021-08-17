@@ -57,8 +57,8 @@ struct DataType< ::rosbridge_library::TestMultipleRequestFields > {
 };
 
 
-// service_traits::MD5Sum< ::rosbridge_library::TestMultipleRequestFieldsRequest> should match
-// service_traits::MD5Sum< ::rosbridge_library::TestMultipleRequestFields >
+// service_traits::MD5Sum< ::rosbridge_library::TestMultipleRequestFieldsRequest> should match 
+// service_traits::MD5Sum< ::rosbridge_library::TestMultipleRequestFields > 
 template<>
 struct MD5Sum< ::rosbridge_library::TestMultipleRequestFieldsRequest>
 {
@@ -72,8 +72,8 @@ struct MD5Sum< ::rosbridge_library::TestMultipleRequestFieldsRequest>
   }
 };
 
-// service_traits::DataType< ::rosbridge_library::TestMultipleRequestFieldsRequest> should match
-// service_traits::DataType< ::rosbridge_library::TestMultipleRequestFields >
+// service_traits::DataType< ::rosbridge_library::TestMultipleRequestFieldsRequest> should match 
+// service_traits::DataType< ::rosbridge_library::TestMultipleRequestFields > 
 template<>
 struct DataType< ::rosbridge_library::TestMultipleRequestFieldsRequest>
 {
@@ -87,8 +87,8 @@ struct DataType< ::rosbridge_library::TestMultipleRequestFieldsRequest>
   }
 };
 
-// service_traits::MD5Sum< ::rosbridge_library::TestMultipleRequestFieldsResponse> should match
-// service_traits::MD5Sum< ::rosbridge_library::TestMultipleRequestFields >
+// service_traits::MD5Sum< ::rosbridge_library::TestMultipleRequestFieldsResponse> should match 
+// service_traits::MD5Sum< ::rosbridge_library::TestMultipleRequestFields > 
 template<>
 struct MD5Sum< ::rosbridge_library::TestMultipleRequestFieldsResponse>
 {
@@ -102,8 +102,8 @@ struct MD5Sum< ::rosbridge_library::TestMultipleRequestFieldsResponse>
   }
 };
 
-// service_traits::DataType< ::rosbridge_library::TestMultipleRequestFieldsResponse> should match
-// service_traits::DataType< ::rosbridge_library::TestMultipleRequestFields >
+// service_traits::DataType< ::rosbridge_library::TestMultipleRequestFieldsResponse> should match 
+// service_traits::DataType< ::rosbridge_library::TestMultipleRequestFields > 
 template<>
 struct DataType< ::rosbridge_library::TestMultipleRequestFieldsResponse>
 {

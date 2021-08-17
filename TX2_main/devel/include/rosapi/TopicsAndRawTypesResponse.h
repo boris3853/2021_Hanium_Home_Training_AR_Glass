@@ -71,22 +71,6 @@ ros::message_operations::Printer< ::rosapi::TopicsAndRawTypesResponse_<Container
 return s;
 }
 
-
-template<typename ContainerAllocator1, typename ContainerAllocator2>
-bool operator==(const ::rosapi::TopicsAndRawTypesResponse_<ContainerAllocator1> & lhs, const ::rosapi::TopicsAndRawTypesResponse_<ContainerAllocator2> & rhs)
-{
-  return lhs.topics == rhs.topics &&
-    lhs.types == rhs.types &&
-    lhs.typedefs_full_text == rhs.typedefs_full_text;
-}
-
-template<typename ContainerAllocator1, typename ContainerAllocator2>
-bool operator!=(const ::rosapi::TopicsAndRawTypesResponse_<ContainerAllocator1> & lhs, const ::rosapi::TopicsAndRawTypesResponse_<ContainerAllocator2> & rhs)
-{
-  return !(lhs == rhs);
-}
-
-
 } // namespace rosapi
 
 namespace ros
@@ -96,17 +80,13 @@ namespace message_traits
 
 
 
+// BOOLTRAITS {'IsFixedSize': False, 'IsMessage': True, 'HasHeader': False}
+// {'rosapi': ['/home/nvidia/21_hf271/TX2_main/src/rosbridge_suite/rosapi/msg']}
+
+// !!!!!!!!!!! ['__class__', '__delattr__', '__dict__', '__doc__', '__eq__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_parsed_fields', 'constants', 'fields', 'full_name', 'has_header', 'header_present', 'names', 'package', 'parsed_fields', 'short_name', 'text', 'types']
 
 
-template <class ContainerAllocator>
-struct IsMessage< ::rosapi::TopicsAndRawTypesResponse_<ContainerAllocator> >
-  : TrueType
-  { };
 
-template <class ContainerAllocator>
-struct IsMessage< ::rosapi::TopicsAndRawTypesResponse_<ContainerAllocator> const>
-  : TrueType
-  { };
 
 template <class ContainerAllocator>
 struct IsFixedSize< ::rosapi::TopicsAndRawTypesResponse_<ContainerAllocator> >
@@ -116,6 +96,16 @@ struct IsFixedSize< ::rosapi::TopicsAndRawTypesResponse_<ContainerAllocator> >
 template <class ContainerAllocator>
 struct IsFixedSize< ::rosapi::TopicsAndRawTypesResponse_<ContainerAllocator> const>
   : FalseType
+  { };
+
+template <class ContainerAllocator>
+struct IsMessage< ::rosapi::TopicsAndRawTypesResponse_<ContainerAllocator> >
+  : TrueType
+  { };
+
+template <class ContainerAllocator>
+struct IsMessage< ::rosapi::TopicsAndRawTypesResponse_<ContainerAllocator> const>
+  : TrueType
   { };
 
 template <class ContainerAllocator>
@@ -158,11 +148,11 @@ struct Definition< ::rosapi::TopicsAndRawTypesResponse_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "string[] topics\n"
-"string[] types\n"
-"string[] typedefs_full_text\n"
-"\n"
-;
+    return "string[] topics\n\
+string[] types\n\
+string[] typedefs_full_text\n\
+\n\
+";
   }
 
   static const char* value(const ::rosapi::TopicsAndRawTypesResponse_<ContainerAllocator>&) { return value(); }

@@ -1,5 +1,5 @@
-execute_process(COMMAND "/home/kyung/21_hf271/TX2_main/build/cv_bridge/catkin_generated/python_distutils_install.sh" RESULT_VARIABLE res)
+execute_process(COMMAND "/home/nvidia/21_hf271/TX2_main/build/cv_bridge/catkin_generated/python_distutils_install.sh" RESULT_VARIABLE res)
 
 if(NOT res EQUAL 0)
-  message(FATAL_ERROR "execute_process(/home/kyung/21_hf271/TX2_main/build/cv_bridge/catkin_generated/python_distutils_install.sh) returned error code ")
+  message(FATAL_ERROR "execute_process(/home/nvidia/21_hf271/TX2_main/build/cv_bridge/catkin_generated/python_distutils_install.sh) returned error code ")
 endif()

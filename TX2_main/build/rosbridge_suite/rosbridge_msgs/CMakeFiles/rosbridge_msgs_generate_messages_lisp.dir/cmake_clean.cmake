@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "/home/kyung/21_hf271/TX2_main/devel/share/common-lisp/ros/rosbridge_msgs/msg/ConnectedClient.lisp"
-  "/home/kyung/21_hf271/TX2_main/devel/share/common-lisp/ros/rosbridge_msgs/msg/ConnectedClients.lisp"
   "CMakeFiles/rosbridge_msgs_generate_messages_lisp"
+  "/home/nvidia/21_hf271/TX2_main/devel/share/common-lisp/ros/rosbridge_msgs/msg/ConnectedClients.lisp"
+  "/home/nvidia/21_hf271/TX2_main/devel/share/common-lisp/ros/rosbridge_msgs/msg/ConnectedClient.lisp"
 )
 
 # Per-language clean rules from dependency scanning.

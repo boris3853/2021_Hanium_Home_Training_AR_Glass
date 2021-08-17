@@ -122,7 +122,7 @@ class SendBytesResponse {
 
   static getMessageSize(object) {
     let length = 0;
-    length += _getByteLength(object.data);
+    length += object.data.length;
     return length + 4;
   }
 

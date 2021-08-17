@@ -119,7 +119,7 @@
 (setf (get rosbridge_library::TestNestedServiceRequest :md5sum-) "063d2b71e58b5225a457d4ee09dab6f6")
 (setf (get rosbridge_library::TestNestedServiceRequest :datatype-) "rosbridge_library/TestNestedServiceRequest")
 (setf (get rosbridge_library::TestNestedServiceRequest :definition-)
-      "#request definition
+      "
 geometry_msgs/Pose pose
 
 ================================================================================
@@ -144,7 +144,7 @@ float64 y
 float64 z
 float64 w
 ---
-#response definition
+
 std_msgs/Float64 data
 
 
@@ -155,7 +155,7 @@ MSG: std_msgs/Float64
 (setf (get rosbridge_library::TestNestedServiceResponse :md5sum-) "063d2b71e58b5225a457d4ee09dab6f6")
 (setf (get rosbridge_library::TestNestedServiceResponse :datatype-) "rosbridge_library/TestNestedServiceResponse")
 (setf (get rosbridge_library::TestNestedServiceResponse :definition-)
-      "#request definition
+      "
 geometry_msgs/Pose pose
 
 ================================================================================
@@ -180,7 +180,7 @@ float64 y
 float64 z
 float64 w
 ---
-#response definition
+
 std_msgs/Float64 data
 
 

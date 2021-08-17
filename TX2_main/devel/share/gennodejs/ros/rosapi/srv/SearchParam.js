@@ -51,7 +51,7 @@ class SearchParamRequest {
 
   static getMessageSize(object) {
     let length = 0;
-    length += _getByteLength(object.name);
+    length += object.name.length;
     return length + 4;
   }
 
@@ -124,7 +124,7 @@ class SearchParamResponse {
 
   static getMessageSize(object) {
     let length = 0;
-    length += _getByteLength(object.global_name);
+    length += object.global_name.length;
     return length + 4;
   }
 

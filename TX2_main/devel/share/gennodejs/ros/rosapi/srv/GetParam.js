@@ -62,8 +62,8 @@ class GetParamRequest {
 
   static getMessageSize(object) {
     let length = 0;
-    length += _getByteLength(object.name);
-    length += _getByteLength(object.default);
+    length += object.name.length;
+    length += object.default.length;
     return length + 8;
   }
 
@@ -144,7 +144,7 @@ class GetParamResponse {
 
   static getMessageSize(object) {
     let length = 0;
-    length += _getByteLength(object.value);
+    length += object.value.length;
     return length + 4;
   }
 

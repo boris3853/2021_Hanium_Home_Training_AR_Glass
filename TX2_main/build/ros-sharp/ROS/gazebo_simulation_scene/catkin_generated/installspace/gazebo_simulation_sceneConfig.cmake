@@ -67,14 +67,14 @@ set(gazebo_simulation_scene_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(gazebo_simulation_scene_SOURCE_PREFIX /home/kyung/21_hf271/TX2_main/src/ros-sharp/ROS/gazebo_simulation_scene)
-  set(gazebo_simulation_scene_DEVEL_PREFIX /home/kyung/21_hf271/TX2_main/devel)
+  set(gazebo_simulation_scene_SOURCE_PREFIX /home/nvidia/21_hf271/TX2_main/src/ros-sharp/ROS/gazebo_simulation_scene)
+  set(gazebo_simulation_scene_DEVEL_PREFIX /home/nvidia/21_hf271/TX2_main/devel)
   set(gazebo_simulation_scene_INSTALL_PREFIX "")
   set(gazebo_simulation_scene_PREFIX ${gazebo_simulation_scene_DEVEL_PREFIX})
 else()
   set(gazebo_simulation_scene_SOURCE_PREFIX "")
   set(gazebo_simulation_scene_DEVEL_PREFIX "")
-  set(gazebo_simulation_scene_INSTALL_PREFIX /home/kyung/21_hf271/TX2_main/install)
+  set(gazebo_simulation_scene_INSTALL_PREFIX /home/nvidia/21_hf271/TX2_main/install)
   set(gazebo_simulation_scene_PREFIX ${gazebo_simulation_scene_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/kyung/21_hf271/TX2_main/install/lib;/opt/ros/noetic/lib)
+    foreach(path /home/nvidia/21_hf271/TX2_main/install/lib;/opt/ros/kinetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)
@@ -211,7 +211,7 @@ foreach(depend ${depends})
   _unpack_libraries_with_build_configuration(gazebo_simulation_scene_LIBRARIES ${gazebo_simulation_scene_LIBRARIES})
 
   _list_append_unique(gazebo_simulation_scene_LIBRARY_DIRS ${${gazebo_simulation_scene_dep}_LIBRARY_DIRS})
-  _list_append_deduplicate(gazebo_simulation_scene_EXPORTED_TARGETS ${${gazebo_simulation_scene_dep}_EXPORTED_TARGETS})
+  list(APPEND gazebo_simulation_scene_EXPORTED_TARGETS ${${gazebo_simulation_scene_dep}_EXPORTED_TARGETS})
 endforeach()
 
 set(pkg_cfg_extras "")

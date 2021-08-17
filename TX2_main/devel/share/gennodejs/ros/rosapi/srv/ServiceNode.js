@@ -51,7 +51,7 @@ class ServiceNodeRequest {
 
   static getMessageSize(object) {
     let length = 0;
-    length += _getByteLength(object.service);
+    length += object.service.length;
     return length + 4;
   }
 
@@ -124,7 +124,7 @@ class ServiceNodeResponse {
 
   static getMessageSize(object) {
     let length = 0;
-    length += _getByteLength(object.node);
+    length += object.node.length;
     return length + 4;
   }
 

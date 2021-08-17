@@ -57,8 +57,8 @@ struct DataType< ::rosbridge_library::TestRequestAndResponse > {
 };
 
 
-// service_traits::MD5Sum< ::rosbridge_library::TestRequestAndResponseRequest> should match
-// service_traits::MD5Sum< ::rosbridge_library::TestRequestAndResponse >
+// service_traits::MD5Sum< ::rosbridge_library::TestRequestAndResponseRequest> should match 
+// service_traits::MD5Sum< ::rosbridge_library::TestRequestAndResponse > 
 template<>
 struct MD5Sum< ::rosbridge_library::TestRequestAndResponseRequest>
 {
@@ -72,8 +72,8 @@ struct MD5Sum< ::rosbridge_library::TestRequestAndResponseRequest>
   }
 };
 
-// service_traits::DataType< ::rosbridge_library::TestRequestAndResponseRequest> should match
-// service_traits::DataType< ::rosbridge_library::TestRequestAndResponse >
+// service_traits::DataType< ::rosbridge_library::TestRequestAndResponseRequest> should match 
+// service_traits::DataType< ::rosbridge_library::TestRequestAndResponse > 
 template<>
 struct DataType< ::rosbridge_library::TestRequestAndResponseRequest>
 {
@@ -87,8 +87,8 @@ struct DataType< ::rosbridge_library::TestRequestAndResponseRequest>
   }
 };
 
-// service_traits::MD5Sum< ::rosbridge_library::TestRequestAndResponseResponse> should match
-// service_traits::MD5Sum< ::rosbridge_library::TestRequestAndResponse >
+// service_traits::MD5Sum< ::rosbridge_library::TestRequestAndResponseResponse> should match 
+// service_traits::MD5Sum< ::rosbridge_library::TestRequestAndResponse > 
 template<>
 struct MD5Sum< ::rosbridge_library::TestRequestAndResponseResponse>
 {
@@ -102,8 +102,8 @@ struct MD5Sum< ::rosbridge_library::TestRequestAndResponseResponse>
   }
 };
 
-// service_traits::DataType< ::rosbridge_library::TestRequestAndResponseResponse> should match
-// service_traits::DataType< ::rosbridge_library::TestRequestAndResponse >
+// service_traits::DataType< ::rosbridge_library::TestRequestAndResponseResponse> should match 
+// service_traits::DataType< ::rosbridge_library::TestRequestAndResponse > 
 template<>
 struct DataType< ::rosbridge_library::TestRequestAndResponseResponse>
 {

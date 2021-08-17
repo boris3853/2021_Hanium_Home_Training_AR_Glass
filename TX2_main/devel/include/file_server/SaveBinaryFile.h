@@ -57,8 +57,8 @@ struct DataType< ::file_server::SaveBinaryFile > {
 };
 
 
-// service_traits::MD5Sum< ::file_server::SaveBinaryFileRequest> should match
-// service_traits::MD5Sum< ::file_server::SaveBinaryFile >
+// service_traits::MD5Sum< ::file_server::SaveBinaryFileRequest> should match 
+// service_traits::MD5Sum< ::file_server::SaveBinaryFile > 
 template<>
 struct MD5Sum< ::file_server::SaveBinaryFileRequest>
 {
@@ -72,8 +72,8 @@ struct MD5Sum< ::file_server::SaveBinaryFileRequest>
   }
 };
 
-// service_traits::DataType< ::file_server::SaveBinaryFileRequest> should match
-// service_traits::DataType< ::file_server::SaveBinaryFile >
+// service_traits::DataType< ::file_server::SaveBinaryFileRequest> should match 
+// service_traits::DataType< ::file_server::SaveBinaryFile > 
 template<>
 struct DataType< ::file_server::SaveBinaryFileRequest>
 {
@@ -87,8 +87,8 @@ struct DataType< ::file_server::SaveBinaryFileRequest>
   }
 };
 
-// service_traits::MD5Sum< ::file_server::SaveBinaryFileResponse> should match
-// service_traits::MD5Sum< ::file_server::SaveBinaryFile >
+// service_traits::MD5Sum< ::file_server::SaveBinaryFileResponse> should match 
+// service_traits::MD5Sum< ::file_server::SaveBinaryFile > 
 template<>
 struct MD5Sum< ::file_server::SaveBinaryFileResponse>
 {
@@ -102,8 +102,8 @@ struct MD5Sum< ::file_server::SaveBinaryFileResponse>
   }
 };
 
-// service_traits::DataType< ::file_server::SaveBinaryFileResponse> should match
-// service_traits::DataType< ::file_server::SaveBinaryFile >
+// service_traits::DataType< ::file_server::SaveBinaryFileResponse> should match 
+// service_traits::DataType< ::file_server::SaveBinaryFile > 
 template<>
 struct DataType< ::file_server::SaveBinaryFileResponse>
 {

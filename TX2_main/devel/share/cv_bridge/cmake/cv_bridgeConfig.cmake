@@ -67,14 +67,14 @@ set(cv_bridge_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("TRUE" STREQUAL "TRUE")
-  set(cv_bridge_SOURCE_PREFIX /home/kyung/21_hf271/TX2_main/src/cv_bridge)
-  set(cv_bridge_DEVEL_PREFIX /home/kyung/21_hf271/TX2_main/devel)
+  set(cv_bridge_SOURCE_PREFIX /home/nvidia/21_hf271/TX2_main/src/cv_bridge)
+  set(cv_bridge_DEVEL_PREFIX /home/nvidia/21_hf271/TX2_main/devel)
   set(cv_bridge_INSTALL_PREFIX "")
   set(cv_bridge_PREFIX ${cv_bridge_DEVEL_PREFIX})
 else()
   set(cv_bridge_SOURCE_PREFIX "")
   set(cv_bridge_DEVEL_PREFIX "")
-  set(cv_bridge_INSTALL_PREFIX /home/kyung/21_hf271/TX2_main/install)
+  set(cv_bridge_INSTALL_PREFIX /home/nvidia/21_hf271/TX2_main/install)
   set(cv_bridge_PREFIX ${cv_bridge_INSTALL_PREFIX})
 endif()
 
@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(cv_bridge_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT "/home/kyung/21_hf271/TX2_main/src/cv_bridge/include;/usr/include/opencv4 " STREQUAL " ")
+if(NOT "/home/nvidia/21_hf271/TX2_main/src/cv_bridge/include;/usr/local/include;/usr/local/include/opencv " STREQUAL " ")
   set(cv_bridge_INCLUDE_DIRS "")
-  set(_include_dirs "/home/kyung/21_hf271/TX2_main/src/cv_bridge/include;/usr/include/opencv4")
+  set(_include_dirs "/home/nvidia/21_hf271/TX2_main/src/cv_bridge/include;/usr/local/include;/usr/local/include/opencv")
   if(NOT "https://github.com/ros-perception/vision_opencv/issues " STREQUAL " ")
     set(_report "Check the issue tracker 'https://github.com/ros-perception/vision_opencv/issues' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT "http://www.ros.org/wiki/cv_bridge " STREQUAL " ")
@@ -110,13 +110,13 @@ if(NOT "/home/kyung/21_hf271/TX2_main/src/cv_bridge/include;/usr/include/opencv4
         message(FATAL_ERROR "Project 'cv_bridge' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  ${_report}")
       endif()
     else()
-      message(FATAL_ERROR "Project 'cv_bridge' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/kyung/21_hf271/TX2_main/src/cv_bridge/${idir}'.  ${_report}")
+      message(FATAL_ERROR "Project 'cv_bridge' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/nvidia/21_hf271/TX2_main/src/cv_bridge/${idir}'.  ${_report}")
     endif()
     _list_append_unique(cv_bridge_INCLUDE_DIRS ${include})
   endforeach()
 endif()
 
-set(libraries "cv_bridge;/usr/lib/x86_64-linux-gnu/libopencv_calib3d.so.4.2.0;/usr/lib/x86_64-linux-gnu/libopencv_dnn.so.4.2.0;/usr/lib/x86_64-linux-gnu/libopencv_features2d.so.4.2.0;/usr/lib/x86_64-linux-gnu/libopencv_flann.so.4.2.0;/usr/lib/x86_64-linux-gnu/libopencv_highgui.so.4.2.0;/usr/lib/x86_64-linux-gnu/libopencv_ml.so.4.2.0;/usr/lib/x86_64-linux-gnu/libopencv_objdetect.so.4.2.0;/usr/lib/x86_64-linux-gnu/libopencv_photo.so.4.2.0;/usr/lib/x86_64-linux-gnu/libopencv_stitching.so.4.2.0;/usr/lib/x86_64-linux-gnu/libopencv_video.so.4.2.0;/usr/lib/x86_64-linux-gnu/libopencv_videoio.so.4.2.0;/usr/lib/x86_64-linux-gnu/libopencv_aruco.so.4.2.0;/usr/lib/x86_64-linux-gnu/libopencv_bgsegm.so.4.2.0;/usr/lib/x86_64-linux-gnu/libopencv_bioinspired.so.4.2.0;/usr/lib/x86_64-linux-gnu/libopencv_ccalib.so.4.2.0;/usr/lib/x86_64-linux-gnu/libopencv_datasets.so.4.2.0;/usr/lib/x86_64-linux-gnu/libopencv_dnn_objdetect.so.4.2.0;/usr/lib/x86_64-linux-gnu/libopencv_dnn_superres.so.4.2.0;/usr/lib/x86_64-linux-gnu/libopencv_dpm.so.4.2.0;/usr/lib/x86_64-linux-gnu/libopencv_face.so.4.2.0;/usr/lib/x86_64-linux-gnu/libopencv_freetype.so.4.2.0;/usr/lib/x86_64-linux-gnu/libopencv_fuzzy.so.4.2.0;/usr/lib/x86_64-linux-gnu/libopencv_hdf.so.4.2.0;/usr/lib/x86_64-linux-gnu/libopencv_hfs.so.4.2.0;/usr/lib/x86_64-linux-gnu/libopencv_img_hash.so.4.2.0;/usr/lib/x86_64-linux-gnu/libopencv_line_descriptor.so.4.2.0;/usr/lib/x86_64-linux-gnu/libopencv_optflow.so.4.2.0;/usr/lib/x86_64-linux-gnu/libopencv_phase_unwrapping.so.4.2.0;/usr/lib/x86_64-linux-gnu/libopencv_plot.so.4.2.0;/usr/lib/x86_64-linux-gnu/libopencv_quality.so.4.2.0;/usr/lib/x86_64-linux-gnu/libopencv_reg.so.4.2.0;/usr/lib/x86_64-linux-gnu/libopencv_rgbd.so.4.2.0;/usr/lib/x86_64-linux-gnu/libopencv_saliency.so.4.2.0;/usr/lib/x86_64-linux-gnu/libopencv_shape.so.4.2.0;/usr/lib/x86_64-linux-gnu/libopencv_stereo.so.4.2.0;/usr/lib/x86_64-linux-gnu/libopencv_structured_light.so.4.2.0;/usr/lib/x86_64-linux-gnu/libopencv_superres.so.4.2.0;/usr/lib/x86_64-linux-gnu/libopencv_surface_matching.so.4.2.0;/usr/lib/x86_64-linux-gnu/libopencv_text.so.4.2.0;/usr/lib/x86_64-linux-gnu/libopencv_tracking.so.4.2.0;/usr/lib/x86_64-linux-gnu/libopencv_videostab.so.4.2.0;/usr/lib/x86_64-linux-gnu/libopencv_viz.so.4.2.0;/usr/lib/x86_64-linux-gnu/libopencv_ximgproc.so.4.2.0;/usr/lib/x86_64-linux-gnu/libopencv_xobjdetect.so.4.2.0;/usr/lib/x86_64-linux-gnu/libopencv_xphoto.so.4.2.0;/usr/lib/x86_64-linux-gnu/libopencv_core.so.4.2.0;/usr/lib/x86_64-linux-gnu/libopencv_imgproc.so.4.2.0;/usr/lib/x86_64-linux-gnu/libopencv_imgcodecs.so.4.2.0")
+set(libraries "cv_bridge;/usr/local/lib/libopencv_core.so.3.4.1;/usr/local/lib/libopencv_imgproc.so.3.4.1;/usr/local/lib/libopencv_imgcodecs.so.3.4.1")
 foreach(library ${libraries})
   # keep build configuration keywords, target names and absolute libraries as-is
   if("${library}" MATCHES "^(debug|optimized|general)$")
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/kyung/21_hf271/TX2_main/devel/lib;/opt/ros/noetic/lib)
+    foreach(path /home/nvidia/21_hf271/TX2_main/devel/lib;/opt/ros/kinetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)
@@ -211,7 +211,7 @@ foreach(depend ${depends})
   _unpack_libraries_with_build_configuration(cv_bridge_LIBRARIES ${cv_bridge_LIBRARIES})
 
   _list_append_unique(cv_bridge_LIBRARY_DIRS ${${cv_bridge_dep}_LIBRARY_DIRS})
-  _list_append_deduplicate(cv_bridge_EXPORTED_TARGETS ${${cv_bridge_dep}_EXPORTED_TARGETS})
+  list(APPEND cv_bridge_EXPORTED_TARGETS ${${cv_bridge_dep}_EXPORTED_TARGETS})
 endforeach()
 
 set(pkg_cfg_extras "cv_bridge-extras.cmake")

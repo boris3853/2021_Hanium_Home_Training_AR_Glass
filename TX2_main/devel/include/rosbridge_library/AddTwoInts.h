@@ -57,8 +57,8 @@ struct DataType< ::rosbridge_library::AddTwoInts > {
 };
 
 
-// service_traits::MD5Sum< ::rosbridge_library::AddTwoIntsRequest> should match
-// service_traits::MD5Sum< ::rosbridge_library::AddTwoInts >
+// service_traits::MD5Sum< ::rosbridge_library::AddTwoIntsRequest> should match 
+// service_traits::MD5Sum< ::rosbridge_library::AddTwoInts > 
 template<>
 struct MD5Sum< ::rosbridge_library::AddTwoIntsRequest>
 {
@@ -72,8 +72,8 @@ struct MD5Sum< ::rosbridge_library::AddTwoIntsRequest>
   }
 };
 
-// service_traits::DataType< ::rosbridge_library::AddTwoIntsRequest> should match
-// service_traits::DataType< ::rosbridge_library::AddTwoInts >
+// service_traits::DataType< ::rosbridge_library::AddTwoIntsRequest> should match 
+// service_traits::DataType< ::rosbridge_library::AddTwoInts > 
 template<>
 struct DataType< ::rosbridge_library::AddTwoIntsRequest>
 {
@@ -87,8 +87,8 @@ struct DataType< ::rosbridge_library::AddTwoIntsRequest>
   }
 };
 
-// service_traits::MD5Sum< ::rosbridge_library::AddTwoIntsResponse> should match
-// service_traits::MD5Sum< ::rosbridge_library::AddTwoInts >
+// service_traits::MD5Sum< ::rosbridge_library::AddTwoIntsResponse> should match 
+// service_traits::MD5Sum< ::rosbridge_library::AddTwoInts > 
 template<>
 struct MD5Sum< ::rosbridge_library::AddTwoIntsResponse>
 {
@@ -102,8 +102,8 @@ struct MD5Sum< ::rosbridge_library::AddTwoIntsResponse>
   }
 };
 
-// service_traits::DataType< ::rosbridge_library::AddTwoIntsResponse> should match
-// service_traits::DataType< ::rosbridge_library::AddTwoInts >
+// service_traits::DataType< ::rosbridge_library::AddTwoIntsResponse> should match 
+// service_traits::DataType< ::rosbridge_library::AddTwoInts > 
 template<>
 struct DataType< ::rosbridge_library::AddTwoIntsResponse>
 {

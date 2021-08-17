@@ -62,20 +62,6 @@ ros::message_operations::Printer< ::rosbridge_library::TestNestedServiceResponse
 return s;
 }
 
-
-template<typename ContainerAllocator1, typename ContainerAllocator2>
-bool operator==(const ::rosbridge_library::TestNestedServiceResponse_<ContainerAllocator1> & lhs, const ::rosbridge_library::TestNestedServiceResponse_<ContainerAllocator2> & rhs)
-{
-  return lhs.data == rhs.data;
-}
-
-template<typename ContainerAllocator1, typename ContainerAllocator2>
-bool operator!=(const ::rosbridge_library::TestNestedServiceResponse_<ContainerAllocator1> & lhs, const ::rosbridge_library::TestNestedServiceResponse_<ContainerAllocator2> & rhs)
-{
-  return !(lhs == rhs);
-}
-
-
 } // namespace rosbridge_library
 
 namespace ros
@@ -85,17 +71,13 @@ namespace message_traits
 
 
 
+// BOOLTRAITS {'IsFixedSize': True, 'IsMessage': True, 'HasHeader': False}
+// {'geometry_msgs': ['/opt/ros/kinetic/share/geometry_msgs/cmake/../msg'], 'rosbridge_library': ['/home/nvidia/21_hf271/TX2_main/src/rosbridge_suite/rosbridge_library/msg'], 'std_msgs': ['/opt/ros/kinetic/share/std_msgs/cmake/../msg']}
+
+// !!!!!!!!!!! ['__class__', '__delattr__', '__dict__', '__doc__', '__eq__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_parsed_fields', 'constants', 'fields', 'full_name', 'has_header', 'header_present', 'names', 'package', 'parsed_fields', 'short_name', 'text', 'types']
 
 
-template <class ContainerAllocator>
-struct IsMessage< ::rosbridge_library::TestNestedServiceResponse_<ContainerAllocator> >
-  : TrueType
-  { };
 
-template <class ContainerAllocator>
-struct IsMessage< ::rosbridge_library::TestNestedServiceResponse_<ContainerAllocator> const>
-  : TrueType
-  { };
 
 template <class ContainerAllocator>
 struct IsFixedSize< ::rosbridge_library::TestNestedServiceResponse_<ContainerAllocator> >
@@ -104,6 +86,16 @@ struct IsFixedSize< ::rosbridge_library::TestNestedServiceResponse_<ContainerAll
 
 template <class ContainerAllocator>
 struct IsFixedSize< ::rosbridge_library::TestNestedServiceResponse_<ContainerAllocator> const>
+  : TrueType
+  { };
+
+template <class ContainerAllocator>
+struct IsMessage< ::rosbridge_library::TestNestedServiceResponse_<ContainerAllocator> >
+  : TrueType
+  { };
+
+template <class ContainerAllocator>
+struct IsMessage< ::rosbridge_library::TestNestedServiceResponse_<ContainerAllocator> const>
   : TrueType
   { };
 
@@ -147,14 +139,14 @@ struct Definition< ::rosbridge_library::TestNestedServiceResponse_<ContainerAllo
 {
   static const char* value()
   {
-    return "#response definition\n"
-"std_msgs/Float64 data\n"
-"\n"
-"\n"
-"================================================================================\n"
-"MSG: std_msgs/Float64\n"
-"float64 data\n"
-;
+    return "\n\
+std_msgs/Float64 data\n\
+\n\
+\n\
+================================================================================\n\
+MSG: std_msgs/Float64\n\
+float64 data\n\
+";
   }
 
   static const char* value(const ::rosbridge_library::TestNestedServiceResponse_<ContainerAllocator>&) { return value(); }

@@ -57,8 +57,8 @@ struct DataType< ::rosbridge_library::SendBytes > {
 };
 
 
-// service_traits::MD5Sum< ::rosbridge_library::SendBytesRequest> should match
-// service_traits::MD5Sum< ::rosbridge_library::SendBytes >
+// service_traits::MD5Sum< ::rosbridge_library::SendBytesRequest> should match 
+// service_traits::MD5Sum< ::rosbridge_library::SendBytes > 
 template<>
 struct MD5Sum< ::rosbridge_library::SendBytesRequest>
 {
@@ -72,8 +72,8 @@ struct MD5Sum< ::rosbridge_library::SendBytesRequest>
   }
 };
 
-// service_traits::DataType< ::rosbridge_library::SendBytesRequest> should match
-// service_traits::DataType< ::rosbridge_library::SendBytes >
+// service_traits::DataType< ::rosbridge_library::SendBytesRequest> should match 
+// service_traits::DataType< ::rosbridge_library::SendBytes > 
 template<>
 struct DataType< ::rosbridge_library::SendBytesRequest>
 {
@@ -87,8 +87,8 @@ struct DataType< ::rosbridge_library::SendBytesRequest>
   }
 };
 
-// service_traits::MD5Sum< ::rosbridge_library::SendBytesResponse> should match
-// service_traits::MD5Sum< ::rosbridge_library::SendBytes >
+// service_traits::MD5Sum< ::rosbridge_library::SendBytesResponse> should match 
+// service_traits::MD5Sum< ::rosbridge_library::SendBytes > 
 template<>
 struct MD5Sum< ::rosbridge_library::SendBytesResponse>
 {
@@ -102,8 +102,8 @@ struct MD5Sum< ::rosbridge_library::SendBytesResponse>
   }
 };
 
-// service_traits::DataType< ::rosbridge_library::SendBytesResponse> should match
-// service_traits::DataType< ::rosbridge_library::SendBytes >
+// service_traits::DataType< ::rosbridge_library::SendBytesResponse> should match 
+// service_traits::DataType< ::rosbridge_library::SendBytes > 
 template<>
 struct DataType< ::rosbridge_library::SendBytesResponse>
 {

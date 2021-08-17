@@ -46,8 +46,8 @@
    (&optional __string)
    (if __string (setq _string __string)) _string)
   (:bool
-   (&optional (__bool :null))
-   (if (not (eq __bool :null)) (setq _bool __bool)) _bool)
+   (&optional __bool)
+   (if __bool (setq _bool __bool)) _bool)
   (:serialization-length
    ()
    (+

@@ -67,14 +67,14 @@ set(socket_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(socket_SOURCE_PREFIX /home/kyung/21_hf271/TX2_main/src/socket)
-  set(socket_DEVEL_PREFIX /home/kyung/21_hf271/TX2_main/devel)
+  set(socket_SOURCE_PREFIX /home/nvidia/21_hf271/TX2_main/src/socket)
+  set(socket_DEVEL_PREFIX /home/nvidia/21_hf271/TX2_main/devel)
   set(socket_INSTALL_PREFIX "")
   set(socket_PREFIX ${socket_DEVEL_PREFIX})
 else()
   set(socket_SOURCE_PREFIX "")
   set(socket_DEVEL_PREFIX "")
-  set(socket_INSTALL_PREFIX /home/kyung/21_hf271/TX2_main/install)
+  set(socket_INSTALL_PREFIX /home/nvidia/21_hf271/TX2_main/install)
   set(socket_PREFIX ${socket_INSTALL_PREFIX})
 endif()
 
@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(socket_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT " " STREQUAL " ")
+if(NOT "include " STREQUAL " ")
   set(socket_INCLUDE_DIRS "")
-  set(_include_dirs "")
+  set(_include_dirs "include")
   if(NOT " " STREQUAL " ")
     set(_report "Check the issue tracker '' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT " " STREQUAL " ")
@@ -116,7 +116,7 @@ if(NOT " " STREQUAL " ")
   endforeach()
 endif()
 
-set(libraries "")
+set(libraries "json")
 foreach(library ${libraries})
   # keep build configuration keywords, target names and absolute libraries as-is
   if("${library}" MATCHES "^(debug|optimized|general)$")
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/kyung/21_hf271/TX2_main/install/lib;/opt/ros/noetic/lib)
+    foreach(path /home/nvidia/21_hf271/TX2_main/install/lib;/opt/ros/kinetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)
@@ -211,7 +211,7 @@ foreach(depend ${depends})
   _unpack_libraries_with_build_configuration(socket_LIBRARIES ${socket_LIBRARIES})
 
   _list_append_unique(socket_LIBRARY_DIRS ${${socket_dep}_LIBRARY_DIRS})
-  _list_append_deduplicate(socket_EXPORTED_TARGETS ${${socket_dep}_EXPORTED_TARGETS})
+  list(APPEND socket_EXPORTED_TARGETS ${${socket_dep}_EXPORTED_TARGETS})
 endforeach()
 
 set(pkg_cfg_extras "")

@@ -66,21 +66,6 @@ ros::message_operations::Printer< ::rosapi::SetParamRequest_<ContainerAllocator>
 return s;
 }
 
-
-template<typename ContainerAllocator1, typename ContainerAllocator2>
-bool operator==(const ::rosapi::SetParamRequest_<ContainerAllocator1> & lhs, const ::rosapi::SetParamRequest_<ContainerAllocator2> & rhs)
-{
-  return lhs.name == rhs.name &&
-    lhs.value == rhs.value;
-}
-
-template<typename ContainerAllocator1, typename ContainerAllocator2>
-bool operator!=(const ::rosapi::SetParamRequest_<ContainerAllocator1> & lhs, const ::rosapi::SetParamRequest_<ContainerAllocator2> & rhs)
-{
-  return !(lhs == rhs);
-}
-
-
 } // namespace rosapi
 
 namespace ros
@@ -90,17 +75,13 @@ namespace message_traits
 
 
 
+// BOOLTRAITS {'IsFixedSize': False, 'IsMessage': True, 'HasHeader': False}
+// {'rosapi': ['/home/nvidia/21_hf271/TX2_main/src/rosbridge_suite/rosapi/msg']}
+
+// !!!!!!!!!!! ['__class__', '__delattr__', '__dict__', '__doc__', '__eq__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_parsed_fields', 'constants', 'fields', 'full_name', 'has_header', 'header_present', 'names', 'package', 'parsed_fields', 'short_name', 'text', 'types']
 
 
-template <class ContainerAllocator>
-struct IsMessage< ::rosapi::SetParamRequest_<ContainerAllocator> >
-  : TrueType
-  { };
 
-template <class ContainerAllocator>
-struct IsMessage< ::rosapi::SetParamRequest_<ContainerAllocator> const>
-  : TrueType
-  { };
 
 template <class ContainerAllocator>
 struct IsFixedSize< ::rosapi::SetParamRequest_<ContainerAllocator> >
@@ -110,6 +91,16 @@ struct IsFixedSize< ::rosapi::SetParamRequest_<ContainerAllocator> >
 template <class ContainerAllocator>
 struct IsFixedSize< ::rosapi::SetParamRequest_<ContainerAllocator> const>
   : FalseType
+  { };
+
+template <class ContainerAllocator>
+struct IsMessage< ::rosapi::SetParamRequest_<ContainerAllocator> >
+  : TrueType
+  { };
+
+template <class ContainerAllocator>
+struct IsMessage< ::rosapi::SetParamRequest_<ContainerAllocator> const>
+  : TrueType
   { };
 
 template <class ContainerAllocator>
@@ -152,9 +143,9 @@ struct Definition< ::rosapi::SetParamRequest_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "string name\n"
-"string value\n"
-;
+    return "string name\n\
+string value\n\
+";
   }
 
   static const char* value(const ::rosapi::SetParamRequest_<ContainerAllocator>&) { return value(); }

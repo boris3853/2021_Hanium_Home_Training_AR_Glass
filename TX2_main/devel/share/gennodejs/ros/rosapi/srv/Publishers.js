@@ -51,7 +51,7 @@ class PublishersRequest {
 
   static getMessageSize(object) {
     let length = 0;
-    length += _getByteLength(object.topic);
+    length += object.topic.length;
     return length + 4;
   }
 
@@ -125,7 +125,7 @@ class PublishersResponse {
   static getMessageSize(object) {
     let length = 0;
     object.publishers.forEach((val) => {
-      length += 4 + _getByteLength(val);
+      length += 4 + val.length;
     });
     return length + 4;
   }

@@ -1,8 +1,8 @@
-# Install script for directory: /home/kyung/21_hf271/TX2_main/src/cv_bridge
+# Install script for directory: /home/nvidia/21_hf271/TX2_main/src/cv_bridge
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/kyung/21_hf271/TX2_main/install")
+  set(CMAKE_INSTALL_PREFIX "/home/nvidia/21_hf271/TX2_main/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -32,43 +32,38 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
   set(CMAKE_INSTALL_SO_NO_EXE "1")
 endif()
 
-# Is this installation the result of a crosscompile?
-if(NOT DEFINED CMAKE_CROSSCOMPILING)
-  set(CMAKE_CROSSCOMPILING "FALSE")
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/nvidia/21_hf271/TX2_main/build/cv_bridge/catkin_generated/installspace/cv_bridge.pc")
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/kyung/21_hf271/TX2_main/build/cv_bridge/catkin_generated/installspace/cv_bridge.pc")
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cv_bridge/cmake" TYPE FILE FILES "/home/nvidia/21_hf271/TX2_main/build/cv_bridge/catkin_generated/installspace/cv_bridge-extras.cmake")
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cv_bridge/cmake" TYPE FILE FILES "/home/kyung/21_hf271/TX2_main/build/cv_bridge/catkin_generated/installspace/cv_bridge-extras.cmake")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cv_bridge/cmake" TYPE FILE FILES
-    "/home/kyung/21_hf271/TX2_main/build/cv_bridge/catkin_generated/installspace/cv_bridgeConfig.cmake"
-    "/home/kyung/21_hf271/TX2_main/build/cv_bridge/catkin_generated/installspace/cv_bridgeConfig-version.cmake"
+    "/home/nvidia/21_hf271/TX2_main/build/cv_bridge/catkin_generated/installspace/cv_bridgeConfig.cmake"
+    "/home/nvidia/21_hf271/TX2_main/build/cv_bridge/catkin_generated/installspace/cv_bridgeConfig-version.cmake"
     )
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cv_bridge" TYPE FILE FILES "/home/kyung/21_hf271/TX2_main/src/cv_bridge/package.xml")
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cv_bridge" TYPE FILE FILES "/home/nvidia/21_hf271/TX2_main/src/cv_bridge/package.xml")
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  include("/home/kyung/21_hf271/TX2_main/build/cv_bridge/catkin_generated/safe_execute_install.cmake")
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  include("/home/nvidia/21_hf271/TX2_main/build/cv_bridge/catkin_generated/safe_execute_install.cmake")
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/cv_bridge" TYPE DIRECTORY FILES "/home/kyung/21_hf271/TX2_main/src/cv_bridge/include/cv_bridge/")
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/cv_bridge" TYPE DIRECTORY FILES "/home/nvidia/21_hf271/TX2_main/src/cv_bridge/include/cv_bridge/")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/kyung/21_hf271/TX2_main/build/cv_bridge/python/cmake_install.cmake")
-  include("/home/kyung/21_hf271/TX2_main/build/cv_bridge/src/cmake_install.cmake")
-  include("/home/kyung/21_hf271/TX2_main/build/cv_bridge/test/cmake_install.cmake")
+  include("/home/nvidia/21_hf271/TX2_main/build/cv_bridge/python/cmake_install.cmake")
+  include("/home/nvidia/21_hf271/TX2_main/build/cv_bridge/src/cmake_install.cmake")
+  include("/home/nvidia/21_hf271/TX2_main/build/cv_bridge/test/cmake_install.cmake")
 
 endif()
 

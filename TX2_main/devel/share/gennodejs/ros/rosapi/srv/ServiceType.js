@@ -51,7 +51,7 @@ class ServiceTypeRequest {
 
   static getMessageSize(object) {
     let length = 0;
-    length += _getByteLength(object.service);
+    length += object.service.length;
     return length + 4;
   }
 
@@ -124,7 +124,7 @@ class ServiceTypeResponse {
 
   static getMessageSize(object) {
     let length = 0;
-    length += _getByteLength(object.type);
+    length += object.type.length;
     return length + 4;
   }
 
