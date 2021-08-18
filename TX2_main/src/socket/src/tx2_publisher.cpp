@@ -2,7 +2,7 @@
 #include <map>
 #include <fstream>
 #include <sstream>
-#include "json/json.h"
+#include "jsoncpp/json/json.h"
 #include "ros/ros.h"
 #include "msg_creator/Keypoints.h"
 
@@ -19,7 +19,7 @@ std::map<int, Keypoint> Keypoints;
 
 int read_json(std::string str){
         Json::Value root;
-        std::ifstream ifs("test", std::ifstream::in);
+        std::ifstream ifs(str, std::ifstream::in);
         Json::CharReaderBuilder builder;
         builder["collectComments"] = false;
         JSONCPP_STRING errs;
@@ -29,15 +29,17 @@ int read_json(std::string str){
             return EXIT_FAILURE;
         }
 
-
+	Keypoints.clear();
         Json::Value Target = root["people"];
         for(Json::ValueIterator it1 = Target.begin(); it1 != Target.end(); ++it1){
                 Json::Value NewTarget = (*it1)["pose_keypoints_2d"];
                 for(Json::ValueIterator it2 = NewTarget.begin(); it2 != NewTarget.end();){
                         static int key_id = 0;
-                        Keypoint cur;
+			if(key_id == 25) key_id = 0;
 
-                        cur.x = (*it2++).asDouble();
+                        Keypoint cur;
+                        
+			cur.x = (*it2++).asDouble();
                         cur.y = (*it2++).asDouble();
                         cur.prob = (*it2++).asDouble();
 
@@ -49,18 +51,8 @@ int read_json(std::string str){
 }
 
 int main(int argc, char **argv){
-        static int cnt = 16;
+        static int cnt = 0;
         int num;
-        std::stringstream sstream;
-
-
-        if(argc != 2) {
-                std::cout << "Usage : ./test [Json file]\n";
-                return 0;
-        }
-
-
-        read_json(argv[1]);
 
         ros::init(argc, argv, "talker");
         ros::NodeHandle nh;
@@ -71,7 +63,9 @@ int main(int argc, char **argv){
         while(ros::ok()){
                 std::stringstream sstream;
                 sstream << "JSON/" << cnt << ".json";
-                read_json(sstream.str());
+		
+
+		read_json(sstream.str());
                 if((cnt++) == 51) cnt = 0;
 		
 
@@ -82,7 +76,8 @@ int main(int argc, char **argv){
                         Keys.y[i] = Keypoints[i].y;
                         Keys.prob[i] = Keypoints[i].prob;
 
-                        ROS_INFO("x: %lf y: %lf prob: %lf", Keys.x[i], Keys.y[i], Keys.prob[i]);
+                        //ROS_INFO("x: %lf y: %lf prob: %lf", Keypoints[i].x, Keypoints[i].y, Keypoints[i].prob);
+                        ROS_INFO("x[%2d]: %10.6lf y[%2d]: %10.6lf prob[%2d]: %10.6lf", i, Keys.x[i], i, Keys.y[i], i, Keys.prob[i]);
                 }
 
                 pub.publish(Keys);

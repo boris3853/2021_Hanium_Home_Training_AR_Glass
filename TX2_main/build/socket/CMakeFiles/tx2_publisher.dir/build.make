@@ -109,6 +109,25 @@ tx2_publisher_EXTERNAL_OBJECTS =
 /home/nvidia/21_hf271/TX2_main/devel/lib/socket/tx2_publisher: /usr/lib/aarch64-linux-gnu/libboost_atomic.so
 /home/nvidia/21_hf271/TX2_main/devel/lib/socket/tx2_publisher: /usr/lib/aarch64-linux-gnu/libpthread.so
 /home/nvidia/21_hf271/TX2_main/devel/lib/socket/tx2_publisher: /usr/lib/aarch64-linux-gnu/libconsole_bridge.so
+/home/nvidia/21_hf271/TX2_main/devel/lib/socket/tx2_publisher: /opt/ros/kinetic/lib/libroscpp.so
+/home/nvidia/21_hf271/TX2_main/devel/lib/socket/tx2_publisher: /usr/lib/aarch64-linux-gnu/libboost_filesystem.so
+/home/nvidia/21_hf271/TX2_main/devel/lib/socket/tx2_publisher: /usr/lib/aarch64-linux-gnu/libboost_signals.so
+/home/nvidia/21_hf271/TX2_main/devel/lib/socket/tx2_publisher: /opt/ros/kinetic/lib/librosconsole.so
+/home/nvidia/21_hf271/TX2_main/devel/lib/socket/tx2_publisher: /opt/ros/kinetic/lib/librosconsole_log4cxx.so
+/home/nvidia/21_hf271/TX2_main/devel/lib/socket/tx2_publisher: /opt/ros/kinetic/lib/librosconsole_backend_interface.so
+/home/nvidia/21_hf271/TX2_main/devel/lib/socket/tx2_publisher: /usr/lib/aarch64-linux-gnu/liblog4cxx.so
+/home/nvidia/21_hf271/TX2_main/devel/lib/socket/tx2_publisher: /usr/lib/aarch64-linux-gnu/libboost_regex.so
+/home/nvidia/21_hf271/TX2_main/devel/lib/socket/tx2_publisher: /opt/ros/kinetic/lib/libxmlrpcpp.so
+/home/nvidia/21_hf271/TX2_main/devel/lib/socket/tx2_publisher: /opt/ros/kinetic/lib/libroscpp_serialization.so
+/home/nvidia/21_hf271/TX2_main/devel/lib/socket/tx2_publisher: /opt/ros/kinetic/lib/librostime.so
+/home/nvidia/21_hf271/TX2_main/devel/lib/socket/tx2_publisher: /opt/ros/kinetic/lib/libcpp_common.so
+/home/nvidia/21_hf271/TX2_main/devel/lib/socket/tx2_publisher: /usr/lib/aarch64-linux-gnu/libboost_system.so
+/home/nvidia/21_hf271/TX2_main/devel/lib/socket/tx2_publisher: /usr/lib/aarch64-linux-gnu/libboost_thread.so
+/home/nvidia/21_hf271/TX2_main/devel/lib/socket/tx2_publisher: /usr/lib/aarch64-linux-gnu/libboost_chrono.so
+/home/nvidia/21_hf271/TX2_main/devel/lib/socket/tx2_publisher: /usr/lib/aarch64-linux-gnu/libboost_date_time.so
+/home/nvidia/21_hf271/TX2_main/devel/lib/socket/tx2_publisher: /usr/lib/aarch64-linux-gnu/libboost_atomic.so
+/home/nvidia/21_hf271/TX2_main/devel/lib/socket/tx2_publisher: /usr/lib/aarch64-linux-gnu/libpthread.so
+/home/nvidia/21_hf271/TX2_main/devel/lib/socket/tx2_publisher: /usr/lib/aarch64-linux-gnu/libconsole_bridge.so
 /home/nvidia/21_hf271/TX2_main/devel/lib/socket/tx2_publisher: socket/CMakeFiles/tx2_publisher.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/nvidia/21_hf271/TX2_main/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable /home/nvidia/21_hf271/TX2_main/devel/lib/socket/tx2_publisher"
 	cd /home/nvidia/21_hf271/TX2_main/build/socket && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/tx2_publisher.dir/link.txt --verbose=$(VERBOSE)

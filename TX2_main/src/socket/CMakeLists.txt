@@ -10,21 +10,16 @@ find_package(catkin REQUIRED COMPONENTS
 	msg_creator
 )
 
+#jsoncpp linking
+find_package(PkgConfig REQUIRED)
+pkg_check_modules(JSONCPP jsoncpp)
+
 catkin_package(
-	INCLUDE_DIRS include
-	LIBRARIES json
 	CATKIN_DEPENDS std_msgs msg_creator
 )
 
-include_directories(include
-        ${catkin_INCLUDE_DIRS}
-)
-
-install(
-	DIRECTORY ../jsoncpp/
-	DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION}
-	FILES_MATCHING PATTERN "*.h"
-)
+include_directories(include ${catkin_INCLUDE_DIRS})
+link_libraries(${JSONCPP_LIBRARIES})
 
 add_executable(tx2_publisher src/tx2_publisher.cpp)
-target_link_libraries(tx2_publisher ${catkin_LIBRARIES})
+target_link_libraries(tx2_publisher ${catkin_LIBRARIES} ${JSONCPP_LIBRARIES})

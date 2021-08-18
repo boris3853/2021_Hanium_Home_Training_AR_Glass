@@ -3,6 +3,6 @@ prefix=/home/nvidia/21_hf271/TX2_main/devel
 Name: socket
 Description: Description of socket
 Version: 1.0.0
-Cflags: -I/home/nvidia/21_hf271/TX2_main/src/socket/include
-Libs: -L${prefix}/lib -ljson
+Cflags: 
+Libs: -L${prefix}/lib 
 Requires: std_msgs msg_creator

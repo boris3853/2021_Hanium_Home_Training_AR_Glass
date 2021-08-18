@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(socket_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT "/home/nvidia/21_hf271/TX2_main/src/socket/include " STREQUAL " ")
+if(NOT " " STREQUAL " ")
   set(socket_INCLUDE_DIRS "")
-  set(_include_dirs "/home/nvidia/21_hf271/TX2_main/src/socket/include")
+  set(_include_dirs "")
   if(NOT " " STREQUAL " ")
     set(_report "Check the issue tracker '' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT " " STREQUAL " ")
@@ -116,7 +116,7 @@ if(NOT "/home/nvidia/21_hf271/TX2_main/src/socket/include " STREQUAL " ")
   endforeach()
 endif()
 
-set(libraries "json")
+set(libraries "")
 foreach(library ${libraries})
   # keep build configuration keywords, target names and absolute libraries as-is
   if("${library}" MATCHES "^(debug|optimized|general)$")

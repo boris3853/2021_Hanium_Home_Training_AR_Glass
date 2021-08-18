@@ -47,7 +47,3 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/socket" TYPE FILE FILES "/home/nvidia/21_hf271/TX2_main/src/socket/package.xml")
 endif()
 
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/socket" TYPE DIRECTORY FILES "/home/nvidia/21_hf271/TX2_main/src/socket/../jsoncpp/" FILES_MATCHING REGEX "/[^/]*\\.h$")
-endif()
-
