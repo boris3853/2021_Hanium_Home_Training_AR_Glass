@@ -1479,6 +1479,279 @@ file_server_genlisp/fast:
 .PHONY : file_server_genlisp/fast
 
 #=============================================================================
+# Target rules for targets named rosauth_gennodejs
+
+# Build rule for target.
+rosauth_gennodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rosauth_gennodejs
+.PHONY : rosauth_gennodejs
+
+# fast build rule for target.
+rosauth_gennodejs/fast:
+	$(MAKE) -f rosauth/CMakeFiles/rosauth_gennodejs.dir/build.make rosauth/CMakeFiles/rosauth_gennodejs.dir/build
+.PHONY : rosauth_gennodejs/fast
+
+#=============================================================================
+# Target rules for targets named rosauth_genlisp
+
+# Build rule for target.
+rosauth_genlisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rosauth_genlisp
+.PHONY : rosauth_genlisp
+
+# fast build rule for target.
+rosauth_genlisp/fast:
+	$(MAKE) -f rosauth/CMakeFiles/rosauth_genlisp.dir/build.make rosauth/CMakeFiles/rosauth_genlisp.dir/build
+.PHONY : rosauth_genlisp/fast
+
+#=============================================================================
+# Target rules for targets named rosauth_geneus
+
+# Build rule for target.
+rosauth_geneus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rosauth_geneus
+.PHONY : rosauth_geneus
+
+# fast build rule for target.
+rosauth_geneus/fast:
+	$(MAKE) -f rosauth/CMakeFiles/rosauth_geneus.dir/build.make rosauth/CMakeFiles/rosauth_geneus.dir/build
+.PHONY : rosauth_geneus/fast
+
+#=============================================================================
+# Target rules for targets named rosauth_generate_messages_py
+
+# Build rule for target.
+rosauth_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rosauth_generate_messages_py
+.PHONY : rosauth_generate_messages_py
+
+# fast build rule for target.
+rosauth_generate_messages_py/fast:
+	$(MAKE) -f rosauth/CMakeFiles/rosauth_generate_messages_py.dir/build.make rosauth/CMakeFiles/rosauth_generate_messages_py.dir/build
+.PHONY : rosauth_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named rosauth_generate_messages_lisp
+
+# Build rule for target.
+rosauth_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rosauth_generate_messages_lisp
+.PHONY : rosauth_generate_messages_lisp
+
+# fast build rule for target.
+rosauth_generate_messages_lisp/fast:
+	$(MAKE) -f rosauth/CMakeFiles/rosauth_generate_messages_lisp.dir/build.make rosauth/CMakeFiles/rosauth_generate_messages_lisp.dir/build
+.PHONY : rosauth_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named rosauth_generate_messages_eus
+
+# Build rule for target.
+rosauth_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rosauth_generate_messages_eus
+.PHONY : rosauth_generate_messages_eus
+
+# fast build rule for target.
+rosauth_generate_messages_eus/fast:
+	$(MAKE) -f rosauth/CMakeFiles/rosauth_generate_messages_eus.dir/build.make rosauth/CMakeFiles/rosauth_generate_messages_eus.dir/build
+.PHONY : rosauth_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named rosauth_generate_messages_cpp
+
+# Build rule for target.
+rosauth_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rosauth_generate_messages_cpp
+.PHONY : rosauth_generate_messages_cpp
+
+# fast build rule for target.
+rosauth_generate_messages_cpp/fast:
+	$(MAKE) -f rosauth/CMakeFiles/rosauth_generate_messages_cpp.dir/build.make rosauth/CMakeFiles/rosauth_generate_messages_cpp.dir/build
+.PHONY : rosauth_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named rosauth_generate_messages
+
+# Build rule for target.
+rosauth_generate_messages: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rosauth_generate_messages
+.PHONY : rosauth_generate_messages
+
+# fast build rule for target.
+rosauth_generate_messages/fast:
+	$(MAKE) -f rosauth/CMakeFiles/rosauth_generate_messages.dir/build.make rosauth/CMakeFiles/rosauth_generate_messages.dir/build
+.PHONY : rosauth_generate_messages/fast
+
+#=============================================================================
+# Target rules for targets named rosauth_generate_messages_nodejs
+
+# Build rule for target.
+rosauth_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rosauth_generate_messages_nodejs
+.PHONY : rosauth_generate_messages_nodejs
+
+# fast build rule for target.
+rosauth_generate_messages_nodejs/fast:
+	$(MAKE) -f rosauth/CMakeFiles/rosauth_generate_messages_nodejs.dir/build.make rosauth/CMakeFiles/rosauth_generate_messages_nodejs.dir/build
+.PHONY : rosauth_generate_messages_nodejs/fast
+
+#=============================================================================
+# Target rules for targets named rosauth_gencpp
+
+# Build rule for target.
+rosauth_gencpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rosauth_gencpp
+.PHONY : rosauth_gencpp
+
+# fast build rule for target.
+rosauth_gencpp/fast:
+	$(MAKE) -f rosauth/CMakeFiles/rosauth_gencpp.dir/build.make rosauth/CMakeFiles/rosauth_gencpp.dir/build
+.PHONY : rosauth_gencpp/fast
+
+#=============================================================================
+# Target rules for targets named ros_mac_authentication
+
+# Build rule for target.
+ros_mac_authentication: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ros_mac_authentication
+.PHONY : ros_mac_authentication
+
+# fast build rule for target.
+ros_mac_authentication/fast:
+	$(MAKE) -f rosauth/CMakeFiles/ros_mac_authentication.dir/build.make rosauth/CMakeFiles/ros_mac_authentication.dir/build
+.PHONY : ros_mac_authentication/fast
+
+#=============================================================================
+# Target rules for targets named run_tests_rosauth_rostest_test_ros_mac_authentication.test
+
+# Build rule for target.
+run_tests_rosauth_rostest_test_ros_mac_authentication.test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 run_tests_rosauth_rostest_test_ros_mac_authentication.test
+.PHONY : run_tests_rosauth_rostest_test_ros_mac_authentication.test
+
+# fast build rule for target.
+run_tests_rosauth_rostest_test_ros_mac_authentication.test/fast:
+	$(MAKE) -f rosauth/CMakeFiles/run_tests_rosauth_rostest_test_ros_mac_authentication.test.dir/build.make rosauth/CMakeFiles/run_tests_rosauth_rostest_test_ros_mac_authentication.test.dir/build
+.PHONY : run_tests_rosauth_rostest_test_ros_mac_authentication.test/fast
+
+#=============================================================================
+# Target rules for targets named _run_tests_rosauth_rostest
+
+# Build rule for target.
+_run_tests_rosauth_rostest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _run_tests_rosauth_rostest
+.PHONY : _run_tests_rosauth_rostest
+
+# fast build rule for target.
+_run_tests_rosauth_rostest/fast:
+	$(MAKE) -f rosauth/CMakeFiles/_run_tests_rosauth_rostest.dir/build.make rosauth/CMakeFiles/_run_tests_rosauth_rostest.dir/build
+.PHONY : _run_tests_rosauth_rostest/fast
+
+#=============================================================================
+# Target rules for targets named _rosauth_generate_messages_check_deps_Authentication
+
+# Build rule for target.
+_rosauth_generate_messages_check_deps_Authentication: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _rosauth_generate_messages_check_deps_Authentication
+.PHONY : _rosauth_generate_messages_check_deps_Authentication
+
+# fast build rule for target.
+_rosauth_generate_messages_check_deps_Authentication/fast:
+	$(MAKE) -f rosauth/CMakeFiles/_rosauth_generate_messages_check_deps_Authentication.dir/build.make rosauth/CMakeFiles/_rosauth_generate_messages_check_deps_Authentication.dir/build
+.PHONY : _rosauth_generate_messages_check_deps_Authentication/fast
+
+#=============================================================================
+# Target rules for targets named _run_tests_rosauth
+
+# Build rule for target.
+_run_tests_rosauth: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _run_tests_rosauth
+.PHONY : _run_tests_rosauth
+
+# fast build rule for target.
+_run_tests_rosauth/fast:
+	$(MAKE) -f rosauth/CMakeFiles/_run_tests_rosauth.dir/build.make rosauth/CMakeFiles/_run_tests_rosauth.dir/build
+.PHONY : _run_tests_rosauth/fast
+
+#=============================================================================
+# Target rules for targets named run_tests_rosauth_rostest
+
+# Build rule for target.
+run_tests_rosauth_rostest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 run_tests_rosauth_rostest
+.PHONY : run_tests_rosauth_rostest
+
+# fast build rule for target.
+run_tests_rosauth_rostest/fast:
+	$(MAKE) -f rosauth/CMakeFiles/run_tests_rosauth_rostest.dir/build.make rosauth/CMakeFiles/run_tests_rosauth_rostest.dir/build
+.PHONY : run_tests_rosauth_rostest/fast
+
+#=============================================================================
+# Target rules for targets named rosauth_genpy
+
+# Build rule for target.
+rosauth_genpy: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rosauth_genpy
+.PHONY : rosauth_genpy
+
+# fast build rule for target.
+rosauth_genpy/fast:
+	$(MAKE) -f rosauth/CMakeFiles/rosauth_genpy.dir/build.make rosauth/CMakeFiles/rosauth_genpy.dir/build
+.PHONY : rosauth_genpy/fast
+
+#=============================================================================
+# Target rules for targets named _run_tests_rosauth_rostest_test_ros_mac_authentication.test
+
+# Build rule for target.
+_run_tests_rosauth_rostest_test_ros_mac_authentication.test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _run_tests_rosauth_rostest_test_ros_mac_authentication.test
+.PHONY : _run_tests_rosauth_rostest_test_ros_mac_authentication.test
+
+# fast build rule for target.
+_run_tests_rosauth_rostest_test_ros_mac_authentication.test/fast:
+	$(MAKE) -f rosauth/CMakeFiles/_run_tests_rosauth_rostest_test_ros_mac_authentication.test.dir/build.make rosauth/CMakeFiles/_run_tests_rosauth_rostest_test_ros_mac_authentication.test.dir/build
+.PHONY : _run_tests_rosauth_rostest_test_ros_mac_authentication.test/fast
+
+#=============================================================================
+# Target rules for targets named ros_mac_authentication_test
+
+# Build rule for target.
+ros_mac_authentication_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ros_mac_authentication_test
+.PHONY : ros_mac_authentication_test
+
+# fast build rule for target.
+ros_mac_authentication_test/fast:
+	$(MAKE) -f rosauth/CMakeFiles/ros_mac_authentication_test.dir/build.make rosauth/CMakeFiles/ros_mac_authentication_test.dir/build
+.PHONY : ros_mac_authentication_test/fast
+
+#=============================================================================
+# Target rules for targets named run_tests_rosauth
+
+# Build rule for target.
+run_tests_rosauth: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 run_tests_rosauth
+.PHONY : run_tests_rosauth
+
+# fast build rule for target.
+run_tests_rosauth/fast:
+	$(MAKE) -f rosauth/CMakeFiles/run_tests_rosauth.dir/build.make rosauth/CMakeFiles/run_tests_rosauth.dir/build
+.PHONY : run_tests_rosauth/fast
+
+#=============================================================================
+# Target rules for targets named clean_test_results_rosauth
+
+# Build rule for target.
+clean_test_results_rosauth: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 clean_test_results_rosauth
+.PHONY : clean_test_results_rosauth
+
+# fast build rule for target.
+clean_test_results_rosauth/fast:
+	$(MAKE) -f rosauth/CMakeFiles/clean_test_results_rosauth.dir/build.make rosauth/CMakeFiles/clean_test_results_rosauth.dir/build
+.PHONY : clean_test_results_rosauth/fast
+
+#=============================================================================
 # Target rules for targets named _run_tests_rosbridge_server
 
 # Build rule for target.
@@ -2632,6 +2905,27 @@ help:
 	@echo "... file_server_generate_messages_lisp"
 	@echo "... file_server_geneus"
 	@echo "... file_server_genlisp"
+	@echo "... rosauth_gennodejs"
+	@echo "... rosauth_genlisp"
+	@echo "... rosauth_geneus"
+	@echo "... rosauth_generate_messages_py"
+	@echo "... rosauth_generate_messages_lisp"
+	@echo "... rosauth_generate_messages_eus"
+	@echo "... rosauth_generate_messages_cpp"
+	@echo "... rosauth_generate_messages"
+	@echo "... rosauth_generate_messages_nodejs"
+	@echo "... rosauth_gencpp"
+	@echo "... ros_mac_authentication"
+	@echo "... run_tests_rosauth_rostest_test_ros_mac_authentication.test"
+	@echo "... _run_tests_rosauth_rostest"
+	@echo "... _rosauth_generate_messages_check_deps_Authentication"
+	@echo "... _run_tests_rosauth"
+	@echo "... run_tests_rosauth_rostest"
+	@echo "... rosauth_genpy"
+	@echo "... _run_tests_rosauth_rostest_test_ros_mac_authentication.test"
+	@echo "... ros_mac_authentication_test"
+	@echo "... run_tests_rosauth"
+	@echo "... clean_test_results_rosauth"
 	@echo "... _run_tests_rosbridge_server"
 	@echo "... _run_tests_rosbridge_server_rostest"
 	@echo "... run_tests_rosbridge_server"

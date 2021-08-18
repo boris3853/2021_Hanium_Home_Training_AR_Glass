@@ -28,6 +28,7 @@ b37656a03da5efb98dacff1f5bde46f7 /home/nvidia/21_hf271/TX2_main/devel/include/ro
 97978a39861e6085bd187488df5998b4 /home/nvidia/21_hf271/TX2_main/devel/include/rosapi/TopicsAndRawTypes.h
 be7b78a2b916dadcee974852fc65bb9a /home/nvidia/21_hf271/TX2_main/devel/include/rosapi/TopicsForType.h
 3ea3f8efeb386fb80052890bc500e157 /home/nvidia/21_hf271/TX2_main/devel/include/rosapi/TypeDef.h
+61eb57d67d32f97c826b2d755dcff805 /home/nvidia/21_hf271/TX2_main/devel/include/rosauth/Authentication.h
 27c7877f64bcb9998bbb34390f0c21af /home/nvidia/21_hf271/TX2_main/devel/include/rosbridge_library/AddTwoInts.h
 d31c9417702af5f38b32e128ebc1205f /home/nvidia/21_hf271/TX2_main/devel/include/rosbridge_library/Num.h
 0ef555779905968ce51a9c66b28039bb /home/nvidia/21_hf271/TX2_main/devel/include/rosbridge_library/SendBytes.h
@@ -82,6 +83,8 @@ ed06eadd287e6411086f2ec37e46ee9e /home/nvidia/21_hf271/TX2_main/devel/lib/python
 bc1ce46620402e0a70370562507b9f0e /home/nvidia/21_hf271/TX2_main/devel/lib/python2.7/dist-packages/rosapi/srv/_TopicsAndRawTypes.py
 0067415c123b1bbffa27afc3beeb5d13 /home/nvidia/21_hf271/TX2_main/devel/lib/python2.7/dist-packages/rosapi/srv/_TopicsForType.py
 ec5934390f372ea724c8d3ff55156eb5 /home/nvidia/21_hf271/TX2_main/devel/lib/python2.7/dist-packages/rosapi/srv/__init__.py
+c3e65a07ec6ec733d3e0b7688107747f /home/nvidia/21_hf271/TX2_main/devel/lib/python2.7/dist-packages/rosauth/srv/_Authentication.py
+19cea8063196f9c11aac09879ae94346 /home/nvidia/21_hf271/TX2_main/devel/lib/python2.7/dist-packages/rosauth/srv/__init__.py
 58e54571b9d3727d886ec915301bd5d7 /home/nvidia/21_hf271/TX2_main/devel/lib/python2.7/dist-packages/rosbridge_library/msg/_Num.py
 fcca543ba63e0550121fc3e5395f03bc /home/nvidia/21_hf271/TX2_main/devel/lib/python2.7/dist-packages/rosbridge_library/msg/_TestChar.py
 0e2a9531b4120b00194667c129da751f /home/nvidia/21_hf271/TX2_main/devel/lib/python2.7/dist-packages/rosbridge_library/msg/_TestDurationArray.py
@@ -135,6 +138,7 @@ db1277a5ebd0225d73834fb8d460cc15 /home/nvidia/21_hf271/TX2_main/devel/share/comm
 da6acffbc8e2bf1c056bcd74a771e65d /home/nvidia/21_hf271/TX2_main/devel/share/common-lisp/ros/rosapi/srv/Topics.lisp
 3c4a16786e2510a9172a246817ee1837 /home/nvidia/21_hf271/TX2_main/devel/share/common-lisp/ros/rosapi/srv/TopicsAndRawTypes.lisp
 9e4f410c927c5a7fc04b9979ae7da9bd /home/nvidia/21_hf271/TX2_main/devel/share/common-lisp/ros/rosapi/srv/TopicsForType.lisp
+cfcffbcbc20564b33694c40072e688e7 /home/nvidia/21_hf271/TX2_main/devel/share/common-lisp/ros/rosauth/srv/Authentication.lisp
 d43410b6c98f28f7cb9b1bf257f4d37b /home/nvidia/21_hf271/TX2_main/devel/share/common-lisp/ros/rosbridge_library/msg/Num.lisp
 22ceb4880f0f1f54cd2ba270bdce8685 /home/nvidia/21_hf271/TX2_main/devel/share/common-lisp/ros/rosbridge_library/msg/TestChar.lisp
 26340274c3bcab81370565223a61f4b2 /home/nvidia/21_hf271/TX2_main/devel/share/common-lisp/ros/rosbridge_library/msg/TestDurationArray.lisp
@@ -185,6 +189,7 @@ ba86bf0e078ce06457d2e60e5b8f4a29 /home/nvidia/21_hf271/TX2_main/devel/share/genn
 d0ebf9ee47ccd4025fd3dec84ba5c397 /home/nvidia/21_hf271/TX2_main/devel/share/gennodejs/ros/rosapi/srv/Topics.js
 a7345acc876eb1884980b070909537da /home/nvidia/21_hf271/TX2_main/devel/share/gennodejs/ros/rosapi/srv/TopicsAndRawTypes.js
 a85c3663af918bbcaf5d17e2ff53cb6d /home/nvidia/21_hf271/TX2_main/devel/share/gennodejs/ros/rosapi/srv/TopicsForType.js
+1f7d2c98f4f9356cdf7c7df0b443bc20 /home/nvidia/21_hf271/TX2_main/devel/share/gennodejs/ros/rosauth/srv/Authentication.js
 e080fb26ff5acfce235da4afd3aaa1d2 /home/nvidia/21_hf271/TX2_main/devel/share/gennodejs/ros/rosbridge_library/msg/Num.js
 91548bbf6ac601662459545026504c7e /home/nvidia/21_hf271/TX2_main/devel/share/gennodejs/ros/rosbridge_library/msg/TestChar.js
 d5c1f40ec4f2a36cdb1a283fc19b1328 /home/nvidia/21_hf271/TX2_main/devel/share/gennodejs/ros/rosbridge_library/msg/TestDurationArray.js
@@ -238,6 +243,8 @@ ddc19673fab67f094de4f24aba80fa99 /home/nvidia/21_hf271/TX2_main/devel/share/rose
 2b5449efa280a061501f288c29ac85af /home/nvidia/21_hf271/TX2_main/devel/share/roseus/ros/rosapi/srv/Topics.l
 225362b9b45eb8d63050715ff5b23ae9 /home/nvidia/21_hf271/TX2_main/devel/share/roseus/ros/rosapi/srv/TopicsAndRawTypes.l
 71faa256e02adbec87a5331361fc711c /home/nvidia/21_hf271/TX2_main/devel/share/roseus/ros/rosapi/srv/TopicsForType.l
+4f5e7a8337ba12aae561e5fc78d224c0 /home/nvidia/21_hf271/TX2_main/devel/share/roseus/ros/rosauth/manifest.l
+144ad87e211b47b7872b0643eee1d227 /home/nvidia/21_hf271/TX2_main/devel/share/roseus/ros/rosauth/srv/Authentication.l
 6f45fa6da0e62c6f32a0a2751f928b47 /home/nvidia/21_hf271/TX2_main/devel/share/roseus/ros/rosbridge_library/manifest.l
 17f2cbd1ea699a3023f75012e18871cd /home/nvidia/21_hf271/TX2_main/devel/share/roseus/ros/rosbridge_library/msg/Num.l
 102ce442e7f6a6155bcb3d004832c710 /home/nvidia/21_hf271/TX2_main/devel/share/roseus/ros/rosbridge_library/msg/TestChar.l
@@ -284,6 +291,15 @@ a91548936bc4f289654b4420b421b91b ros-sharp/ROS/file_server/CMakeFiles/_file_serv
 04a2460abe1a060e404cf8791a7ba576 ros-sharp/ROS/file_server/CMakeFiles/file_server_generate_messages_lisp
 04a2460abe1a060e404cf8791a7ba576 ros-sharp/ROS/file_server/CMakeFiles/file_server_generate_messages_nodejs
 04a2460abe1a060e404cf8791a7ba576 ros-sharp/ROS/file_server/CMakeFiles/file_server_generate_messages_py
+fab7e50ad2784b40ba4bd823ad369f20 rosauth/CMakeFiles/_rosauth_generate_messages_check_deps_Authentication
+f44cbd4f160e3e91ff46f373c277d74c rosauth/CMakeFiles/_run_tests_rosauth_rostest_test_ros_mac_authentication.test
+5b7edd71d46df893cf9157c6aa338a1b rosauth/CMakeFiles/clean_test_results_rosauth
+88f748edf3b8962143f9756bb7fad1b7 rosauth/CMakeFiles/rosauth_generate_messages_cpp
+88f748edf3b8962143f9756bb7fad1b7 rosauth/CMakeFiles/rosauth_generate_messages_eus
+88f748edf3b8962143f9756bb7fad1b7 rosauth/CMakeFiles/rosauth_generate_messages_lisp
+88f748edf3b8962143f9756bb7fad1b7 rosauth/CMakeFiles/rosauth_generate_messages_nodejs
+88f748edf3b8962143f9756bb7fad1b7 rosauth/CMakeFiles/rosauth_generate_messages_py
+f44cbd4f160e3e91ff46f373c277d74c rosauth/CMakeFiles/run_tests_rosauth_rostest_test_ros_mac_authentication.test
 2c3a41c5f3e2a581e76f3795304e20e5 rosbridge_suite/rosapi/CMakeFiles/_rosapi_generate_messages_check_deps_DeleteParam
 995571dd44fb958f7822700da258fa3d rosbridge_suite/rosapi/CMakeFiles/_rosapi_generate_messages_check_deps_GetActionServers
 382adcef9feb9023e25f4c234ae23344 rosbridge_suite/rosapi/CMakeFiles/_rosapi_generate_messages_check_deps_GetParam
