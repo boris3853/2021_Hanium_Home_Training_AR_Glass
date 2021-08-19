@@ -56,17 +56,6 @@ CMAKE_BINARY_DIR = /home/nvidia/21_hf271/TX2_main/build
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
 # Special rule for the target list_install_components
 list_install_components:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
@@ -76,50 +65,6 @@ list_install_components:
 list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
-
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
-
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: install/strip
-
-.PHONY : install/strip/fast
-
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
-
-# Special rule for the target install/local
-install/local/fast: install/local
-
-.PHONY : install/local/fast
-
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
-	/usr/bin/cmake-gui -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
 
 # Special rule for the target install
 install: preinstall
@@ -132,6 +77,50 @@ install/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
 	/usr/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
+	/usr/bin/cmake-gui -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: install/local
+
+.PHONY : install/local/fast
+
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -166,34 +155,154 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-cv_bridge/test/CMakeFiles/_run_tests_cv_bridge_nosetests.dir/rule:
-	cd /home/nvidia/21_hf271/TX2_main/build && $(MAKE) -f CMakeFiles/Makefile2 cv_bridge/test/CMakeFiles/_run_tests_cv_bridge_nosetests.dir/rule
-.PHONY : cv_bridge/test/CMakeFiles/_run_tests_cv_bridge_nosetests.dir/rule
+cv_bridge/test/CMakeFiles/run_tests_cv_bridge_nosetests_python_bindings.py.dir/rule:
+	cd /home/nvidia/21_hf271/TX2_main/build && $(MAKE) -f CMakeFiles/Makefile2 cv_bridge/test/CMakeFiles/run_tests_cv_bridge_nosetests_python_bindings.py.dir/rule
+.PHONY : cv_bridge/test/CMakeFiles/run_tests_cv_bridge_nosetests_python_bindings.py.dir/rule
 
 # Convenience name for target.
-_run_tests_cv_bridge_nosetests: cv_bridge/test/CMakeFiles/_run_tests_cv_bridge_nosetests.dir/rule
+run_tests_cv_bridge_nosetests_python_bindings.py: cv_bridge/test/CMakeFiles/run_tests_cv_bridge_nosetests_python_bindings.py.dir/rule
 
-.PHONY : _run_tests_cv_bridge_nosetests
+.PHONY : run_tests_cv_bridge_nosetests_python_bindings.py
 
 # fast build rule for target.
-_run_tests_cv_bridge_nosetests/fast:
-	cd /home/nvidia/21_hf271/TX2_main/build && $(MAKE) -f cv_bridge/test/CMakeFiles/_run_tests_cv_bridge_nosetests.dir/build.make cv_bridge/test/CMakeFiles/_run_tests_cv_bridge_nosetests.dir/build
-.PHONY : _run_tests_cv_bridge_nosetests/fast
+run_tests_cv_bridge_nosetests_python_bindings.py/fast:
+	cd /home/nvidia/21_hf271/TX2_main/build && $(MAKE) -f cv_bridge/test/CMakeFiles/run_tests_cv_bridge_nosetests_python_bindings.py.dir/build.make cv_bridge/test/CMakeFiles/run_tests_cv_bridge_nosetests_python_bindings.py.dir/build
+.PHONY : run_tests_cv_bridge_nosetests_python_bindings.py/fast
 
 # Convenience name for target.
-cv_bridge/test/CMakeFiles/run_tests_cv_bridge_nosetests.dir/rule:
-	cd /home/nvidia/21_hf271/TX2_main/build && $(MAKE) -f CMakeFiles/Makefile2 cv_bridge/test/CMakeFiles/run_tests_cv_bridge_nosetests.dir/rule
-.PHONY : cv_bridge/test/CMakeFiles/run_tests_cv_bridge_nosetests.dir/rule
+cv_bridge/test/CMakeFiles/_run_tests_cv_bridge_nosetests_conversions.py.dir/rule:
+	cd /home/nvidia/21_hf271/TX2_main/build && $(MAKE) -f CMakeFiles/Makefile2 cv_bridge/test/CMakeFiles/_run_tests_cv_bridge_nosetests_conversions.py.dir/rule
+.PHONY : cv_bridge/test/CMakeFiles/_run_tests_cv_bridge_nosetests_conversions.py.dir/rule
 
 # Convenience name for target.
-run_tests_cv_bridge_nosetests: cv_bridge/test/CMakeFiles/run_tests_cv_bridge_nosetests.dir/rule
+_run_tests_cv_bridge_nosetests_conversions.py: cv_bridge/test/CMakeFiles/_run_tests_cv_bridge_nosetests_conversions.py.dir/rule
 
-.PHONY : run_tests_cv_bridge_nosetests
+.PHONY : _run_tests_cv_bridge_nosetests_conversions.py
 
 # fast build rule for target.
-run_tests_cv_bridge_nosetests/fast:
-	cd /home/nvidia/21_hf271/TX2_main/build && $(MAKE) -f cv_bridge/test/CMakeFiles/run_tests_cv_bridge_nosetests.dir/build.make cv_bridge/test/CMakeFiles/run_tests_cv_bridge_nosetests.dir/build
-.PHONY : run_tests_cv_bridge_nosetests/fast
+_run_tests_cv_bridge_nosetests_conversions.py/fast:
+	cd /home/nvidia/21_hf271/TX2_main/build && $(MAKE) -f cv_bridge/test/CMakeFiles/_run_tests_cv_bridge_nosetests_conversions.py.dir/build.make cv_bridge/test/CMakeFiles/_run_tests_cv_bridge_nosetests_conversions.py.dir/build
+.PHONY : _run_tests_cv_bridge_nosetests_conversions.py/fast
+
+# Convenience name for target.
+cv_bridge/test/CMakeFiles/run_tests_cv_bridge_gtest.dir/rule:
+	cd /home/nvidia/21_hf271/TX2_main/build && $(MAKE) -f CMakeFiles/Makefile2 cv_bridge/test/CMakeFiles/run_tests_cv_bridge_gtest.dir/rule
+.PHONY : cv_bridge/test/CMakeFiles/run_tests_cv_bridge_gtest.dir/rule
+
+# Convenience name for target.
+run_tests_cv_bridge_gtest: cv_bridge/test/CMakeFiles/run_tests_cv_bridge_gtest.dir/rule
+
+.PHONY : run_tests_cv_bridge_gtest
+
+# fast build rule for target.
+run_tests_cv_bridge_gtest/fast:
+	cd /home/nvidia/21_hf271/TX2_main/build && $(MAKE) -f cv_bridge/test/CMakeFiles/run_tests_cv_bridge_gtest.dir/build.make cv_bridge/test/CMakeFiles/run_tests_cv_bridge_gtest.dir/build
+.PHONY : run_tests_cv_bridge_gtest/fast
+
+# Convenience name for target.
+cv_bridge/test/CMakeFiles/_run_tests_cv_bridge.dir/rule:
+	cd /home/nvidia/21_hf271/TX2_main/build && $(MAKE) -f CMakeFiles/Makefile2 cv_bridge/test/CMakeFiles/_run_tests_cv_bridge.dir/rule
+.PHONY : cv_bridge/test/CMakeFiles/_run_tests_cv_bridge.dir/rule
+
+# Convenience name for target.
+_run_tests_cv_bridge: cv_bridge/test/CMakeFiles/_run_tests_cv_bridge.dir/rule
+
+.PHONY : _run_tests_cv_bridge
+
+# fast build rule for target.
+_run_tests_cv_bridge/fast:
+	cd /home/nvidia/21_hf271/TX2_main/build && $(MAKE) -f cv_bridge/test/CMakeFiles/_run_tests_cv_bridge.dir/build.make cv_bridge/test/CMakeFiles/_run_tests_cv_bridge.dir/build
+.PHONY : _run_tests_cv_bridge/fast
+
+# Convenience name for target.
+cv_bridge/test/CMakeFiles/run_tests_cv_bridge.dir/rule:
+	cd /home/nvidia/21_hf271/TX2_main/build && $(MAKE) -f CMakeFiles/Makefile2 cv_bridge/test/CMakeFiles/run_tests_cv_bridge.dir/rule
+.PHONY : cv_bridge/test/CMakeFiles/run_tests_cv_bridge.dir/rule
+
+# Convenience name for target.
+run_tests_cv_bridge: cv_bridge/test/CMakeFiles/run_tests_cv_bridge.dir/rule
+
+.PHONY : run_tests_cv_bridge
+
+# fast build rule for target.
+run_tests_cv_bridge/fast:
+	cd /home/nvidia/21_hf271/TX2_main/build && $(MAKE) -f cv_bridge/test/CMakeFiles/run_tests_cv_bridge.dir/build.make cv_bridge/test/CMakeFiles/run_tests_cv_bridge.dir/build
+.PHONY : run_tests_cv_bridge/fast
+
+# Convenience name for target.
+cv_bridge/test/CMakeFiles/run_tests_cv_bridge_nosetests_conversions.py.dir/rule:
+	cd /home/nvidia/21_hf271/TX2_main/build && $(MAKE) -f CMakeFiles/Makefile2 cv_bridge/test/CMakeFiles/run_tests_cv_bridge_nosetests_conversions.py.dir/rule
+.PHONY : cv_bridge/test/CMakeFiles/run_tests_cv_bridge_nosetests_conversions.py.dir/rule
+
+# Convenience name for target.
+run_tests_cv_bridge_nosetests_conversions.py: cv_bridge/test/CMakeFiles/run_tests_cv_bridge_nosetests_conversions.py.dir/rule
+
+.PHONY : run_tests_cv_bridge_nosetests_conversions.py
+
+# fast build rule for target.
+run_tests_cv_bridge_nosetests_conversions.py/fast:
+	cd /home/nvidia/21_hf271/TX2_main/build && $(MAKE) -f cv_bridge/test/CMakeFiles/run_tests_cv_bridge_nosetests_conversions.py.dir/build.make cv_bridge/test/CMakeFiles/run_tests_cv_bridge_nosetests_conversions.py.dir/build
+.PHONY : run_tests_cv_bridge_nosetests_conversions.py/fast
+
+# Convenience name for target.
+cv_bridge/test/CMakeFiles/cv_bridge-utest.dir/rule:
+	cd /home/nvidia/21_hf271/TX2_main/build && $(MAKE) -f CMakeFiles/Makefile2 cv_bridge/test/CMakeFiles/cv_bridge-utest.dir/rule
+.PHONY : cv_bridge/test/CMakeFiles/cv_bridge-utest.dir/rule
+
+# Convenience name for target.
+cv_bridge-utest: cv_bridge/test/CMakeFiles/cv_bridge-utest.dir/rule
+
+.PHONY : cv_bridge-utest
+
+# fast build rule for target.
+cv_bridge-utest/fast:
+	cd /home/nvidia/21_hf271/TX2_main/build && $(MAKE) -f cv_bridge/test/CMakeFiles/cv_bridge-utest.dir/build.make cv_bridge/test/CMakeFiles/cv_bridge-utest.dir/build
+.PHONY : cv_bridge-utest/fast
+
+# Convenience name for target.
+cv_bridge/test/CMakeFiles/_run_tests_cv_bridge_nosetests_python_bindings.py.dir/rule:
+	cd /home/nvidia/21_hf271/TX2_main/build && $(MAKE) -f CMakeFiles/Makefile2 cv_bridge/test/CMakeFiles/_run_tests_cv_bridge_nosetests_python_bindings.py.dir/rule
+.PHONY : cv_bridge/test/CMakeFiles/_run_tests_cv_bridge_nosetests_python_bindings.py.dir/rule
+
+# Convenience name for target.
+_run_tests_cv_bridge_nosetests_python_bindings.py: cv_bridge/test/CMakeFiles/_run_tests_cv_bridge_nosetests_python_bindings.py.dir/rule
+
+.PHONY : _run_tests_cv_bridge_nosetests_python_bindings.py
+
+# fast build rule for target.
+_run_tests_cv_bridge_nosetests_python_bindings.py/fast:
+	cd /home/nvidia/21_hf271/TX2_main/build && $(MAKE) -f cv_bridge/test/CMakeFiles/_run_tests_cv_bridge_nosetests_python_bindings.py.dir/build.make cv_bridge/test/CMakeFiles/_run_tests_cv_bridge_nosetests_python_bindings.py.dir/build
+.PHONY : _run_tests_cv_bridge_nosetests_python_bindings.py/fast
+
+# Convenience name for target.
+cv_bridge/test/CMakeFiles/_run_tests_cv_bridge_gtest.dir/rule:
+	cd /home/nvidia/21_hf271/TX2_main/build && $(MAKE) -f CMakeFiles/Makefile2 cv_bridge/test/CMakeFiles/_run_tests_cv_bridge_gtest.dir/rule
+.PHONY : cv_bridge/test/CMakeFiles/_run_tests_cv_bridge_gtest.dir/rule
+
+# Convenience name for target.
+_run_tests_cv_bridge_gtest: cv_bridge/test/CMakeFiles/_run_tests_cv_bridge_gtest.dir/rule
+
+.PHONY : _run_tests_cv_bridge_gtest
+
+# fast build rule for target.
+_run_tests_cv_bridge_gtest/fast:
+	cd /home/nvidia/21_hf271/TX2_main/build && $(MAKE) -f cv_bridge/test/CMakeFiles/_run_tests_cv_bridge_gtest.dir/build.make cv_bridge/test/CMakeFiles/_run_tests_cv_bridge_gtest.dir/build
+.PHONY : _run_tests_cv_bridge_gtest/fast
+
+# Convenience name for target.
+cv_bridge/test/CMakeFiles/_run_tests_cv_bridge_nosetests_enumerants.py.dir/rule:
+	cd /home/nvidia/21_hf271/TX2_main/build && $(MAKE) -f CMakeFiles/Makefile2 cv_bridge/test/CMakeFiles/_run_tests_cv_bridge_nosetests_enumerants.py.dir/rule
+.PHONY : cv_bridge/test/CMakeFiles/_run_tests_cv_bridge_nosetests_enumerants.py.dir/rule
+
+# Convenience name for target.
+_run_tests_cv_bridge_nosetests_enumerants.py: cv_bridge/test/CMakeFiles/_run_tests_cv_bridge_nosetests_enumerants.py.dir/rule
+
+.PHONY : _run_tests_cv_bridge_nosetests_enumerants.py
+
+# fast build rule for target.
+_run_tests_cv_bridge_nosetests_enumerants.py/fast:
+	cd /home/nvidia/21_hf271/TX2_main/build && $(MAKE) -f cv_bridge/test/CMakeFiles/_run_tests_cv_bridge_nosetests_enumerants.py.dir/build.make cv_bridge/test/CMakeFiles/_run_tests_cv_bridge_nosetests_enumerants.py.dir/build
+.PHONY : _run_tests_cv_bridge_nosetests_enumerants.py/fast
 
 # Convenience name for target.
 cv_bridge/test/CMakeFiles/run_tests_cv_bridge_nosetests_enumerants.py.dir/rule:
@@ -226,21 +335,6 @@ _run_tests_cv_bridge_gtest_cv_bridge-utest/fast:
 .PHONY : _run_tests_cv_bridge_gtest_cv_bridge-utest/fast
 
 # Convenience name for target.
-cv_bridge/test/CMakeFiles/_run_tests_cv_bridge_nosetests_enumerants.py.dir/rule:
-	cd /home/nvidia/21_hf271/TX2_main/build && $(MAKE) -f CMakeFiles/Makefile2 cv_bridge/test/CMakeFiles/_run_tests_cv_bridge_nosetests_enumerants.py.dir/rule
-.PHONY : cv_bridge/test/CMakeFiles/_run_tests_cv_bridge_nosetests_enumerants.py.dir/rule
-
-# Convenience name for target.
-_run_tests_cv_bridge_nosetests_enumerants.py: cv_bridge/test/CMakeFiles/_run_tests_cv_bridge_nosetests_enumerants.py.dir/rule
-
-.PHONY : _run_tests_cv_bridge_nosetests_enumerants.py
-
-# fast build rule for target.
-_run_tests_cv_bridge_nosetests_enumerants.py/fast:
-	cd /home/nvidia/21_hf271/TX2_main/build && $(MAKE) -f cv_bridge/test/CMakeFiles/_run_tests_cv_bridge_nosetests_enumerants.py.dir/build.make cv_bridge/test/CMakeFiles/_run_tests_cv_bridge_nosetests_enumerants.py.dir/build
-.PHONY : _run_tests_cv_bridge_nosetests_enumerants.py/fast
-
-# Convenience name for target.
 cv_bridge/test/CMakeFiles/clean_test_results_cv_bridge.dir/rule:
 	cd /home/nvidia/21_hf271/TX2_main/build && $(MAKE) -f CMakeFiles/Makefile2 cv_bridge/test/CMakeFiles/clean_test_results_cv_bridge.dir/rule
 .PHONY : cv_bridge/test/CMakeFiles/clean_test_results_cv_bridge.dir/rule
@@ -254,81 +348,6 @@ clean_test_results_cv_bridge: cv_bridge/test/CMakeFiles/clean_test_results_cv_br
 clean_test_results_cv_bridge/fast:
 	cd /home/nvidia/21_hf271/TX2_main/build && $(MAKE) -f cv_bridge/test/CMakeFiles/clean_test_results_cv_bridge.dir/build.make cv_bridge/test/CMakeFiles/clean_test_results_cv_bridge.dir/build
 .PHONY : clean_test_results_cv_bridge/fast
-
-# Convenience name for target.
-cv_bridge/test/CMakeFiles/_run_tests_cv_bridge_gtest.dir/rule:
-	cd /home/nvidia/21_hf271/TX2_main/build && $(MAKE) -f CMakeFiles/Makefile2 cv_bridge/test/CMakeFiles/_run_tests_cv_bridge_gtest.dir/rule
-.PHONY : cv_bridge/test/CMakeFiles/_run_tests_cv_bridge_gtest.dir/rule
-
-# Convenience name for target.
-_run_tests_cv_bridge_gtest: cv_bridge/test/CMakeFiles/_run_tests_cv_bridge_gtest.dir/rule
-
-.PHONY : _run_tests_cv_bridge_gtest
-
-# fast build rule for target.
-_run_tests_cv_bridge_gtest/fast:
-	cd /home/nvidia/21_hf271/TX2_main/build && $(MAKE) -f cv_bridge/test/CMakeFiles/_run_tests_cv_bridge_gtest.dir/build.make cv_bridge/test/CMakeFiles/_run_tests_cv_bridge_gtest.dir/build
-.PHONY : _run_tests_cv_bridge_gtest/fast
-
-# Convenience name for target.
-cv_bridge/test/CMakeFiles/cv_bridge-utest.dir/rule:
-	cd /home/nvidia/21_hf271/TX2_main/build && $(MAKE) -f CMakeFiles/Makefile2 cv_bridge/test/CMakeFiles/cv_bridge-utest.dir/rule
-.PHONY : cv_bridge/test/CMakeFiles/cv_bridge-utest.dir/rule
-
-# Convenience name for target.
-cv_bridge-utest: cv_bridge/test/CMakeFiles/cv_bridge-utest.dir/rule
-
-.PHONY : cv_bridge-utest
-
-# fast build rule for target.
-cv_bridge-utest/fast:
-	cd /home/nvidia/21_hf271/TX2_main/build && $(MAKE) -f cv_bridge/test/CMakeFiles/cv_bridge-utest.dir/build.make cv_bridge/test/CMakeFiles/cv_bridge-utest.dir/build
-.PHONY : cv_bridge-utest/fast
-
-# Convenience name for target.
-cv_bridge/test/CMakeFiles/run_tests_cv_bridge_nosetests_conversions.py.dir/rule:
-	cd /home/nvidia/21_hf271/TX2_main/build && $(MAKE) -f CMakeFiles/Makefile2 cv_bridge/test/CMakeFiles/run_tests_cv_bridge_nosetests_conversions.py.dir/rule
-.PHONY : cv_bridge/test/CMakeFiles/run_tests_cv_bridge_nosetests_conversions.py.dir/rule
-
-# Convenience name for target.
-run_tests_cv_bridge_nosetests_conversions.py: cv_bridge/test/CMakeFiles/run_tests_cv_bridge_nosetests_conversions.py.dir/rule
-
-.PHONY : run_tests_cv_bridge_nosetests_conversions.py
-
-# fast build rule for target.
-run_tests_cv_bridge_nosetests_conversions.py/fast:
-	cd /home/nvidia/21_hf271/TX2_main/build && $(MAKE) -f cv_bridge/test/CMakeFiles/run_tests_cv_bridge_nosetests_conversions.py.dir/build.make cv_bridge/test/CMakeFiles/run_tests_cv_bridge_nosetests_conversions.py.dir/build
-.PHONY : run_tests_cv_bridge_nosetests_conversions.py/fast
-
-# Convenience name for target.
-cv_bridge/test/CMakeFiles/run_tests_cv_bridge.dir/rule:
-	cd /home/nvidia/21_hf271/TX2_main/build && $(MAKE) -f CMakeFiles/Makefile2 cv_bridge/test/CMakeFiles/run_tests_cv_bridge.dir/rule
-.PHONY : cv_bridge/test/CMakeFiles/run_tests_cv_bridge.dir/rule
-
-# Convenience name for target.
-run_tests_cv_bridge: cv_bridge/test/CMakeFiles/run_tests_cv_bridge.dir/rule
-
-.PHONY : run_tests_cv_bridge
-
-# fast build rule for target.
-run_tests_cv_bridge/fast:
-	cd /home/nvidia/21_hf271/TX2_main/build && $(MAKE) -f cv_bridge/test/CMakeFiles/run_tests_cv_bridge.dir/build.make cv_bridge/test/CMakeFiles/run_tests_cv_bridge.dir/build
-.PHONY : run_tests_cv_bridge/fast
-
-# Convenience name for target.
-cv_bridge/test/CMakeFiles/_run_tests_cv_bridge.dir/rule:
-	cd /home/nvidia/21_hf271/TX2_main/build && $(MAKE) -f CMakeFiles/Makefile2 cv_bridge/test/CMakeFiles/_run_tests_cv_bridge.dir/rule
-.PHONY : cv_bridge/test/CMakeFiles/_run_tests_cv_bridge.dir/rule
-
-# Convenience name for target.
-_run_tests_cv_bridge: cv_bridge/test/CMakeFiles/_run_tests_cv_bridge.dir/rule
-
-.PHONY : _run_tests_cv_bridge
-
-# fast build rule for target.
-_run_tests_cv_bridge/fast:
-	cd /home/nvidia/21_hf271/TX2_main/build && $(MAKE) -f cv_bridge/test/CMakeFiles/_run_tests_cv_bridge.dir/build.make cv_bridge/test/CMakeFiles/_run_tests_cv_bridge.dir/build
-.PHONY : _run_tests_cv_bridge/fast
 
 # Convenience name for target.
 cv_bridge/test/CMakeFiles/run_tests_cv_bridge_gtest_cv_bridge-utest.dir/rule:
@@ -346,64 +365,34 @@ run_tests_cv_bridge_gtest_cv_bridge-utest/fast:
 .PHONY : run_tests_cv_bridge_gtest_cv_bridge-utest/fast
 
 # Convenience name for target.
-cv_bridge/test/CMakeFiles/run_tests_cv_bridge_gtest.dir/rule:
-	cd /home/nvidia/21_hf271/TX2_main/build && $(MAKE) -f CMakeFiles/Makefile2 cv_bridge/test/CMakeFiles/run_tests_cv_bridge_gtest.dir/rule
-.PHONY : cv_bridge/test/CMakeFiles/run_tests_cv_bridge_gtest.dir/rule
+cv_bridge/test/CMakeFiles/run_tests_cv_bridge_nosetests.dir/rule:
+	cd /home/nvidia/21_hf271/TX2_main/build && $(MAKE) -f CMakeFiles/Makefile2 cv_bridge/test/CMakeFiles/run_tests_cv_bridge_nosetests.dir/rule
+.PHONY : cv_bridge/test/CMakeFiles/run_tests_cv_bridge_nosetests.dir/rule
 
 # Convenience name for target.
-run_tests_cv_bridge_gtest: cv_bridge/test/CMakeFiles/run_tests_cv_bridge_gtest.dir/rule
+run_tests_cv_bridge_nosetests: cv_bridge/test/CMakeFiles/run_tests_cv_bridge_nosetests.dir/rule
 
-.PHONY : run_tests_cv_bridge_gtest
+.PHONY : run_tests_cv_bridge_nosetests
 
 # fast build rule for target.
-run_tests_cv_bridge_gtest/fast:
-	cd /home/nvidia/21_hf271/TX2_main/build && $(MAKE) -f cv_bridge/test/CMakeFiles/run_tests_cv_bridge_gtest.dir/build.make cv_bridge/test/CMakeFiles/run_tests_cv_bridge_gtest.dir/build
-.PHONY : run_tests_cv_bridge_gtest/fast
+run_tests_cv_bridge_nosetests/fast:
+	cd /home/nvidia/21_hf271/TX2_main/build && $(MAKE) -f cv_bridge/test/CMakeFiles/run_tests_cv_bridge_nosetests.dir/build.make cv_bridge/test/CMakeFiles/run_tests_cv_bridge_nosetests.dir/build
+.PHONY : run_tests_cv_bridge_nosetests/fast
 
 # Convenience name for target.
-cv_bridge/test/CMakeFiles/_run_tests_cv_bridge_nosetests_conversions.py.dir/rule:
-	cd /home/nvidia/21_hf271/TX2_main/build && $(MAKE) -f CMakeFiles/Makefile2 cv_bridge/test/CMakeFiles/_run_tests_cv_bridge_nosetests_conversions.py.dir/rule
-.PHONY : cv_bridge/test/CMakeFiles/_run_tests_cv_bridge_nosetests_conversions.py.dir/rule
+cv_bridge/test/CMakeFiles/_run_tests_cv_bridge_nosetests.dir/rule:
+	cd /home/nvidia/21_hf271/TX2_main/build && $(MAKE) -f CMakeFiles/Makefile2 cv_bridge/test/CMakeFiles/_run_tests_cv_bridge_nosetests.dir/rule
+.PHONY : cv_bridge/test/CMakeFiles/_run_tests_cv_bridge_nosetests.dir/rule
 
 # Convenience name for target.
-_run_tests_cv_bridge_nosetests_conversions.py: cv_bridge/test/CMakeFiles/_run_tests_cv_bridge_nosetests_conversions.py.dir/rule
+_run_tests_cv_bridge_nosetests: cv_bridge/test/CMakeFiles/_run_tests_cv_bridge_nosetests.dir/rule
 
-.PHONY : _run_tests_cv_bridge_nosetests_conversions.py
+.PHONY : _run_tests_cv_bridge_nosetests
 
 # fast build rule for target.
-_run_tests_cv_bridge_nosetests_conversions.py/fast:
-	cd /home/nvidia/21_hf271/TX2_main/build && $(MAKE) -f cv_bridge/test/CMakeFiles/_run_tests_cv_bridge_nosetests_conversions.py.dir/build.make cv_bridge/test/CMakeFiles/_run_tests_cv_bridge_nosetests_conversions.py.dir/build
-.PHONY : _run_tests_cv_bridge_nosetests_conversions.py/fast
-
-# Convenience name for target.
-cv_bridge/test/CMakeFiles/run_tests_cv_bridge_nosetests_python_bindings.py.dir/rule:
-	cd /home/nvidia/21_hf271/TX2_main/build && $(MAKE) -f CMakeFiles/Makefile2 cv_bridge/test/CMakeFiles/run_tests_cv_bridge_nosetests_python_bindings.py.dir/rule
-.PHONY : cv_bridge/test/CMakeFiles/run_tests_cv_bridge_nosetests_python_bindings.py.dir/rule
-
-# Convenience name for target.
-run_tests_cv_bridge_nosetests_python_bindings.py: cv_bridge/test/CMakeFiles/run_tests_cv_bridge_nosetests_python_bindings.py.dir/rule
-
-.PHONY : run_tests_cv_bridge_nosetests_python_bindings.py
-
-# fast build rule for target.
-run_tests_cv_bridge_nosetests_python_bindings.py/fast:
-	cd /home/nvidia/21_hf271/TX2_main/build && $(MAKE) -f cv_bridge/test/CMakeFiles/run_tests_cv_bridge_nosetests_python_bindings.py.dir/build.make cv_bridge/test/CMakeFiles/run_tests_cv_bridge_nosetests_python_bindings.py.dir/build
-.PHONY : run_tests_cv_bridge_nosetests_python_bindings.py/fast
-
-# Convenience name for target.
-cv_bridge/test/CMakeFiles/_run_tests_cv_bridge_nosetests_python_bindings.py.dir/rule:
-	cd /home/nvidia/21_hf271/TX2_main/build && $(MAKE) -f CMakeFiles/Makefile2 cv_bridge/test/CMakeFiles/_run_tests_cv_bridge_nosetests_python_bindings.py.dir/rule
-.PHONY : cv_bridge/test/CMakeFiles/_run_tests_cv_bridge_nosetests_python_bindings.py.dir/rule
-
-# Convenience name for target.
-_run_tests_cv_bridge_nosetests_python_bindings.py: cv_bridge/test/CMakeFiles/_run_tests_cv_bridge_nosetests_python_bindings.py.dir/rule
-
-.PHONY : _run_tests_cv_bridge_nosetests_python_bindings.py
-
-# fast build rule for target.
-_run_tests_cv_bridge_nosetests_python_bindings.py/fast:
-	cd /home/nvidia/21_hf271/TX2_main/build && $(MAKE) -f cv_bridge/test/CMakeFiles/_run_tests_cv_bridge_nosetests_python_bindings.py.dir/build.make cv_bridge/test/CMakeFiles/_run_tests_cv_bridge_nosetests_python_bindings.py.dir/build
-.PHONY : _run_tests_cv_bridge_nosetests_python_bindings.py/fast
+_run_tests_cv_bridge_nosetests/fast:
+	cd /home/nvidia/21_hf271/TX2_main/build && $(MAKE) -f cv_bridge/test/CMakeFiles/_run_tests_cv_bridge_nosetests.dir/build.make cv_bridge/test/CMakeFiles/_run_tests_cv_bridge_nosetests.dir/build
+.PHONY : _run_tests_cv_bridge_nosetests/fast
 
 test_compression.o: test_compression.cpp.o
 
@@ -546,29 +535,28 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... _run_tests_cv_bridge_nosetests"
-	@echo "... run_tests_cv_bridge_nosetests"
-	@echo "... rebuild_cache"
+	@echo "... list_install_components"
+	@echo "... install"
+	@echo "... edit_cache"
+	@echo "... install/local"
+	@echo "... run_tests_cv_bridge_nosetests_python_bindings.py"
+	@echo "... _run_tests_cv_bridge_nosetests_conversions.py"
+	@echo "... test"
+	@echo "... run_tests_cv_bridge_gtest"
+	@echo "... _run_tests_cv_bridge"
+	@echo "... run_tests_cv_bridge"
+	@echo "... run_tests_cv_bridge_nosetests_conversions.py"
+	@echo "... cv_bridge-utest"
+	@echo "... _run_tests_cv_bridge_nosetests_python_bindings.py"
+	@echo "... _run_tests_cv_bridge_gtest"
+	@echo "... _run_tests_cv_bridge_nosetests_enumerants.py"
 	@echo "... run_tests_cv_bridge_nosetests_enumerants.py"
 	@echo "... _run_tests_cv_bridge_gtest_cv_bridge-utest"
-	@echo "... _run_tests_cv_bridge_nosetests_enumerants.py"
+	@echo "... rebuild_cache"
 	@echo "... clean_test_results_cv_bridge"
-	@echo "... _run_tests_cv_bridge_gtest"
-	@echo "... cv_bridge-utest"
-	@echo "... run_tests_cv_bridge_nosetests_conversions.py"
-	@echo "... run_tests_cv_bridge"
-	@echo "... list_install_components"
-	@echo "... _run_tests_cv_bridge"
 	@echo "... run_tests_cv_bridge_gtest_cv_bridge-utest"
-	@echo "... run_tests_cv_bridge_gtest"
-	@echo "... test"
-	@echo "... _run_tests_cv_bridge_nosetests_conversions.py"
-	@echo "... run_tests_cv_bridge_nosetests_python_bindings.py"
-	@echo "... _run_tests_cv_bridge_nosetests_python_bindings.py"
-	@echo "... install/strip"
-	@echo "... install/local"
-	@echo "... edit_cache"
-	@echo "... install"
+	@echo "... run_tests_cv_bridge_nosetests"
+	@echo "... _run_tests_cv_bridge_nosetests"
 	@echo "... test_compression.o"
 	@echo "... test_compression.i"
 	@echo "... test_compression.s"

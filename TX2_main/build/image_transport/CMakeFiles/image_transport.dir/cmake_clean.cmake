@@ -8,6 +8,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/image_transport.dir/src/subscriber.cpp.o"
   "/home/nvidia/21_hf271/TX2_main/devel/lib/libimage_transport.pdb"
   "/home/nvidia/21_hf271/TX2_main/devel/lib/libimage_transport.so"
+  "/home/nvidia/21_hf271/TX2_main/devel/lib/libimage_transport.pdb"
+  "CMakeFiles/CMakeRelink.dir/libimage_transport.so"
 )
 
 # Per-language clean rules from dependency scanning.

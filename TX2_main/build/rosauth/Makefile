@@ -122,17 +122,6 @@ install/local/fast: install/local
 
 .PHONY : install/local/fast
 
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: install/strip
-
-.PHONY : install/strip/fast
-
 # The main all target
 all: cmake_check_build_system
 	cd /home/nvidia/21_hf271/TX2_main/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/nvidia/21_hf271/TX2_main/build/CMakeFiles /home/nvidia/21_hf271/TX2_main/build/rosauth/CMakeFiles/progress.marks
@@ -329,6 +318,11 @@ ros_mac_authentication: rosauth/CMakeFiles/ros_mac_authentication.dir/rule
 ros_mac_authentication/fast:
 	cd /home/nvidia/21_hf271/TX2_main/build && $(MAKE) -f rosauth/CMakeFiles/ros_mac_authentication.dir/build.make rosauth/CMakeFiles/ros_mac_authentication.dir/build
 .PHONY : ros_mac_authentication/fast
+
+# Manual pre-install relink rule for target.
+ros_mac_authentication/preinstall:
+	cd /home/nvidia/21_hf271/TX2_main/build && $(MAKE) -f CMakeFiles/Makefile2 rosauth/CMakeFiles/ros_mac_authentication.dir/preinstall
+.PHONY : ros_mac_authentication/preinstall
 
 # Convenience name for target.
 rosauth/CMakeFiles/run_tests_rosauth_rostest_test_ros_mac_authentication.test.dir/rule:
@@ -545,7 +539,6 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... test"
-	@echo "... install/local"
 	@echo "... rosauth_gennodejs"
 	@echo "... rosauth_genlisp"
 	@echo "... rosauth_geneus"
@@ -561,13 +554,13 @@ help:
 	@echo "... _run_tests_rosauth_rostest"
 	@echo "... _rosauth_generate_messages_check_deps_Authentication"
 	@echo "... _run_tests_rosauth"
-	@echo "... install/strip"
 	@echo "... run_tests_rosauth_rostest"
 	@echo "... rosauth_genpy"
 	@echo "... _run_tests_rosauth_rostest_test_ros_mac_authentication.test"
 	@echo "... ros_mac_authentication_test"
 	@echo "... run_tests_rosauth"
 	@echo "... clean_test_results_rosauth"
+	@echo "... install/local"
 	@echo "... src/ros_mac_authentication.o"
 	@echo "... src/ros_mac_authentication.i"
 	@echo "... src/ros_mac_authentication.s"

@@ -56,60 +56,16 @@ CMAKE_BINARY_DIR = /home/nvidia/21_hf271/TX2_main/build
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
 
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
 
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-
-.PHONY : list_install_components/fast
-
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: install/strip
-
-.PHONY : install/strip/fast
-
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
-
-# Special rule for the target install/local
-install/local/fast: install/local
-
-.PHONY : install/local/fast
-
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
+.PHONY : rebuild_cache/fast
 
 # Special rule for the target edit_cache
 edit_cache:
@@ -122,16 +78,49 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
 
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
+# Special rule for the target test
+test/fast: test
 
-.PHONY : rebuild_cache/fast
+.PHONY : test/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: install/local
+
+.PHONY : install/local/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -166,6 +155,26 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+image_transport/CMakeFiles/image_transport.dir/rule:
+	cd /home/nvidia/21_hf271/TX2_main/build && $(MAKE) -f CMakeFiles/Makefile2 image_transport/CMakeFiles/image_transport.dir/rule
+.PHONY : image_transport/CMakeFiles/image_transport.dir/rule
+
+# Convenience name for target.
+image_transport: image_transport/CMakeFiles/image_transport.dir/rule
+
+.PHONY : image_transport
+
+# fast build rule for target.
+image_transport/fast:
+	cd /home/nvidia/21_hf271/TX2_main/build && $(MAKE) -f image_transport/CMakeFiles/image_transport.dir/build.make image_transport/CMakeFiles/image_transport.dir/build
+.PHONY : image_transport/fast
+
+# Manual pre-install relink rule for target.
+image_transport/preinstall:
+	cd /home/nvidia/21_hf271/TX2_main/build && $(MAKE) -f CMakeFiles/Makefile2 image_transport/CMakeFiles/image_transport.dir/preinstall
+.PHONY : image_transport/preinstall
+
+# Convenience name for target.
 image_transport/CMakeFiles/image_transport_plugins.dir/rule:
 	cd /home/nvidia/21_hf271/TX2_main/build && $(MAKE) -f CMakeFiles/Makefile2 image_transport/CMakeFiles/image_transport_plugins.dir/rule
 .PHONY : image_transport/CMakeFiles/image_transport_plugins.dir/rule
@@ -180,20 +189,10 @@ image_transport_plugins/fast:
 	cd /home/nvidia/21_hf271/TX2_main/build && $(MAKE) -f image_transport/CMakeFiles/image_transport_plugins.dir/build.make image_transport/CMakeFiles/image_transport_plugins.dir/build
 .PHONY : image_transport_plugins/fast
 
-# Convenience name for target.
-image_transport/CMakeFiles/image_transport.dir/rule:
-	cd /home/nvidia/21_hf271/TX2_main/build && $(MAKE) -f CMakeFiles/Makefile2 image_transport/CMakeFiles/image_transport.dir/rule
-.PHONY : image_transport/CMakeFiles/image_transport.dir/rule
-
-# Convenience name for target.
-image_transport: image_transport/CMakeFiles/image_transport.dir/rule
-
-.PHONY : image_transport
-
-# fast build rule for target.
-image_transport/fast:
-	cd /home/nvidia/21_hf271/TX2_main/build && $(MAKE) -f image_transport/CMakeFiles/image_transport.dir/build.make image_transport/CMakeFiles/image_transport.dir/build
-.PHONY : image_transport/fast
+# Manual pre-install relink rule for target.
+image_transport_plugins/preinstall:
+	cd /home/nvidia/21_hf271/TX2_main/build && $(MAKE) -f CMakeFiles/Makefile2 image_transport/CMakeFiles/image_transport_plugins.dir/preinstall
+.PHONY : image_transport_plugins/preinstall
 
 # Convenience name for target.
 image_transport/CMakeFiles/republish.dir/rule:
@@ -210,6 +209,11 @@ republish/fast:
 	cd /home/nvidia/21_hf271/TX2_main/build && $(MAKE) -f image_transport/CMakeFiles/republish.dir/build.make image_transport/CMakeFiles/republish.dir/build
 .PHONY : republish/fast
 
+# Manual pre-install relink rule for target.
+republish/preinstall:
+	cd /home/nvidia/21_hf271/TX2_main/build && $(MAKE) -f CMakeFiles/Makefile2 image_transport/CMakeFiles/republish.dir/preinstall
+.PHONY : republish/preinstall
+
 # Convenience name for target.
 image_transport/CMakeFiles/list_transports.dir/rule:
 	cd /home/nvidia/21_hf271/TX2_main/build && $(MAKE) -f CMakeFiles/Makefile2 image_transport/CMakeFiles/list_transports.dir/rule
@@ -224,6 +228,11 @@ list_transports: image_transport/CMakeFiles/list_transports.dir/rule
 list_transports/fast:
 	cd /home/nvidia/21_hf271/TX2_main/build && $(MAKE) -f image_transport/CMakeFiles/list_transports.dir/build.make image_transport/CMakeFiles/list_transports.dir/build
 .PHONY : list_transports/fast
+
+# Manual pre-install relink rule for target.
+list_transports/preinstall:
+	cd /home/nvidia/21_hf271/TX2_main/build && $(MAKE) -f CMakeFiles/Makefile2 image_transport/CMakeFiles/list_transports.dir/preinstall
+.PHONY : list_transports/preinstall
 
 src/camera_common.o: src/camera_common.cpp.o
 
@@ -528,17 +537,16 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... install"
-	@echo "... list_install_components"
-	@echo "... install/strip"
-	@echo "... install/local"
-	@echo "... image_transport_plugins"
-	@echo "... test"
-	@echo "... image_transport"
-	@echo "... republish"
-	@echo "... edit_cache"
-	@echo "... list_transports"
 	@echo "... rebuild_cache"
+	@echo "... edit_cache"
+	@echo "... image_transport"
+	@echo "... test"
+	@echo "... image_transport_plugins"
+	@echo "... install/local"
+	@echo "... republish"
+	@echo "... list_install_components"
+	@echo "... install"
+	@echo "... list_transports"
 	@echo "... src/camera_common.o"
 	@echo "... src/camera_common.i"
 	@echo "... src/camera_common.s"

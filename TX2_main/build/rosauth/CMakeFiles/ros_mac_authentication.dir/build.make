@@ -120,6 +120,45 @@ rosauth/CMakeFiles/ros_mac_authentication.dir/build: /home/nvidia/21_hf271/TX2_m
 
 .PHONY : rosauth/CMakeFiles/ros_mac_authentication.dir/build
 
+# Object files for target ros_mac_authentication
+ros_mac_authentication_OBJECTS = \
+"CMakeFiles/ros_mac_authentication.dir/src/ros_mac_authentication.cpp.o"
+
+# External object files for target ros_mac_authentication
+ros_mac_authentication_EXTERNAL_OBJECTS =
+
+rosauth/CMakeFiles/CMakeRelink.dir/ros_mac_authentication: rosauth/CMakeFiles/ros_mac_authentication.dir/src/ros_mac_authentication.cpp.o
+rosauth/CMakeFiles/CMakeRelink.dir/ros_mac_authentication: rosauth/CMakeFiles/ros_mac_authentication.dir/build.make
+rosauth/CMakeFiles/CMakeRelink.dir/ros_mac_authentication: /opt/ros/kinetic/lib/libroscpp.so
+rosauth/CMakeFiles/CMakeRelink.dir/ros_mac_authentication: /usr/lib/aarch64-linux-gnu/libboost_filesystem.so
+rosauth/CMakeFiles/CMakeRelink.dir/ros_mac_authentication: /usr/lib/aarch64-linux-gnu/libboost_signals.so
+rosauth/CMakeFiles/CMakeRelink.dir/ros_mac_authentication: /opt/ros/kinetic/lib/librosconsole.so
+rosauth/CMakeFiles/CMakeRelink.dir/ros_mac_authentication: /opt/ros/kinetic/lib/librosconsole_log4cxx.so
+rosauth/CMakeFiles/CMakeRelink.dir/ros_mac_authentication: /opt/ros/kinetic/lib/librosconsole_backend_interface.so
+rosauth/CMakeFiles/CMakeRelink.dir/ros_mac_authentication: /usr/lib/aarch64-linux-gnu/liblog4cxx.so
+rosauth/CMakeFiles/CMakeRelink.dir/ros_mac_authentication: /usr/lib/aarch64-linux-gnu/libboost_regex.so
+rosauth/CMakeFiles/CMakeRelink.dir/ros_mac_authentication: /opt/ros/kinetic/lib/libroscpp_serialization.so
+rosauth/CMakeFiles/CMakeRelink.dir/ros_mac_authentication: /opt/ros/kinetic/lib/libxmlrpcpp.so
+rosauth/CMakeFiles/CMakeRelink.dir/ros_mac_authentication: /opt/ros/kinetic/lib/librostime.so
+rosauth/CMakeFiles/CMakeRelink.dir/ros_mac_authentication: /opt/ros/kinetic/lib/libcpp_common.so
+rosauth/CMakeFiles/CMakeRelink.dir/ros_mac_authentication: /usr/lib/aarch64-linux-gnu/libboost_system.so
+rosauth/CMakeFiles/CMakeRelink.dir/ros_mac_authentication: /usr/lib/aarch64-linux-gnu/libboost_thread.so
+rosauth/CMakeFiles/CMakeRelink.dir/ros_mac_authentication: /usr/lib/aarch64-linux-gnu/libboost_chrono.so
+rosauth/CMakeFiles/CMakeRelink.dir/ros_mac_authentication: /usr/lib/aarch64-linux-gnu/libboost_date_time.so
+rosauth/CMakeFiles/CMakeRelink.dir/ros_mac_authentication: /usr/lib/aarch64-linux-gnu/libboost_atomic.so
+rosauth/CMakeFiles/CMakeRelink.dir/ros_mac_authentication: /usr/lib/aarch64-linux-gnu/libpthread.so
+rosauth/CMakeFiles/CMakeRelink.dir/ros_mac_authentication: /usr/lib/aarch64-linux-gnu/libconsole_bridge.so
+rosauth/CMakeFiles/CMakeRelink.dir/ros_mac_authentication: /usr/lib/aarch64-linux-gnu/libssl.so
+rosauth/CMakeFiles/CMakeRelink.dir/ros_mac_authentication: /usr/lib/aarch64-linux-gnu/libcrypto.so
+rosauth/CMakeFiles/CMakeRelink.dir/ros_mac_authentication: rosauth/CMakeFiles/ros_mac_authentication.dir/relink.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/nvidia/21_hf271/TX2_main/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable CMakeFiles/CMakeRelink.dir/ros_mac_authentication"
+	cd /home/nvidia/21_hf271/TX2_main/build/rosauth && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ros_mac_authentication.dir/relink.txt --verbose=$(VERBOSE)
+
+# Rule to relink during preinstall.
+rosauth/CMakeFiles/ros_mac_authentication.dir/preinstall: rosauth/CMakeFiles/CMakeRelink.dir/ros_mac_authentication
+
+.PHONY : rosauth/CMakeFiles/ros_mac_authentication.dir/preinstall
+
 rosauth/CMakeFiles/ros_mac_authentication.dir/requires: rosauth/CMakeFiles/ros_mac_authentication.dir/src/ros_mac_authentication.cpp.o.requires
 
 .PHONY : rosauth/CMakeFiles/ros_mac_authentication.dir/requires

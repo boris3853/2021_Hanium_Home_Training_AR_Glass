@@ -122,17 +122,6 @@ list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
 
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: install/strip
-
-.PHONY : install/strip/fast
-
 # The main all target
 all: cmake_check_build_system
 	cd /home/nvidia/21_hf271/TX2_main/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/nvidia/21_hf271/TX2_main/build/CMakeFiles /home/nvidia/21_hf271/TX2_main/build/rosbridge_suite/rosbridge_library/CMakeFiles/progress.marks
@@ -787,7 +776,6 @@ help:
 	@echo "... rosbridge_library_generate_messages_py"
 	@echo "... _rosbridge_library_generate_messages_check_deps_TestHeaderTwo"
 	@echo "... _rosbridge_library_generate_messages_check_deps_TestNestedService"
-	@echo "... install/strip"
 	@echo "... _rosbridge_library_generate_messages_check_deps_TestUInt8FixedSizeArray16"
 	@echo "... clean_test_results_rosbridge_library"
 	@echo "... _rosbridge_library_generate_messages_check_deps_TestMultipleRequestFields"

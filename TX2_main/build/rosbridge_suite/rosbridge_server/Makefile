@@ -79,16 +79,15 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
-	/usr/bin/cmake-gui -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : edit_cache
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
 
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
 
-.PHONY : edit_cache/fast
+.PHONY : list_install_components/fast
 
 # Special rule for the target test
 test:
@@ -101,27 +100,6 @@ test/fast: test
 
 .PHONY : test/fast
 
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-
-.PHONY : list_install_components/fast
-
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: install/strip
-
-.PHONY : install/strip/fast
-
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
@@ -132,6 +110,17 @@ install/local: preinstall
 install/local/fast: install/local
 
 .PHONY : install/local/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
+	/usr/bin/cmake-gui -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -164,6 +153,21 @@ preinstall/fast:
 depend:
 	cd /home/nvidia/21_hf271/TX2_main/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
+
+# Convenience name for target.
+rosbridge_suite/rosbridge_server/CMakeFiles/_run_tests_rosbridge_server_rostest_test_websocket_test_smoke.test.dir/rule:
+	cd /home/nvidia/21_hf271/TX2_main/build && $(MAKE) -f CMakeFiles/Makefile2 rosbridge_suite/rosbridge_server/CMakeFiles/_run_tests_rosbridge_server_rostest_test_websocket_test_smoke.test.dir/rule
+.PHONY : rosbridge_suite/rosbridge_server/CMakeFiles/_run_tests_rosbridge_server_rostest_test_websocket_test_smoke.test.dir/rule
+
+# Convenience name for target.
+_run_tests_rosbridge_server_rostest_test_websocket_test_smoke.test: rosbridge_suite/rosbridge_server/CMakeFiles/_run_tests_rosbridge_server_rostest_test_websocket_test_smoke.test.dir/rule
+
+.PHONY : _run_tests_rosbridge_server_rostest_test_websocket_test_smoke.test
+
+# fast build rule for target.
+_run_tests_rosbridge_server_rostest_test_websocket_test_smoke.test/fast:
+	cd /home/nvidia/21_hf271/TX2_main/build && $(MAKE) -f rosbridge_suite/rosbridge_server/CMakeFiles/_run_tests_rosbridge_server_rostest_test_websocket_test_smoke.test.dir/build.make rosbridge_suite/rosbridge_server/CMakeFiles/_run_tests_rosbridge_server_rostest_test_websocket_test_smoke.test.dir/build
+.PHONY : _run_tests_rosbridge_server_rostest_test_websocket_test_smoke.test/fast
 
 # Convenience name for target.
 rosbridge_suite/rosbridge_server/CMakeFiles/_run_tests_rosbridge_server.dir/rule:
@@ -255,21 +259,6 @@ clean_test_results_rosbridge_server/fast:
 	cd /home/nvidia/21_hf271/TX2_main/build && $(MAKE) -f rosbridge_suite/rosbridge_server/CMakeFiles/clean_test_results_rosbridge_server.dir/build.make rosbridge_suite/rosbridge_server/CMakeFiles/clean_test_results_rosbridge_server.dir/build
 .PHONY : clean_test_results_rosbridge_server/fast
 
-# Convenience name for target.
-rosbridge_suite/rosbridge_server/CMakeFiles/_run_tests_rosbridge_server_rostest_test_websocket_test_smoke.test.dir/rule:
-	cd /home/nvidia/21_hf271/TX2_main/build && $(MAKE) -f CMakeFiles/Makefile2 rosbridge_suite/rosbridge_server/CMakeFiles/_run_tests_rosbridge_server_rostest_test_websocket_test_smoke.test.dir/rule
-.PHONY : rosbridge_suite/rosbridge_server/CMakeFiles/_run_tests_rosbridge_server_rostest_test_websocket_test_smoke.test.dir/rule
-
-# Convenience name for target.
-_run_tests_rosbridge_server_rostest_test_websocket_test_smoke.test: rosbridge_suite/rosbridge_server/CMakeFiles/_run_tests_rosbridge_server_rostest_test_websocket_test_smoke.test.dir/rule
-
-.PHONY : _run_tests_rosbridge_server_rostest_test_websocket_test_smoke.test
-
-# fast build rule for target.
-_run_tests_rosbridge_server_rostest_test_websocket_test_smoke.test/fast:
-	cd /home/nvidia/21_hf271/TX2_main/build && $(MAKE) -f rosbridge_suite/rosbridge_server/CMakeFiles/_run_tests_rosbridge_server_rostest_test_websocket_test_smoke.test.dir/build.make rosbridge_suite/rosbridge_server/CMakeFiles/_run_tests_rosbridge_server_rostest_test_websocket_test_smoke.test.dir/build
-.PHONY : _run_tests_rosbridge_server_rostest_test_websocket_test_smoke.test/fast
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -278,7 +267,8 @@ help:
 	@echo "... depend"
 	@echo "... install"
 	@echo "... rebuild_cache"
-	@echo "... edit_cache"
+	@echo "... list_install_components"
+	@echo "... _run_tests_rosbridge_server_rostest_test_websocket_test_smoke.test"
 	@echo "... _run_tests_rosbridge_server"
 	@echo "... _run_tests_rosbridge_server_rostest"
 	@echo "... run_tests_rosbridge_server"
@@ -286,10 +276,8 @@ help:
 	@echo "... test"
 	@echo "... run_tests_rosbridge_server_rostest"
 	@echo "... clean_test_results_rosbridge_server"
-	@echo "... list_install_components"
-	@echo "... _run_tests_rosbridge_server_rostest_test_websocket_test_smoke.test"
-	@echo "... install/strip"
 	@echo "... install/local"
+	@echo "... edit_cache"
 .PHONY : help
 
 

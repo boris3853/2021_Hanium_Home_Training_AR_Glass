@@ -3,6 +3,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/cv_bridge_boost.dir/module_opencv4.cpp.o"
   "/home/nvidia/21_hf271/TX2_main/devel/lib/python2.7/dist-packages/cv_bridge/boost/cv_bridge_boost.pdb"
   "/home/nvidia/21_hf271/TX2_main/devel/lib/python2.7/dist-packages/cv_bridge/boost/cv_bridge_boost.so"
+  "/home/nvidia/21_hf271/TX2_main/devel/lib/python2.7/dist-packages/cv_bridge/boost/cv_bridge_boost.pdb"
+  "CMakeFiles/CMakeRelink.dir/cv_bridge_boost.so"
 )
 
 # Per-language clean rules from dependency scanning.

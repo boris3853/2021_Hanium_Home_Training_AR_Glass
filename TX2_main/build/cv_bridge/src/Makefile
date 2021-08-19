@@ -89,17 +89,6 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
-
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -122,16 +111,16 @@ install/local/fast: install/local
 
 .PHONY : install/local/fast
 
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
 
-# Special rule for the target install/strip
-install/strip/fast: install/strip
+# Special rule for the target test
+test/fast: test
 
-.PHONY : install/strip/fast
+.PHONY : test/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -180,6 +169,11 @@ cv_bridge/fast:
 	cd /home/nvidia/21_hf271/TX2_main/build && $(MAKE) -f cv_bridge/src/CMakeFiles/cv_bridge.dir/build.make cv_bridge/src/CMakeFiles/cv_bridge.dir/build
 .PHONY : cv_bridge/fast
 
+# Manual pre-install relink rule for target.
+cv_bridge/preinstall:
+	cd /home/nvidia/21_hf271/TX2_main/build && $(MAKE) -f CMakeFiles/Makefile2 cv_bridge/src/CMakeFiles/cv_bridge.dir/preinstall
+.PHONY : cv_bridge/preinstall
+
 # Convenience name for target.
 cv_bridge/src/CMakeFiles/cv_bridge_boost.dir/rule:
 	cd /home/nvidia/21_hf271/TX2_main/build && $(MAKE) -f CMakeFiles/Makefile2 cv_bridge/src/CMakeFiles/cv_bridge_boost.dir/rule
@@ -194,6 +188,11 @@ cv_bridge_boost: cv_bridge/src/CMakeFiles/cv_bridge_boost.dir/rule
 cv_bridge_boost/fast:
 	cd /home/nvidia/21_hf271/TX2_main/build && $(MAKE) -f cv_bridge/src/CMakeFiles/cv_bridge_boost.dir/build.make cv_bridge/src/CMakeFiles/cv_bridge_boost.dir/build
 .PHONY : cv_bridge_boost/fast
+
+# Manual pre-install relink rule for target.
+cv_bridge_boost/preinstall:
+	cd /home/nvidia/21_hf271/TX2_main/build && $(MAKE) -f CMakeFiles/Makefile2 cv_bridge/src/CMakeFiles/cv_bridge_boost.dir/preinstall
+.PHONY : cv_bridge_boost/preinstall
 
 cv_bridge.o: cv_bridge.cpp.o
 
@@ -312,12 +311,11 @@ help:
 	@echo "... list_install_components"
 	@echo "... install"
 	@echo "... edit_cache"
-	@echo "... test"
 	@echo "... rebuild_cache"
 	@echo "... cv_bridge"
 	@echo "... cv_bridge_boost"
 	@echo "... install/local"
-	@echo "... install/strip"
+	@echo "... test"
 	@echo "... cv_bridge.o"
 	@echo "... cv_bridge.i"
 	@echo "... cv_bridge.s"

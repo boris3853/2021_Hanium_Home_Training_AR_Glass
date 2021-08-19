@@ -122,17 +122,6 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: install/strip
-
-.PHONY : install/strip/fast
-
 # The main all target
 all: cmake_check_build_system
 	cd /home/nvidia/21_hf271/TX2_main/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/nvidia/21_hf271/TX2_main/build/CMakeFiles /home/nvidia/21_hf271/TX2_main/build/rosbridge_suite/rosapi/CMakeFiles/progress.marks
@@ -784,7 +773,6 @@ help:
 	@echo "... _rosapi_generate_messages_check_deps_ServiceHost"
 	@echo "... _rosapi_generate_messages_check_deps_ServiceProviders"
 	@echo "... _rosapi_generate_messages_check_deps_ServiceResponseDetails"
-	@echo "... install/strip"
 	@echo "... _rosapi_generate_messages_check_deps_ServiceRequestDetails"
 .PHONY : help
 

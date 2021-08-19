@@ -129,6 +129,54 @@ image_transport/CMakeFiles/republish.dir/build: /home/nvidia/21_hf271/TX2_main/d
 
 .PHONY : image_transport/CMakeFiles/republish.dir/build
 
+# Object files for target republish
+republish_OBJECTS = \
+"CMakeFiles/republish.dir/src/republish.cpp.o"
+
+# External object files for target republish
+republish_EXTERNAL_OBJECTS =
+
+image_transport/CMakeFiles/CMakeRelink.dir/republish: image_transport/CMakeFiles/republish.dir/src/republish.cpp.o
+image_transport/CMakeFiles/CMakeRelink.dir/republish: image_transport/CMakeFiles/republish.dir/build.make
+image_transport/CMakeFiles/CMakeRelink.dir/republish: /home/nvidia/21_hf271/TX2_main/devel/lib/libimage_transport.so
+image_transport/CMakeFiles/CMakeRelink.dir/republish: /opt/ros/kinetic/lib/libmessage_filters.so
+image_transport/CMakeFiles/CMakeRelink.dir/republish: /usr/lib/aarch64-linux-gnu/libtinyxml2.so
+image_transport/CMakeFiles/CMakeRelink.dir/republish: /opt/ros/kinetic/lib/libclass_loader.so
+image_transport/CMakeFiles/CMakeRelink.dir/republish: /usr/lib/libPocoFoundation.so
+image_transport/CMakeFiles/CMakeRelink.dir/republish: /usr/lib/aarch64-linux-gnu/libdl.so
+image_transport/CMakeFiles/CMakeRelink.dir/republish: /opt/ros/kinetic/lib/libroscpp.so
+image_transport/CMakeFiles/CMakeRelink.dir/republish: /usr/lib/aarch64-linux-gnu/libboost_signals.so
+image_transport/CMakeFiles/CMakeRelink.dir/republish: /opt/ros/kinetic/lib/librosconsole.so
+image_transport/CMakeFiles/CMakeRelink.dir/republish: /opt/ros/kinetic/lib/librosconsole_log4cxx.so
+image_transport/CMakeFiles/CMakeRelink.dir/republish: /opt/ros/kinetic/lib/librosconsole_backend_interface.so
+image_transport/CMakeFiles/CMakeRelink.dir/republish: /usr/lib/aarch64-linux-gnu/liblog4cxx.so
+image_transport/CMakeFiles/CMakeRelink.dir/republish: /usr/lib/aarch64-linux-gnu/libboost_regex.so
+image_transport/CMakeFiles/CMakeRelink.dir/republish: /opt/ros/kinetic/lib/libxmlrpcpp.so
+image_transport/CMakeFiles/CMakeRelink.dir/republish: /opt/ros/kinetic/lib/libroslib.so
+image_transport/CMakeFiles/CMakeRelink.dir/republish: /opt/ros/kinetic/lib/librospack.so
+image_transport/CMakeFiles/CMakeRelink.dir/republish: /usr/lib/aarch64-linux-gnu/libpython2.7.so
+image_transport/CMakeFiles/CMakeRelink.dir/republish: /usr/lib/aarch64-linux-gnu/libboost_filesystem.so
+image_transport/CMakeFiles/CMakeRelink.dir/republish: /usr/lib/aarch64-linux-gnu/libboost_program_options.so
+image_transport/CMakeFiles/CMakeRelink.dir/republish: /usr/lib/aarch64-linux-gnu/libtinyxml.so
+image_transport/CMakeFiles/CMakeRelink.dir/republish: /opt/ros/kinetic/lib/libroscpp_serialization.so
+image_transport/CMakeFiles/CMakeRelink.dir/republish: /opt/ros/kinetic/lib/librostime.so
+image_transport/CMakeFiles/CMakeRelink.dir/republish: /opt/ros/kinetic/lib/libcpp_common.so
+image_transport/CMakeFiles/CMakeRelink.dir/republish: /usr/lib/aarch64-linux-gnu/libboost_system.so
+image_transport/CMakeFiles/CMakeRelink.dir/republish: /usr/lib/aarch64-linux-gnu/libboost_thread.so
+image_transport/CMakeFiles/CMakeRelink.dir/republish: /usr/lib/aarch64-linux-gnu/libboost_chrono.so
+image_transport/CMakeFiles/CMakeRelink.dir/republish: /usr/lib/aarch64-linux-gnu/libboost_date_time.so
+image_transport/CMakeFiles/CMakeRelink.dir/republish: /usr/lib/aarch64-linux-gnu/libboost_atomic.so
+image_transport/CMakeFiles/CMakeRelink.dir/republish: /usr/lib/aarch64-linux-gnu/libpthread.so
+image_transport/CMakeFiles/CMakeRelink.dir/republish: /usr/lib/aarch64-linux-gnu/libconsole_bridge.so
+image_transport/CMakeFiles/CMakeRelink.dir/republish: image_transport/CMakeFiles/republish.dir/relink.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/nvidia/21_hf271/TX2_main/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable CMakeFiles/CMakeRelink.dir/republish"
+	cd /home/nvidia/21_hf271/TX2_main/build/image_transport && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/republish.dir/relink.txt --verbose=$(VERBOSE)
+
+# Rule to relink during preinstall.
+image_transport/CMakeFiles/republish.dir/preinstall: image_transport/CMakeFiles/CMakeRelink.dir/republish
+
+.PHONY : image_transport/CMakeFiles/republish.dir/preinstall
+
 image_transport/CMakeFiles/republish.dir/requires: image_transport/CMakeFiles/republish.dir/src/republish.cpp.o.requires
 
 .PHONY : image_transport/CMakeFiles/republish.dir/requires
