@@ -1,8 +1,0 @@
-prefix=/home/kyung/21_hf271/image_transport/devel
-
-Name: webcam
-Description: Description of webcam
-Version: 0.1.0
-Cflags: -I/home/kyung/21_hf271/image_transport/src/webcam/include
-Libs: -L${prefix}/lib -lwebcam
-Requires: cv_bridge image_transport std_msgs sensor_msgs roscpp
