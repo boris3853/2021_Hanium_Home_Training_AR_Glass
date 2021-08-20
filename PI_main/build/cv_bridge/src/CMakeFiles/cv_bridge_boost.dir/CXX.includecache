@@ -1088,14 +1088,6 @@ mutex
 opencv2/core/utils/instrumentation.hpp
 /usr/local/include/opencv4/opencv2/core/opencv2/core/utils/instrumentation.hpp
 
-/usr/local/include/opencv4/opencv2/core/utils/instrumentation.hpp
-opencv2/core/utility.hpp
--
-opencv2/core/utils/tls.hpp
--
-
-/usr/local/include/opencv4/opencv2/core/utils/tls.hpp
-
 /usr/local/include/opencv4/opencv2/core/version.hpp
 
 /usr/local/include/opencv4/opencv2/core/vsx_utils.hpp
@@ -1111,10 +1103,6 @@ opencv2/core.hpp
 /usr/local/include/opencv4/opencv2/imgproc/segmentation.hpp
 
 /usr/local/include/opencv4/opencv2/imgproc/imgproc.hpp
-opencv2/imgproc.hpp
-/usr/local/include/opencv4/opencv2/imgproc/opencv2/imgproc.hpp
-
-/usr/local/include/opencv4/opencv2/imgproc/segmentation.hpp
 opencv2/imgproc.hpp
 /usr/local/include/opencv4/opencv2/imgproc/opencv2/imgproc.hpp
 

@@ -21,12 +21,12 @@ private:
 public:
 	PI_Publisher(ros::NodeHandle nh) : it(nh), cap(0, cv::CAP_V4L)
 	{
-		pub = it.advertise("camera/image2", 1);
+		pub = it.advertise("camera/image1", 1);
 		// PI1: camera/image1 PI2: camera/image2
 	}
 	
 	void capture(){
-		cap >> frame;
+		cap.read(frame);
 		header.stamp = ros::Time::now();
 		
 		imshow("test", frame); // TEST
@@ -46,7 +46,7 @@ public:
 };
 
 int main(int argc, char **argv){
-	ros::init(argc, argv, "image_pub2"); // PI1: image_pub1 PI2: image_pub2
+	ros::init(argc, argv, "image_pub1"); // PI1: image_pub1 PI2: image_pub2
 	ros::NodeHandle nh;
 	PI_Publisher PI_PUB(nh);
 

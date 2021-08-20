@@ -26,7 +26,7 @@ public:
 	}
 	
 	void capture(){
-		cap >> frame;
+		cap.read(frame);
 		header.stamp = ros::Time::now();
 		
 		imshow("test", frame); // TEST
