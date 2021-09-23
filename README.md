@@ -37,3 +37,14 @@ socket_comm / TX2_main 추가 (21/08/01)
 ##### 마크다운 문법 사용법
 다음 링크 참조: 
 https://velog.io/@yuuuye/velog-%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4MarkDown-%EC%9E%91%EC%84%B1%EB%B2%95
+
+
+
+##### OpenPose
+1. OpenPose 설치  
+> git clone https://github.com/CMU-Perceptual-Computing-Lab/openpose
+
+=> cmake시 다음과 같은 오류 발생하면 (https://github.com/CMU-Perceptual-Computing-Lab/openpose/issues/423)     
+openpose/3rdparty/ 에서
+> git clone https://github.com/CMU-Perceptual-Computing-Lab/caffe.git
+
