@@ -20,7 +20,7 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/home/pi/21_hf271/PI_main/devel/include"
+  "devel/include"
   "/home/pi/21_hf271/PI_main/src/image_transport_plugins/compressed_image_transport/include"
   "/home/pi/21_hf271/PI_main/src/cv_bridge/include"
   "/home/pi/21_hf271/PI_main/src/image_transport/include"

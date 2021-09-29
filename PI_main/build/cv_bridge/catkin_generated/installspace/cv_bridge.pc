@@ -1,4 +1,4 @@
-prefix=/home/pi/21_hf271/PI_main/install
+prefix=/usr/local
 
 Name: cv_bridge
 Description: Description of cv_bridge

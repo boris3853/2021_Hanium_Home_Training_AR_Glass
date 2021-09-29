@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/pi/21_hf271/PI_main/devel/lib/libtheora_image_transport.pdb"
-  "/home/pi/21_hf271/PI_main/devel/lib/libtheora_image_transport.so"
+  "../../devel/lib/libtheora_image_transport.pdb"
+  "../../devel/lib/libtheora_image_transport.so"
   "CMakeFiles/theora_image_transport.dir/src/manifest.cpp.o"
   "CMakeFiles/theora_image_transport.dir/src/theora_publisher.cpp.o"
   "CMakeFiles/theora_image_transport.dir/src/theora_subscriber.cpp.o"

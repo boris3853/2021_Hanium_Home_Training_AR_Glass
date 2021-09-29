@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/pi/21_hf271/PI_main/devel/lib/theora_image_transport/ogg_saver"
-  "/home/pi/21_hf271/PI_main/devel/lib/theora_image_transport/ogg_saver.pdb"
+  "../../devel/lib/theora_image_transport/ogg_saver"
+  "../../devel/lib/theora_image_transport/ogg_saver.pdb"
   "CMakeFiles/ogg_saver.dir/src/ogg_saver.cpp.o"
 )
 

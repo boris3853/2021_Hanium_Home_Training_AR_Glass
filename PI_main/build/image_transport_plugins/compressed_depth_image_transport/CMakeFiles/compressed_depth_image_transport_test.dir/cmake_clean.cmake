@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/pi/21_hf271/PI_main/devel/lib/libcompressed_depth_image_transport_test.pdb"
-  "/home/pi/21_hf271/PI_main/devel/lib/libcompressed_depth_image_transport_test.so"
+  "../../devel/lib/libcompressed_depth_image_transport_test.pdb"
+  "../../devel/lib/libcompressed_depth_image_transport_test.so"
   "CMakeFiles/compressed_depth_image_transport_test.dir/src/codec.cpp.o"
   "CMakeFiles/compressed_depth_image_transport_test.dir/src/compressed_depth_publisher.cpp.o"
   "CMakeFiles/compressed_depth_image_transport_test.dir/src/compressed_depth_subscriber.cpp.o"

@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/pi/21_hf271/PI_main/devel/lib/compressed_depth_image_transport/rvl_codec_test"
-  "/home/pi/21_hf271/PI_main/devel/lib/compressed_depth_image_transport/rvl_codec_test.pdb"
+  "../../devel/lib/compressed_depth_image_transport/rvl_codec_test"
+  "../../devel/lib/compressed_depth_image_transport/rvl_codec_test.pdb"
   "CMakeFiles/rvl_codec_test.dir/test/rvl_codec_test.cpp.o"
 )
 

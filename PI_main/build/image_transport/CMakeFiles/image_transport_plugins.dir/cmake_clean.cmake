@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/pi/21_hf271/PI_main/devel/lib/libimage_transport_plugins.pdb"
-  "/home/pi/21_hf271/PI_main/devel/lib/libimage_transport_plugins.so"
+  "../devel/lib/libimage_transport_plugins.pdb"
+  "../devel/lib/libimage_transport_plugins.so"
   "CMakeFiles/image_transport_plugins.dir/src/manifest.cpp.o"
   "CMakeFiles/image_transport_plugins.dir/src/raw_publisher.cpp.o"
 )

@@ -53,17 +53,17 @@ CMAKE_BINARY_DIR = /home/pi/21_hf271/PI_main/build
 # Include the progress variables for this target.
 include image_transport_plugins/theora_image_transport/CMakeFiles/theora_image_transport_generate_messages_lisp.dir/progress.make
 
-image_transport_plugins/theora_image_transport/CMakeFiles/theora_image_transport_generate_messages_lisp: /home/pi/21_hf271/PI_main/devel/share/common-lisp/ros/theora_image_transport/msg/Packet.lisp
+image_transport_plugins/theora_image_transport/CMakeFiles/theora_image_transport_generate_messages_lisp: devel/share/common-lisp/ros/theora_image_transport/msg/Packet.lisp
 
 
-/home/pi/21_hf271/PI_main/devel/share/common-lisp/ros/theora_image_transport/msg/Packet.lisp: /opt/ros/melodic/lib/genlisp/gen_lisp.py
-/home/pi/21_hf271/PI_main/devel/share/common-lisp/ros/theora_image_transport/msg/Packet.lisp: /home/pi/21_hf271/PI_main/src/image_transport_plugins/theora_image_transport/msg/Packet.msg
-/home/pi/21_hf271/PI_main/devel/share/common-lisp/ros/theora_image_transport/msg/Packet.lisp: /opt/ros/melodic/share/std_msgs/msg/Header.msg
+devel/share/common-lisp/ros/theora_image_transport/msg/Packet.lisp: /opt/ros/melodic/lib/genlisp/gen_lisp.py
+devel/share/common-lisp/ros/theora_image_transport/msg/Packet.lisp: /home/pi/21_hf271/PI_main/src/image_transport_plugins/theora_image_transport/msg/Packet.msg
+devel/share/common-lisp/ros/theora_image_transport/msg/Packet.lisp: /opt/ros/melodic/share/std_msgs/msg/Header.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/pi/21_hf271/PI_main/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Lisp code from theora_image_transport/Packet.msg"
-	cd /home/pi/21_hf271/PI_main/build/image_transport_plugins/theora_image_transport && ../../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/pi/21_hf271/PI_main/src/image_transport_plugins/theora_image_transport/msg/Packet.msg -Itheora_image_transport:/home/pi/21_hf271/PI_main/src/image_transport_plugins/theora_image_transport/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p theora_image_transport -o /home/pi/21_hf271/PI_main/devel/share/common-lisp/ros/theora_image_transport/msg
+	cd /home/pi/21_hf271/PI_main/build/image_transport_plugins/theora_image_transport && ../../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/pi/21_hf271/PI_main/src/image_transport_plugins/theora_image_transport/msg/Packet.msg -Itheora_image_transport:/home/pi/21_hf271/PI_main/src/image_transport_plugins/theora_image_transport/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p theora_image_transport -o /home/pi/21_hf271/PI_main/build/devel/share/common-lisp/ros/theora_image_transport/msg
 
 theora_image_transport_generate_messages_lisp: image_transport_plugins/theora_image_transport/CMakeFiles/theora_image_transport_generate_messages_lisp
-theora_image_transport_generate_messages_lisp: /home/pi/21_hf271/PI_main/devel/share/common-lisp/ros/theora_image_transport/msg/Packet.lisp
+theora_image_transport_generate_messages_lisp: devel/share/common-lisp/ros/theora_image_transport/msg/Packet.lisp
 theora_image_transport_generate_messages_lisp: image_transport_plugins/theora_image_transport/CMakeFiles/theora_image_transport_generate_messages_lisp.dir/build.make
 
 .PHONY : theora_image_transport_generate_messages_lisp

@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/pi/21_hf271/PI_main/build
 include cv_bridge/test/CMakeFiles/_run_tests_cv_bridge_gtest_cv_bridge-utest.dir/progress.make
 
 cv_bridge/test/CMakeFiles/_run_tests_cv_bridge_gtest_cv_bridge-utest:
-	cd /home/pi/21_hf271/PI_main/build/cv_bridge/test && ../../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/catkin/cmake/test/run_tests.py /home/pi/21_hf271/PI_main/build/test_results/cv_bridge/gtest-cv_bridge-utest.xml "/home/pi/21_hf271/PI_main/devel/lib/cv_bridge/cv_bridge-utest --gtest_output=xml:/home/pi/21_hf271/PI_main/build/test_results/cv_bridge/gtest-cv_bridge-utest.xml"
+	cd /home/pi/21_hf271/PI_main/build/cv_bridge/test && ../../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/catkin/cmake/test/run_tests.py /home/pi/21_hf271/PI_main/build/test_results/cv_bridge/gtest-cv_bridge-utest.xml "/home/pi/21_hf271/PI_main/build/devel/lib/cv_bridge/cv_bridge-utest --gtest_output=xml:/home/pi/21_hf271/PI_main/build/test_results/cv_bridge/gtest-cv_bridge-utest.xml"
 
 _run_tests_cv_bridge_gtest_cv_bridge-utest: cv_bridge/test/CMakeFiles/_run_tests_cv_bridge_gtest_cv_bridge-utest
 _run_tests_cv_bridge_gtest_cv_bridge-utest: cv_bridge/test/CMakeFiles/_run_tests_cv_bridge_gtest_cv_bridge-utest.dir/build.make

@@ -1,4 +1,4 @@
-prefix=/home/pi/21_hf271/PI_main/install
+prefix=/usr/local
 
 Name: theora_image_transport
 Description: Description of theora_image_transport

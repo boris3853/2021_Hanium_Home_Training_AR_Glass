@@ -68,13 +68,13 @@ set(webcam_CONFIG_INCLUDED TRUE)
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
   set(webcam_SOURCE_PREFIX /home/pi/21_hf271/PI_main/src/webcam)
-  set(webcam_DEVEL_PREFIX /home/pi/21_hf271/PI_main/devel)
+  set(webcam_DEVEL_PREFIX /home/pi/21_hf271/PI_main/build/devel)
   set(webcam_INSTALL_PREFIX "")
   set(webcam_PREFIX ${webcam_DEVEL_PREFIX})
 else()
   set(webcam_SOURCE_PREFIX "")
   set(webcam_DEVEL_PREFIX "")
-  set(webcam_INSTALL_PREFIX /home/pi/21_hf271/PI_main/install)
+  set(webcam_INSTALL_PREFIX /usr/local)
   set(webcam_PREFIX ${webcam_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/pi/21_hf271/PI_main/install/lib;/opt/ros/melodic/lib)
+    foreach(path /usr/local/lib;/opt/ros/melodic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/pi/21_hf271/PI_main/devel/lib/image_transport/republish"
-  "/home/pi/21_hf271/PI_main/devel/lib/image_transport/republish.pdb"
+  "../devel/lib/image_transport/republish"
+  "../devel/lib/image_transport/republish.pdb"
   "CMakeFiles/republish.dir/src/republish.cpp.o"
 )
 

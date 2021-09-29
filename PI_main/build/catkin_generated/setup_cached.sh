@@ -7,10 +7,10 @@
 # new environment variables
 
 # modified environment variables
-export CMAKE_PREFIX_PATH="/home/pi/21_hf271/PI_main/devel:$CMAKE_PREFIX_PATH"
-export LD_LIBRARY_PATH="/home/pi/21_hf271/PI_main/devel/lib:$LD_LIBRARY_PATH"
-export PKG_CONFIG_PATH="/home/pi/21_hf271/PI_main/devel/lib/pkgconfig:$PKG_CONFIG_PATH"
+export CMAKE_PREFIX_PATH="/home/pi/21_hf271/PI_main/build/devel:$CMAKE_PREFIX_PATH"
+export LD_LIBRARY_PATH="/home/pi/21_hf271/PI_main/build/devel/lib:$LD_LIBRARY_PATH"
+export PKG_CONFIG_PATH="/home/pi/21_hf271/PI_main/build/devel/lib/pkgconfig:$PKG_CONFIG_PATH"
 export PWD='/home/pi/21_hf271/PI_main/build'
-export PYTHONPATH="/home/pi/21_hf271/PI_main/devel/lib/python2.7/dist-packages:$PYTHONPATH"
-export ROSLISP_PACKAGE_DIRECTORIES='/home/pi/21_hf271/PI_main/devel/share/common-lisp'
+export PYTHONPATH="/home/pi/21_hf271/PI_main/build/devel/lib/python2.7/dist-packages:$PYTHONPATH"
+export ROSLISP_PACKAGE_DIRECTORIES='/home/pi/21_hf271/PI_main/build/devel/share/common-lisp'
 export ROS_PACKAGE_PATH="/home/pi/21_hf271/PI_main/src:$ROS_PACKAGE_PATH"

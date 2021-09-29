@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/pi/21_hf271/PI_main/devel/lib/libimage_transport.pdb"
-  "/home/pi/21_hf271/PI_main/devel/lib/libimage_transport.so"
+  "../devel/lib/libimage_transport.pdb"
+  "../devel/lib/libimage_transport.so"
   "CMakeFiles/image_transport.dir/src/camera_common.cpp.o"
   "CMakeFiles/image_transport.dir/src/camera_publisher.cpp.o"
   "CMakeFiles/image_transport.dir/src/camera_subscriber.cpp.o"

@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/pi/21_hf271/PI_main/devel/lib/python2.7/dist-packages/cv_bridge/boost/cv_bridge_boost.pdb"
-  "/home/pi/21_hf271/PI_main/devel/lib/python2.7/dist-packages/cv_bridge/boost/cv_bridge_boost.so"
+  "../../devel/lib/python2.7/dist-packages/cv_bridge/boost/cv_bridge_boost.pdb"
+  "../../devel/lib/python2.7/dist-packages/cv_bridge/boost/cv_bridge_boost.so"
   "CMakeFiles/cv_bridge_boost.dir/module.cpp.o"
   "CMakeFiles/cv_bridge_boost.dir/module_opencv4.cpp.o"
 )

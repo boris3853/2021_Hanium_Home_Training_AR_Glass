@@ -1,0 +1,8 @@
+prefix=/home/pi/21_hf271/PI_main/build/devel
+
+Name: webcam
+Description: Description of webcam
+Version: 1.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: cv_bridge image_transport std_msgs sensor_msgs roscpp

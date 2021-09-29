@@ -68,13 +68,13 @@ set(cv_bridge_CONFIG_INCLUDED TRUE)
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
   set(cv_bridge_SOURCE_PREFIX /home/pi/21_hf271/PI_main/src/cv_bridge)
-  set(cv_bridge_DEVEL_PREFIX /home/pi/21_hf271/PI_main/devel)
+  set(cv_bridge_DEVEL_PREFIX /home/pi/21_hf271/PI_main/build/devel)
   set(cv_bridge_INSTALL_PREFIX "")
   set(cv_bridge_PREFIX ${cv_bridge_DEVEL_PREFIX})
 else()
   set(cv_bridge_SOURCE_PREFIX "")
   set(cv_bridge_DEVEL_PREFIX "")
-  set(cv_bridge_INSTALL_PREFIX /home/pi/21_hf271/PI_main/install)
+  set(cv_bridge_INSTALL_PREFIX /usr/local)
   set(cv_bridge_PREFIX ${cv_bridge_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/pi/21_hf271/PI_main/install/lib;/opt/ros/melodic/lib)
+    foreach(path /usr/local/lib;/opt/ros/melodic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

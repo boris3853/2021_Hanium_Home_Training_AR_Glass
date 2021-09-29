@@ -1,2 +1,2 @@
 - setup-file:
-    local-name: /home/pi/21_hf271/PI_main/install/setup.sh
+    local-name: /usr/local/setup.sh

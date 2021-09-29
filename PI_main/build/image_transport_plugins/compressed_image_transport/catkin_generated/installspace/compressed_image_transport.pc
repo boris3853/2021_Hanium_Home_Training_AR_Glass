@@ -1,4 +1,4 @@
-prefix=/home/pi/21_hf271/PI_main/install
+prefix=/usr/local
 
 Name: compressed_image_transport
 Description: Description of compressed_image_transport

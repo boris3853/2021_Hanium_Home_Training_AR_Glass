@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/pi/21_hf271/PI_main/devel/lib/cv_bridge/cv_bridge-utest"
-  "/home/pi/21_hf271/PI_main/devel/lib/cv_bridge/cv_bridge-utest.pdb"
+  "../../devel/lib/cv_bridge/cv_bridge-utest"
+  "../../devel/lib/cv_bridge/cv_bridge-utest.pdb"
   "CMakeFiles/cv_bridge-utest.dir/test_compression.cpp.o"
   "CMakeFiles/cv_bridge-utest.dir/test_endian.cpp.o"
   "CMakeFiles/cv_bridge-utest.dir/test_rgb_colors.cpp.o"

@@ -4,5 +4,5 @@ PROJECT_PKG_CONFIG_INCLUDE_DIRS = "${prefix}/include".split(';') if "${prefix}/i
 PROJECT_CATKIN_DEPENDS = "message_runtime;std_msgs".replace(';', ' ')
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "-ltheora_image_transport".split(';') if "-ltheora_image_transport" != "" else []
 PROJECT_NAME = "theora_image_transport"
-PROJECT_SPACE_DIR = "/home/pi/21_hf271/PI_main/install"
+PROJECT_SPACE_DIR = "/usr/local"
 PROJECT_VERSION = "1.14.0"

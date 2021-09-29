@@ -19,7 +19,7 @@ except ImportError:
             break
     from catkin.environment_cache import generate_environment_script
 
-code = generate_environment_script('/home/pi/21_hf271/PI_main/devel/env.sh')
+code = generate_environment_script('/home/pi/21_hf271/PI_main/build/devel/env.sh')
 
 output_filename = '/home/pi/21_hf271/PI_main/build/catkin_generated/setup_cached.sh'
 with open(output_filename, 'w') as f:

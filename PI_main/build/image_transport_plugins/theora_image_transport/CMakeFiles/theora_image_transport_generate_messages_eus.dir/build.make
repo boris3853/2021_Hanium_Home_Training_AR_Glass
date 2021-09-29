@@ -53,23 +53,23 @@ CMAKE_BINARY_DIR = /home/pi/21_hf271/PI_main/build
 # Include the progress variables for this target.
 include image_transport_plugins/theora_image_transport/CMakeFiles/theora_image_transport_generate_messages_eus.dir/progress.make
 
-image_transport_plugins/theora_image_transport/CMakeFiles/theora_image_transport_generate_messages_eus: /home/pi/21_hf271/PI_main/devel/share/roseus/ros/theora_image_transport/msg/Packet.l
-image_transport_plugins/theora_image_transport/CMakeFiles/theora_image_transport_generate_messages_eus: /home/pi/21_hf271/PI_main/devel/share/roseus/ros/theora_image_transport/manifest.l
+image_transport_plugins/theora_image_transport/CMakeFiles/theora_image_transport_generate_messages_eus: devel/share/roseus/ros/theora_image_transport/msg/Packet.l
+image_transport_plugins/theora_image_transport/CMakeFiles/theora_image_transport_generate_messages_eus: devel/share/roseus/ros/theora_image_transport/manifest.l
 
 
-/home/pi/21_hf271/PI_main/devel/share/roseus/ros/theora_image_transport/msg/Packet.l: /opt/ros/melodic/lib/geneus/gen_eus.py
-/home/pi/21_hf271/PI_main/devel/share/roseus/ros/theora_image_transport/msg/Packet.l: /home/pi/21_hf271/PI_main/src/image_transport_plugins/theora_image_transport/msg/Packet.msg
-/home/pi/21_hf271/PI_main/devel/share/roseus/ros/theora_image_transport/msg/Packet.l: /opt/ros/melodic/share/std_msgs/msg/Header.msg
+devel/share/roseus/ros/theora_image_transport/msg/Packet.l: /opt/ros/melodic/lib/geneus/gen_eus.py
+devel/share/roseus/ros/theora_image_transport/msg/Packet.l: /home/pi/21_hf271/PI_main/src/image_transport_plugins/theora_image_transport/msg/Packet.msg
+devel/share/roseus/ros/theora_image_transport/msg/Packet.l: /opt/ros/melodic/share/std_msgs/msg/Header.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/pi/21_hf271/PI_main/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating EusLisp code from theora_image_transport/Packet.msg"
-	cd /home/pi/21_hf271/PI_main/build/image_transport_plugins/theora_image_transport && ../../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/pi/21_hf271/PI_main/src/image_transport_plugins/theora_image_transport/msg/Packet.msg -Itheora_image_transport:/home/pi/21_hf271/PI_main/src/image_transport_plugins/theora_image_transport/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p theora_image_transport -o /home/pi/21_hf271/PI_main/devel/share/roseus/ros/theora_image_transport/msg
+	cd /home/pi/21_hf271/PI_main/build/image_transport_plugins/theora_image_transport && ../../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/pi/21_hf271/PI_main/src/image_transport_plugins/theora_image_transport/msg/Packet.msg -Itheora_image_transport:/home/pi/21_hf271/PI_main/src/image_transport_plugins/theora_image_transport/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p theora_image_transport -o /home/pi/21_hf271/PI_main/build/devel/share/roseus/ros/theora_image_transport/msg
 
-/home/pi/21_hf271/PI_main/devel/share/roseus/ros/theora_image_transport/manifest.l: /opt/ros/melodic/lib/geneus/gen_eus.py
+devel/share/roseus/ros/theora_image_transport/manifest.l: /opt/ros/melodic/lib/geneus/gen_eus.py
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/pi/21_hf271/PI_main/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating EusLisp manifest code for theora_image_transport"
-	cd /home/pi/21_hf271/PI_main/build/image_transport_plugins/theora_image_transport && ../../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/geneus/cmake/../../../lib/geneus/gen_eus.py -m -o /home/pi/21_hf271/PI_main/devel/share/roseus/ros/theora_image_transport theora_image_transport std_msgs
+	cd /home/pi/21_hf271/PI_main/build/image_transport_plugins/theora_image_transport && ../../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/geneus/cmake/../../../lib/geneus/gen_eus.py -m -o /home/pi/21_hf271/PI_main/build/devel/share/roseus/ros/theora_image_transport theora_image_transport std_msgs
 
 theora_image_transport_generate_messages_eus: image_transport_plugins/theora_image_transport/CMakeFiles/theora_image_transport_generate_messages_eus
-theora_image_transport_generate_messages_eus: /home/pi/21_hf271/PI_main/devel/share/roseus/ros/theora_image_transport/msg/Packet.l
-theora_image_transport_generate_messages_eus: /home/pi/21_hf271/PI_main/devel/share/roseus/ros/theora_image_transport/manifest.l
+theora_image_transport_generate_messages_eus: devel/share/roseus/ros/theora_image_transport/msg/Packet.l
+theora_image_transport_generate_messages_eus: devel/share/roseus/ros/theora_image_transport/manifest.l
 theora_image_transport_generate_messages_eus: image_transport_plugins/theora_image_transport/CMakeFiles/theora_image_transport_generate_messages_eus.dir/build.make
 
 .PHONY : theora_image_transport_generate_messages_eus
