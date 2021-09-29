@@ -57,11 +57,11 @@ openpose/3rdparty/ 에서
 #### alias
 
 ##### Openpose alias
-cleanmake='make clean && make all -j6'
-runcustomcode='cd ~/21_hf271/TX2_main/src/openpose && ./build/examples    /tutorial_api_cpp/03_keypoints_from_image.bin'
-openposedemo='./build/examples/openpose/openpose.bin'
+cleanmake='make clean && make all -j6'      
+runcustomcode='cd ~/21_hf271/TX2_main/src/openpose && ./build/examples    /tutorial_api_cpp/03_keypoints_from_image.bin'        
+openposedemo='./build/examples/openpose/openpose.bin'       
 
 ##### Other Project alias
-alias socketserver='source ~/21_hf271/TX2_main/devel/setup.bash && roslaunch     rosbridge_server rosbridge_websocket.launch'
-alias tx2_pub='source ~/21_hf271/TX2_main/devel/setup.bash && cd ~/21_hf271/    TX2_main && rosrun socket tx2_publisher'
-alias sub='source ~/21_hf271/TX2_main/devel/setup.bash && cd ~/21_hf271/TX2_    main && rosrun webcam webcam_sub _image_transport:=compressed'
+socketserver='source ~/21_hf271/TX2_main/devel/setup.bash && roslaunch rosbridge_server rosbridge_websocket.launch'   
+tx2_pub='source ~/21_hf271/TX2_main/devel/setup.bash && cd ~/21_hf271/TX2_main && rosrun socket tx2_publisher'    
+sub='source ~/21_hf271/TX2_main/devel/setup.bash && cd ~/21_hf271/TX2_main && rosrun webcam webcam_sub _image_transport:=compressed'  
