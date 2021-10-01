@@ -100,17 +100,6 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
-
-# Special rule for the target install/local
-install/local/fast: install/local
-
-.PHONY : install/local/fast
-
 # Special rule for the target test
 test:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
@@ -121,6 +110,17 @@ test:
 test/fast: test
 
 .PHONY : test/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: install/local
+
+.PHONY : install/local/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -169,6 +169,21 @@ tx2_publisher/fast:
 	cd /home/nvidia/21_hf271/TX2_main/build && $(MAKE) -f socket/CMakeFiles/tx2_publisher.dir/build.make socket/CMakeFiles/tx2_publisher.dir/build
 .PHONY : tx2_publisher/fast
 
+# Convenience name for target.
+socket/CMakeFiles/tx2_realpub.dir/rule:
+	cd /home/nvidia/21_hf271/TX2_main/build && $(MAKE) -f CMakeFiles/Makefile2 socket/CMakeFiles/tx2_realpub.dir/rule
+.PHONY : socket/CMakeFiles/tx2_realpub.dir/rule
+
+# Convenience name for target.
+tx2_realpub: socket/CMakeFiles/tx2_realpub.dir/rule
+
+.PHONY : tx2_realpub
+
+# fast build rule for target.
+tx2_realpub/fast:
+	cd /home/nvidia/21_hf271/TX2_main/build && $(MAKE) -f socket/CMakeFiles/tx2_realpub.dir/build.make socket/CMakeFiles/tx2_realpub.dir/build
+.PHONY : tx2_realpub/fast
+
 src/tx2_publisher.o: src/tx2_publisher.cpp.o
 
 .PHONY : src/tx2_publisher.o
@@ -196,6 +211,33 @@ src/tx2_publisher.cpp.s:
 	cd /home/nvidia/21_hf271/TX2_main/build && $(MAKE) -f socket/CMakeFiles/tx2_publisher.dir/build.make socket/CMakeFiles/tx2_publisher.dir/src/tx2_publisher.cpp.s
 .PHONY : src/tx2_publisher.cpp.s
 
+src/tx2_realpub.o: src/tx2_realpub.cpp.o
+
+.PHONY : src/tx2_realpub.o
+
+# target to build an object file
+src/tx2_realpub.cpp.o:
+	cd /home/nvidia/21_hf271/TX2_main/build && $(MAKE) -f socket/CMakeFiles/tx2_realpub.dir/build.make socket/CMakeFiles/tx2_realpub.dir/src/tx2_realpub.cpp.o
+.PHONY : src/tx2_realpub.cpp.o
+
+src/tx2_realpub.i: src/tx2_realpub.cpp.i
+
+.PHONY : src/tx2_realpub.i
+
+# target to preprocess a source file
+src/tx2_realpub.cpp.i:
+	cd /home/nvidia/21_hf271/TX2_main/build && $(MAKE) -f socket/CMakeFiles/tx2_realpub.dir/build.make socket/CMakeFiles/tx2_realpub.dir/src/tx2_realpub.cpp.i
+.PHONY : src/tx2_realpub.cpp.i
+
+src/tx2_realpub.s: src/tx2_realpub.cpp.s
+
+.PHONY : src/tx2_realpub.s
+
+# target to generate assembly for a file
+src/tx2_realpub.cpp.s:
+	cd /home/nvidia/21_hf271/TX2_main/build && $(MAKE) -f socket/CMakeFiles/tx2_realpub.dir/build.make socket/CMakeFiles/tx2_realpub.dir/src/tx2_realpub.cpp.s
+.PHONY : src/tx2_realpub.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -205,13 +247,17 @@ help:
 	@echo "... list_install_components"
 	@echo "... install"
 	@echo "... rebuild_cache"
-	@echo "... tx2_publisher"
 	@echo "... edit_cache"
-	@echo "... install/local"
 	@echo "... test"
+	@echo "... tx2_publisher"
+	@echo "... tx2_realpub"
+	@echo "... install/local"
 	@echo "... src/tx2_publisher.o"
 	@echo "... src/tx2_publisher.i"
 	@echo "... src/tx2_publisher.s"
+	@echo "... src/tx2_realpub.o"
+	@echo "... src/tx2_realpub.i"
+	@echo "... src/tx2_realpub.s"
 .PHONY : help
 
 

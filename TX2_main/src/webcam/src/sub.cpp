@@ -44,6 +44,7 @@ class DualSubscriber{
                 cv::imwrite(sstream.str(), cv_ptr->image);
 
                 count++;
+		if(count == 51) count =0;
                 cv::waitKey(1);
 
         } catch (cv_bridge::Exception& e){

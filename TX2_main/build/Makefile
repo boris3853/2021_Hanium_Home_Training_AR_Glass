@@ -1850,6 +1850,19 @@ tx2_publisher/fast:
 .PHONY : tx2_publisher/fast
 
 #=============================================================================
+# Target rules for targets named tx2_realpub
+
+# Build rule for target.
+tx2_realpub: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 tx2_realpub
+.PHONY : tx2_realpub
+
+# fast build rule for target.
+tx2_realpub/fast:
+	$(MAKE) -f socket/CMakeFiles/tx2_realpub.dir/build.make socket/CMakeFiles/tx2_realpub.dir/build
+.PHONY : tx2_realpub/fast
+
+#=============================================================================
 # Target rules for targets named sensor_msgs_generate_messages_nodejs
 
 # Build rule for target.
@@ -2957,6 +2970,7 @@ help:
 	@echo "... run_tests_rosbridge_server_rostest"
 	@echo "... clean_test_results_rosbridge_server"
 	@echo "... tx2_publisher"
+	@echo "... tx2_realpub"
 	@echo "... sensor_msgs_generate_messages_nodejs"
 	@echo "... sensor_msgs_generate_messages_eus"
 	@echo "... sensor_msgs_generate_messages_py"

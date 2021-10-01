@@ -5,7 +5,30 @@
 #include "jsoncpp/json/json.h"
 #include "ros/ros.h"
 #include "msg_creator/Keypoints.h"
+//------------------added-------
+#include <stdio.h>
+#include <sys/types.h>
+#include <sys/ipc.h>
+#include <sys/types.h>
+#include <sys/msg.h>
+#include <stdlib.h>
+#include <string.h>
+//----------------added----------
 
+//-----------------------------------------//
+// message type for External Communication
+struct keypoint_data{
+	float matrix[25][3];
+	float TF_vector[25];
+};
+
+struct message{
+	long msg_type;
+	struct keypoint_data Data;
+};
+
+//-----------------------------------------//
+// message type for External Communication
 
 struct Keypoint{
         double x;
@@ -75,6 +98,8 @@ int main(int argc, char **argv){
                         Keys.x[i] = Keypoints[i].x;
                         Keys.y[i] = Keypoints[i].y;
                         Keys.prob[i] = Keypoints[i].prob;
+
+			if(i==3 || i==8) Keys.KeyTrue[i] = 1;
 
                         //ROS_INFO("x: %lf y: %lf prob: %lf", Keypoints[i].x, Keypoints[i].y, Keypoints[i].prob);
                         ROS_INFO("x[%2d]: %10.6lf y[%2d]: %10.6lf prob[%2d]: %10.6lf", i, Keys.x[i], i, Keys.y[i], i, Keys.prob[i]);

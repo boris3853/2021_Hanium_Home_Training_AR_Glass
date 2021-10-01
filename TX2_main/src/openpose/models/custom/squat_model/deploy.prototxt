@@ -1,0 +1,227 @@
+input: "data"
+input_dim: 1
+input_dim: 1
+input_dim: 3
+input_dim: 25
+layer {
+  name: "flatten_77"
+  type: "Flatten"
+  bottom: "data"
+  top: "flatten_77"
+}
+layer {
+  name: "dense_385"
+  type: "InnerProduct"
+  bottom: "flatten_77"
+  top: "dense_385"
+  inner_product_param {
+    num_output: 75
+    weight_filler {
+      type: "xavier"
+    }
+  }
+}
+layer {
+  name: "batch_normalization_308"
+  type: "BatchNorm"
+  bottom: "dense_385"
+  top: "dense_385"
+}
+layer {
+  name: "batch_normalization_308s"
+  type: "Scale"
+  bottom: "dense_385"
+  top: "dense_385"
+  param {
+    lr_mult: 1.0
+  }
+  param {
+    lr_mult: 1.0
+  }
+  scale_param {
+    bias_term: true
+  }
+}
+layer {
+  name: "re_lu_308"
+  type: "ReLU"
+  bottom: "dense_385"
+  top: "re_lu_308"
+}
+layer {
+  name: "dropout_308"
+  type: "Dropout"
+  bottom: "re_lu_308"
+  top: "dropout_308"
+  dropout_param {
+    dropout_ratio: 0.4000000059604645
+  }
+}
+layer {
+  name: "dense_386"
+  type: "InnerProduct"
+  bottom: "dropout_308"
+  top: "dense_386"
+  inner_product_param {
+    num_output: 75
+    weight_filler {
+      type: "xavier"
+    }
+  }
+}
+layer {
+  name: "batch_normalization_309"
+  type: "BatchNorm"
+  bottom: "dense_386"
+  top: "dense_386"
+}
+layer {
+  name: "batch_normalization_309s"
+  type: "Scale"
+  bottom: "dense_386"
+  top: "dense_386"
+  param {
+    lr_mult: 1.0
+  }
+  param {
+    lr_mult: 1.0
+  }
+  scale_param {
+    bias_term: true
+  }
+}
+layer {
+  name: "re_lu_309"
+  type: "ReLU"
+  bottom: "dense_386"
+  top: "re_lu_309"
+}
+layer {
+  name: "dropout_309"
+  type: "Dropout"
+  bottom: "re_lu_309"
+  top: "dropout_309"
+  dropout_param {
+    dropout_ratio: 0.4000000059604645
+  }
+}
+layer {
+  name: "dense_387"
+  type: "InnerProduct"
+  bottom: "dropout_309"
+  top: "dense_387"
+  inner_product_param {
+    num_output: 75
+    weight_filler {
+      type: "xavier"
+    }
+  }
+}
+layer {
+  name: "batch_normalization_310"
+  type: "BatchNorm"
+  bottom: "dense_387"
+  top: "dense_387"
+}
+layer {
+  name: "batch_normalization_310s"
+  type: "Scale"
+  bottom: "dense_387"
+  top: "dense_387"
+  param {
+    lr_mult: 1.0
+  }
+  param {
+    lr_mult: 1.0
+  }
+  scale_param {
+    bias_term: true
+  }
+}
+layer {
+  name: "re_lu_310"
+  type: "ReLU"
+  bottom: "dense_387"
+  top: "re_lu_310"
+}
+layer {
+  name: "dropout_310"
+  type: "Dropout"
+  bottom: "re_lu_310"
+  top: "dropout_310"
+  dropout_param {
+    dropout_ratio: 0.4000000059604645
+  }
+}
+layer {
+  name: "dense_388"
+  type: "InnerProduct"
+  bottom: "dropout_310"
+  top: "dense_388"
+  inner_product_param {
+    num_output: 75
+    weight_filler {
+      type: "xavier"
+    }
+  }
+}
+layer {
+  name: "batch_normalization_311"
+  type: "BatchNorm"
+  bottom: "dense_388"
+  top: "dense_388"
+}
+layer {
+  name: "batch_normalization_311s"
+  type: "Scale"
+  bottom: "dense_388"
+  top: "dense_388"
+  param {
+    lr_mult: 1.0
+  }
+  param {
+    lr_mult: 1.0
+  }
+  scale_param {
+    bias_term: true
+  }
+}
+layer {
+  name: "re_lu_311"
+  type: "ReLU"
+  bottom: "dense_388"
+  top: "re_lu_311"
+}
+layer {
+  name: "dropout_311"
+  type: "Dropout"
+  bottom: "re_lu_311"
+  top: "dropout_311"
+  dropout_param {
+    dropout_ratio: 0.4000000059604645
+  }
+}
+layer {
+  name: "dense_389"
+  type: "InnerProduct"
+  bottom: "dropout_311"
+  top: "dense_389"
+  inner_product_param {
+    num_output: 25
+    weight_filler {
+      type: "xavier"
+    }
+  }
+}
+layer {
+  name: "reshape_1"
+  type: "Reshape"
+  bottom: "dense_389"
+  top: "reshape_1"
+  reshape_param {
+    shape {
+      dim: 25
+      dim: 1
+    }
+  }
+}
