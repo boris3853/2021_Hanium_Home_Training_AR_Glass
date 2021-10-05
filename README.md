@@ -71,6 +71,7 @@ sub='source ~/21_hf271/TX2_main/devel/setup.bash && cd ~/21_hf271/TX2_main && ro
 
 #### <화정 / 하연 필독!!!> Openpose 작동 && AR 글래스로 테스트 데이터 보내기
 =================================
+
 터미널1:# roscore
 
 터미널2:# socketserver
@@ -78,6 +79,7 @@ sub='source ~/21_hf271/TX2_main/devel/setup.bash && cd ~/21_hf271/TX2_main && ro
 터미널3:# runcustomcode
 
 터미널4:# tx2_realtest
+
 =================================
 
 만약에 명령어 인식 못하는 경우 # source ~/.bashrc 명령어 치면 명령어 인식됨.
