@@ -37,3 +37,49 @@ socket_comm / TX2_main 추가 (21/08/01)
 ##### 마크다운 문법 사용법
 다음 링크 참조: 
 https://velog.io/@yuuuye/velog-%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4MarkDown-%EC%9E%91%EC%84%B1%EB%B2%95
+
+
+
+##### OpenPose
+1. OpenPose 설치  
+> git clone https://github.com/CMU-Perceptual-Computing-Lab/openpose
+
+=> cmake시 다음과 같은 오류 발생하면 (https://github.com/CMU-Perceptual-Computing-Lab/openpose/issues/423)     
+openpose/3rdparty/ 에서
+> git clone https://github.com/CMU-Perceptual-Computing-Lab/caffe.git
+
+
+
+
+
+
+
+#### alias
+
+##### Openpose alias
+cleanmake='make clean && make all -j6'      
+runcustomcode='cd ~/21_hf271/TX2_main/src/openpose && ./build/examples    /tutorial_api_cpp/03_keypoints_from_image.bin'        
+openposedemo='./build/examples/openpose/openpose.bin'       
+
+##### Other Project alias
+socketserver='source ~/21_hf271/TX2_main/devel/setup.bash && roslaunch rosbridge_server rosbridge_websocket.launch'   
+tx2_pub='source ~/21_hf271/TX2_main/devel/setup.bash && cd ~/21_hf271/TX2_main && rosrun socket tx2_publisher'    
+sub='source ~/21_hf271/TX2_main/devel/setup.bash && cd ~/21_hf271/TX2_main && rosrun webcam webcam_sub _image_transport:=compressed'  
+
+
+
+
+#### <화정 / 하연 필독!!!> Openpose 작동 && AR 글래스로 테스트 데이터 보내기
+=================================
+
+터미널1:# roscore
+
+터미널2:# socketserver
+
+터미널3:# runcustomcode
+
+터미널4:# tx2_realtest
+
+=================================
+
+만약에 명령어 인식 못하는 경우 # source ~/.bashrc 명령어 치면 명령어 인식됨.
