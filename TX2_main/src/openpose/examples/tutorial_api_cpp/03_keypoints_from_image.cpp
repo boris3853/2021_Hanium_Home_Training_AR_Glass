@@ -221,6 +221,8 @@ int tutorialApiCpp()
 	cv::dnn::Net net = cv::dnn::readNetFromCaffe(modeltxt, modelBin);
 	if (net.empty()) { exit(-1); }
         // Process and push Mk-queue
+
+	while(1){
 	char path_PI1[100];
 	char path_PI2[100];
 	key_t key_id;
@@ -331,7 +333,7 @@ int tutorialApiCpp()
 			// Measuring total time
 		}
         op::printTime(opTimer, "OpenPose demo successfully finished. Total time: ", " seconds.", op::Priority::High);
-
+	}
         // Return
         return 0;
     }
@@ -347,5 +349,7 @@ int main(int argc, char *argv[])
     gflags::ParseCommandLineFlags(&argc, &argv, true);
 
     // Running tutorialApiCpp
+    //return tutorialApiCpp();
+
     return tutorialApiCpp();
 }
