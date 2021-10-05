@@ -26,31 +26,29 @@ struct Keypoints_
   Keypoints_()
     : x()
     , y()
-    , prob()
-    , KeyTrue()
-    , type_ex(0)  {
+    , z()
+    , IsTrue()  {
       x.assign(0.0);
 
       y.assign(0.0);
 
-      prob.assign(0.0);
+      z.assign(0.0);
 
-      KeyTrue.assign(0.0);
+      IsTrue.assign(0.0);
   }
   Keypoints_(const ContainerAllocator& _alloc)
     : x()
     , y()
-    , prob()
-    , KeyTrue()
-    , type_ex(0)  {
+    , z()
+    , IsTrue()  {
   (void)_alloc;
       x.assign(0.0);
 
       y.assign(0.0);
 
-      prob.assign(0.0);
+      z.assign(0.0);
 
-      KeyTrue.assign(0.0);
+      IsTrue.assign(0.0);
   }
 
 
@@ -61,14 +59,11 @@ struct Keypoints_
    typedef boost::array<double, 25>  _y_type;
   _y_type y;
 
-   typedef boost::array<double, 25>  _prob_type;
-  _prob_type prob;
+   typedef boost::array<double, 25>  _z_type;
+  _z_type z;
 
-   typedef boost::array<double, 25>  _KeyTrue_type;
-  _KeyTrue_type KeyTrue;
-
-   typedef uint8_t _type_ex_type;
-  _type_ex_type type_ex;
+   typedef boost::array<double, 25>  _IsTrue_type;
+  _IsTrue_type IsTrue;
 
 
 
@@ -148,12 +143,12 @@ struct MD5Sum< ::msg_creator::Keypoints_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "a2259b33e519f11f311bd1ff20ba6ac6";
+    return "ca61976b7747333c168cedac9b79b953";
   }
 
   static const char* value(const ::msg_creator::Keypoints_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0xa2259b33e519f11fULL;
-  static const uint64_t static_value2 = 0x311bd1ff20ba6ac6ULL;
+  static const uint64_t static_value1 = 0xca61976b7747333cULL;
+  static const uint64_t static_value2 = 0x168cedac9b79b953ULL;
 };
 
 template<class ContainerAllocator>
@@ -174,10 +169,8 @@ struct Definition< ::msg_creator::Keypoints_<ContainerAllocator> >
   {
     return "float64[25] x\n\
 float64[25] y\n\
-float64[25] prob\n\
-\n\
-float64[25] KeyTrue\n\
-uint8 type_ex\n\
+float64[25] z\n\
+float64[25] IsTrue\n\
 ";
   }
 
@@ -198,9 +191,8 @@ namespace serialization
     {
       stream.next(m.x);
       stream.next(m.y);
-      stream.next(m.prob);
-      stream.next(m.KeyTrue);
-      stream.next(m.type_ex);
+      stream.next(m.z);
+      stream.next(m.IsTrue);
     }
 
     ROS_DECLARE_ALLINONE_SERIALIZER
@@ -231,20 +223,18 @@ struct Printer< ::msg_creator::Keypoints_<ContainerAllocator> >
       s << indent << "  y[" << i << "]: ";
       Printer<double>::stream(s, indent + "  ", v.y[i]);
     }
-    s << indent << "prob[]" << std::endl;
-    for (size_t i = 0; i < v.prob.size(); ++i)
+    s << indent << "z[]" << std::endl;
+    for (size_t i = 0; i < v.z.size(); ++i)
     {
-      s << indent << "  prob[" << i << "]: ";
-      Printer<double>::stream(s, indent + "  ", v.prob[i]);
+      s << indent << "  z[" << i << "]: ";
+      Printer<double>::stream(s, indent + "  ", v.z[i]);
     }
-    s << indent << "KeyTrue[]" << std::endl;
-    for (size_t i = 0; i < v.KeyTrue.size(); ++i)
+    s << indent << "IsTrue[]" << std::endl;
+    for (size_t i = 0; i < v.IsTrue.size(); ++i)
     {
-      s << indent << "  KeyTrue[" << i << "]: ";
-      Printer<double>::stream(s, indent + "  ", v.KeyTrue[i]);
+      s << indent << "  IsTrue[" << i << "]: ";
+      Printer<double>::stream(s, indent + "  ", v.IsTrue[i]);
     }
-    s << indent << "type_ex: ";
-    Printer<uint8_t>::stream(s, indent + "  ", v.type_ex);
   }
 };
 

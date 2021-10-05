@@ -34,8 +34,6 @@ private:
 
 public:
 
-
-
 	msg_creator::Keypoints getmsg(ros::Publisher pub, key_t msg_key){
 		int msqid;
 
@@ -54,15 +52,15 @@ public:
 			for(int r=0;r<25;++r){
 				TX2_Keys.x[r] = msg_data.Data.matrix[r][0];
 				TX2_Keys.y[r] = msg_data.Data.matrix[r][1];
-				TX2_Keys.prob[r] = msg_data.Data.matrix[r][2];
-				if(msg_data.Data.TF_vector[r] >= 1) TX2_Keys.KeyTrue[r] = true;
-				else TX2_Keys.KeyTrue[r] = false;
+				TX2_Keys.z[r] = msg_data.Data.matrix[r][2];
+				if(msg_data.Data.TF_vector[r] >= 1) TX2_Keys.IsTrue[r] = true;
+				else TX2_Keys.IsTrue[r] = false;
 			}
 
 			for(int r=0;r<25;++r){
                                  //for(int c=0;c<3;++c) printf("%.2f\t", msg_data.Data.matrix[r][c]);
                                   //printf("TF: %.2f\n", this->msg_data.Data.TF_vector[r]);
-                                 ROS_INFO("x[%2d]: %10.6lf y[%2d]: %10.6lf prob[%2d]: %10.6lf", r, TX2_Keys.x[r], r, TX2_Keys.y[r], r, TX2_Keys.prob[r]);
+                                 ROS_INFO("x[%2d]: %10.6lf y[%2d]: %10.6lf z[%2d]: %10.6lf", r, TX2_Keys.x[r], r, TX2_Keys.y[r], r, TX2_Keys.z[r]);
                           }
                           ROS_INFO("------------------------------------------------------\n");
 			pub.publish(TX2_Keys);

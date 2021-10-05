@@ -8,18 +8,16 @@ import struct
 
 
 class Keypoints(genpy.Message):
-  _md5sum = "a2259b33e519f11f311bd1ff20ba6ac6"
+  _md5sum = "ca61976b7747333c168cedac9b79b953"
   _type = "msg_creator/Keypoints"
   _has_header = False  # flag to mark the presence of a Header object
   _full_text = """float64[25] x
 float64[25] y
-float64[25] prob
-
-float64[25] KeyTrue
-uint8 type_ex
+float64[25] z
+float64[25] IsTrue
 """
-  __slots__ = ['x','y','prob','KeyTrue','type_ex']
-  _slot_types = ['float64[25]','float64[25]','float64[25]','float64[25]','uint8']
+  __slots__ = ['x','y','z','IsTrue']
+  _slot_types = ['float64[25]','float64[25]','float64[25]','float64[25]']
 
   def __init__(self, *args, **kwds):
     """
@@ -29,7 +27,7 @@ uint8 type_ex
     changes.  You cannot mix in-order arguments and keyword arguments.
 
     The available fields are:
-       x,y,prob,KeyTrue,type_ex
+       x,y,z,IsTrue
 
     :param args: complete set of field values, in .msg order
     :param kwds: use keyword arguments corresponding to message field names
@@ -42,18 +40,15 @@ uint8 type_ex
         self.x = [0.] * 25
       if self.y is None:
         self.y = [0.] * 25
-      if self.prob is None:
-        self.prob = [0.] * 25
-      if self.KeyTrue is None:
-        self.KeyTrue = [0.] * 25
-      if self.type_ex is None:
-        self.type_ex = 0
+      if self.z is None:
+        self.z = [0.] * 25
+      if self.IsTrue is None:
+        self.IsTrue = [0.] * 25
     else:
       self.x = [0.] * 25
       self.y = [0.] * 25
-      self.prob = [0.] * 25
-      self.KeyTrue = [0.] * 25
-      self.type_ex = 0
+      self.z = [0.] * 25
+      self.IsTrue = [0.] * 25
 
   def _get_types(self):
     """
@@ -69,10 +64,8 @@ uint8 type_ex
     try:
       buff.write(_get_struct_25d().pack(*self.x))
       buff.write(_get_struct_25d().pack(*self.y))
-      buff.write(_get_struct_25d().pack(*self.prob))
-      buff.write(_get_struct_25d().pack(*self.KeyTrue))
-      _x = self.type_ex
-      buff.write(_get_struct_B().pack(_x))
+      buff.write(_get_struct_25d().pack(*self.z))
+      buff.write(_get_struct_25d().pack(*self.IsTrue))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -92,13 +85,10 @@ uint8 type_ex
       self.y = _get_struct_25d().unpack(str[start:end])
       start = end
       end += 200
-      self.prob = _get_struct_25d().unpack(str[start:end])
+      self.z = _get_struct_25d().unpack(str[start:end])
       start = end
       end += 200
-      self.KeyTrue = _get_struct_25d().unpack(str[start:end])
-      start = end
-      end += 1
-      (self.type_ex,) = _get_struct_B().unpack(str[start:end])
+      self.IsTrue = _get_struct_25d().unpack(str[start:end])
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e)  # most likely buffer underfill
@@ -113,10 +103,8 @@ uint8 type_ex
     try:
       buff.write(self.x.tostring())
       buff.write(self.y.tostring())
-      buff.write(self.prob.tostring())
-      buff.write(self.KeyTrue.tostring())
-      _x = self.type_ex
-      buff.write(_get_struct_B().pack(_x))
+      buff.write(self.z.tostring())
+      buff.write(self.IsTrue.tostring())
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -137,13 +125,10 @@ uint8 type_ex
       self.y = numpy.frombuffer(str[start:end], dtype=numpy.float64, count=25)
       start = end
       end += 200
-      self.prob = numpy.frombuffer(str[start:end], dtype=numpy.float64, count=25)
+      self.z = numpy.frombuffer(str[start:end], dtype=numpy.float64, count=25)
       start = end
       end += 200
-      self.KeyTrue = numpy.frombuffer(str[start:end], dtype=numpy.float64, count=25)
-      start = end
-      end += 1
-      (self.type_ex,) = _get_struct_B().unpack(str[start:end])
+      self.IsTrue = numpy.frombuffer(str[start:end], dtype=numpy.float64, count=25)
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e)  # most likely buffer underfill
@@ -158,9 +143,3 @@ def _get_struct_25d():
     if _struct_25d is None:
         _struct_25d = struct.Struct("<25d")
     return _struct_25d
-_struct_B = None
-def _get_struct_B():
-    global _struct_B
-    if _struct_B is None:
-        _struct_B = struct.Struct("<B")
-    return _struct_B

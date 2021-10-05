@@ -20,9 +20,8 @@ class Keypoints {
       // initObj === null is a special case for deserialization where we don't initialize fields
       this.x = null;
       this.y = null;
-      this.prob = null;
-      this.KeyTrue = null;
-      this.type_ex = null;
+      this.z = null;
+      this.IsTrue = null;
     }
     else {
       if (initObj.hasOwnProperty('x')) {
@@ -37,23 +36,17 @@ class Keypoints {
       else {
         this.y = new Array(25).fill(0);
       }
-      if (initObj.hasOwnProperty('prob')) {
-        this.prob = initObj.prob
+      if (initObj.hasOwnProperty('z')) {
+        this.z = initObj.z
       }
       else {
-        this.prob = new Array(25).fill(0);
+        this.z = new Array(25).fill(0);
       }
-      if (initObj.hasOwnProperty('KeyTrue')) {
-        this.KeyTrue = initObj.KeyTrue
-      }
-      else {
-        this.KeyTrue = new Array(25).fill(0);
-      }
-      if (initObj.hasOwnProperty('type_ex')) {
-        this.type_ex = initObj.type_ex
+      if (initObj.hasOwnProperty('IsTrue')) {
+        this.IsTrue = initObj.IsTrue
       }
       else {
-        this.type_ex = 0;
+        this.IsTrue = new Array(25).fill(0);
       }
     }
   }
@@ -72,20 +65,18 @@ class Keypoints {
     }
     // Serialize message field [y]
     bufferOffset = _arraySerializer.float64(obj.y, buffer, bufferOffset, 25);
-    // Check that the constant length array field [prob] has the right length
-    if (obj.prob.length !== 25) {
-      throw new Error('Unable to serialize array field prob - length must be 25')
+    // Check that the constant length array field [z] has the right length
+    if (obj.z.length !== 25) {
+      throw new Error('Unable to serialize array field z - length must be 25')
     }
-    // Serialize message field [prob]
-    bufferOffset = _arraySerializer.float64(obj.prob, buffer, bufferOffset, 25);
-    // Check that the constant length array field [KeyTrue] has the right length
-    if (obj.KeyTrue.length !== 25) {
-      throw new Error('Unable to serialize array field KeyTrue - length must be 25')
+    // Serialize message field [z]
+    bufferOffset = _arraySerializer.float64(obj.z, buffer, bufferOffset, 25);
+    // Check that the constant length array field [IsTrue] has the right length
+    if (obj.IsTrue.length !== 25) {
+      throw new Error('Unable to serialize array field IsTrue - length must be 25')
     }
-    // Serialize message field [KeyTrue]
-    bufferOffset = _arraySerializer.float64(obj.KeyTrue, buffer, bufferOffset, 25);
-    // Serialize message field [type_ex]
-    bufferOffset = _serializer.uint8(obj.type_ex, buffer, bufferOffset);
+    // Serialize message field [IsTrue]
+    bufferOffset = _arraySerializer.float64(obj.IsTrue, buffer, bufferOffset, 25);
     return bufferOffset;
   }
 
@@ -97,17 +88,15 @@ class Keypoints {
     data.x = _arrayDeserializer.float64(buffer, bufferOffset, 25)
     // Deserialize message field [y]
     data.y = _arrayDeserializer.float64(buffer, bufferOffset, 25)
-    // Deserialize message field [prob]
-    data.prob = _arrayDeserializer.float64(buffer, bufferOffset, 25)
-    // Deserialize message field [KeyTrue]
-    data.KeyTrue = _arrayDeserializer.float64(buffer, bufferOffset, 25)
-    // Deserialize message field [type_ex]
-    data.type_ex = _deserializer.uint8(buffer, bufferOffset);
+    // Deserialize message field [z]
+    data.z = _arrayDeserializer.float64(buffer, bufferOffset, 25)
+    // Deserialize message field [IsTrue]
+    data.IsTrue = _arrayDeserializer.float64(buffer, bufferOffset, 25)
     return data;
   }
 
   static getMessageSize(object) {
-    return 801;
+    return 800;
   }
 
   static datatype() {
@@ -117,7 +106,7 @@ class Keypoints {
 
   static md5sum() {
     //Returns md5sum for a message object
-    return 'a2259b33e519f11f311bd1ff20ba6ac6';
+    return 'ca61976b7747333c168cedac9b79b953';
   }
 
   static messageDefinition() {
@@ -125,10 +114,8 @@ class Keypoints {
     return `
     float64[25] x
     float64[25] y
-    float64[25] prob
-    
-    float64[25] KeyTrue
-    uint8 type_ex
+    float64[25] z
+    float64[25] IsTrue
     
     `;
   }
@@ -153,25 +140,18 @@ class Keypoints {
       resolved.y = new Array(25).fill(0)
     }
 
-    if (msg.prob !== undefined) {
-      resolved.prob = msg.prob;
+    if (msg.z !== undefined) {
+      resolved.z = msg.z;
     }
     else {
-      resolved.prob = new Array(25).fill(0)
+      resolved.z = new Array(25).fill(0)
     }
 
-    if (msg.KeyTrue !== undefined) {
-      resolved.KeyTrue = msg.KeyTrue;
+    if (msg.IsTrue !== undefined) {
+      resolved.IsTrue = msg.IsTrue;
     }
     else {
-      resolved.KeyTrue = new Array(25).fill(0)
-    }
-
-    if (msg.type_ex !== undefined) {
-      resolved.type_ex = msg.type_ex;
-    }
-    else {
-      resolved.type_ex = 0
+      resolved.IsTrue = new Array(25).fill(0)
     }
 
     return resolved;

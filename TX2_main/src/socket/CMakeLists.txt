@@ -25,5 +25,5 @@ link_libraries(${JSONCPP_LIBRARIES})
 add_executable(tx2_realpub src/tx2_realpub.cpp)
 target_link_libraries(tx2_realpub ${catkin_LIBRARIES} ${JSONCPP_LIBRARIES})
 
-add_executable(tx2_publisher src/tx2_publisher.cpp)
-target_link_libraries(tx2_publisher ${catkin_LIBRARIES} ${JSONCPP_LIBRARIES})
+#add_executable(tx2_publisher src/tx2_publisher.cpp)
+#target_link_libraries(tx2_publisher ${catkin_LIBRARIES} ${JSONCPP_LIBRARIES})

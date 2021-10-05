@@ -3,10 +3,8 @@
           X
           Y-VAL
           Y
-          PROB-VAL
-          PROB
-          KEYTRUE-VAL
-          KEYTRUE
-          TYPE_EX-VAL
-          TYPE_EX
+          Z-VAL
+          Z
+          ISTRUE-VAL
+          ISTRUE
 ))

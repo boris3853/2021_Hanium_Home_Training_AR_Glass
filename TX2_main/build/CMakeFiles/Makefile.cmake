@@ -487,7 +487,6 @@ set(CMAKE_DEPEND_INFO_FILES
   "rosbridge_suite/rosbridge_server/CMakeFiles/run_tests_rosbridge_server_rostest_test_websocket_test_smoke.test.dir/DependInfo.cmake"
   "rosbridge_suite/rosbridge_server/CMakeFiles/run_tests_rosbridge_server_rostest.dir/DependInfo.cmake"
   "rosbridge_suite/rosbridge_server/CMakeFiles/clean_test_results_rosbridge_server.dir/DependInfo.cmake"
-  "socket/CMakeFiles/tx2_publisher.dir/DependInfo.cmake"
   "socket/CMakeFiles/tx2_realpub.dir/DependInfo.cmake"
   "cv_bridge/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/DependInfo.cmake"
   "cv_bridge/CMakeFiles/sensor_msgs_generate_messages_eus.dir/DependInfo.cmake"

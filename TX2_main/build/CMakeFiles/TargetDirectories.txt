@@ -190,11 +190,10 @@
 /home/nvidia/21_hf271/TX2_main/build/socket/CMakeFiles/list_install_components.dir
 /home/nvidia/21_hf271/TX2_main/build/socket/CMakeFiles/install.dir
 /home/nvidia/21_hf271/TX2_main/build/socket/CMakeFiles/rebuild_cache.dir
-/home/nvidia/21_hf271/TX2_main/build/socket/CMakeFiles/edit_cache.dir
 /home/nvidia/21_hf271/TX2_main/build/socket/CMakeFiles/test.dir
-/home/nvidia/21_hf271/TX2_main/build/socket/CMakeFiles/tx2_publisher.dir
 /home/nvidia/21_hf271/TX2_main/build/socket/CMakeFiles/tx2_realpub.dir
 /home/nvidia/21_hf271/TX2_main/build/socket/CMakeFiles/install/local.dir
+/home/nvidia/21_hf271/TX2_main/build/socket/CMakeFiles/edit_cache.dir
 /home/nvidia/21_hf271/TX2_main/build/cv_bridge/CMakeFiles/list_install_components.dir
 /home/nvidia/21_hf271/TX2_main/build/cv_bridge/CMakeFiles/install.dir
 /home/nvidia/21_hf271/TX2_main/build/cv_bridge/CMakeFiles/test.dir
