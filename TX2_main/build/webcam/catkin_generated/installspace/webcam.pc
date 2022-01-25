@@ -1,0 +1,8 @@
+prefix=/home/nvidia/21_hf271/TX2_main/install
+
+Name: webcam
+Description: Description of webcam
+Version: 1.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: cv_bridge image_transport std_msgs sensor_msgs roscpp
