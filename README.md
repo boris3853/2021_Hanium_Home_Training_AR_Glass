@@ -2,9 +2,9 @@
 
 ## 1. 개요
 <p align="center">
-    <img src="https://user-images.githubusercontent.com/60434800/190900142-3967e4d9-3557-4fb8-b970-8ae04bbe17a9.png" height="200">
-    <img src="https://user-images.githubusercontent.com/60434800/190900145-2e023186-c6aa-486b-8f4f-0a77da4631cc.png" height="200">
-    <img src="https://user-images.githubusercontent.com/60434800/190900146-7b7e6ee2-d65d-4c0b-8d8c-00064ed70a15.png" height="200">
+    <img src="https://user-images.githubusercontent.com/60434800/190900142-3967e4d9-3557-4fb8-b970-8ae04bbe17a9.png" height="190">
+    <img src="https://user-images.githubusercontent.com/60434800/190900145-2e023186-c6aa-486b-8f4f-0a77da4631cc.png" height="190">
+    <img src="https://user-images.githubusercontent.com/60434800/190900146-7b7e6ee2-d65d-4c0b-8d8c-00064ed70a15.png" height="190">
 </p>
 
 - Human Pose Estimation을 활용한 운동 자세 평가
@@ -17,6 +17,8 @@
 " target="_blank"><img src="http://img.youtube.com/vi/ZGKXTQvbzjc/0.jpg" 
 alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
 
+
+[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/ZGKXTQvbzjc/0.jpg)](http://www.youtube.com/watch?v=ZGKXTQvbzjc)
 
 ## 3. 작품 구상도
 ### 3.1. 주요 H/W 구성도
