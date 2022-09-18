@@ -13,30 +13,33 @@
 - 올바른 자세의 3D 모델과 사용자의 Skeleton 모델 시각화
 
 ## 2. 영상
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=ZGKXTQvbzjc
+
+<p align="center">
+    <a href="http://www.youtube.com/watch?feature=player_embedded&v=ZGKXTQvbzjc
 " target="_blank"><img src="http://img.youtube.com/vi/ZGKXTQvbzjc/0.jpg" 
-alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
+alt="IMAGE ALT TEXT HERE" width="320" height="240" border="10" /></a>
+    <br>
+    <sup>https://youtu.be/ZGKXTQvbzjc</sup>
+</p>
 
-
-[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/ZGKXTQvbzjc/0.jpg)](http://www.youtube.com/watch?v=ZGKXTQvbzjc)
 
 ## 3. 작품 구상도
 ### 3.1. 주요 H/W 구성도
-<img src="https://user-images.githubusercontent.com/60434800/190900447-343242da-7e25-4a55-924d-950cf9ddf24f.png" heigh="325">
+<img src="https://user-images.githubusercontent.com/60434800/190900447-343242da-7e25-4a55-924d-950cf9ddf24f.png" width="90%">
 
 ### 3.2. 주요 S/W 구성도
-<img src="https://user-images.githubusercontent.com/60434800/190900461-06f93d3c-d674-4930-b66e-02ec76c5f1c8.png" heigh="325">
+<img src="https://user-images.githubusercontent.com/60434800/190900461-06f93d3c-d674-4930-b66e-02ec76c5f1c8.png" width="90%">
 
 ### 3.3. 라즈베리파이 - TX2 S/W 구성도
-<img src="https://user-images.githubusercontent.com/60434800/190900435-80e55720-072a-4687-9bb6-b46ff0d44d27.png" heigh="325">
+<img src="https://user-images.githubusercontent.com/60434800/190900435-80e55720-072a-4687-9bb6-b46ff0d44d27.png" width="90%">
 
 ### 3.4. TX2 전처리 작업
-<img src="https://user-images.githubusercontent.com/60434800/190900419-366225a2-7c61-454c-bcd7-edb120409954.png" heigh="325">
+<img src="https://user-images.githubusercontent.com/60434800/190900419-366225a2-7c61-454c-bcd7-edb120409954.png" width="60%">
 
 ### 3.5. TX2 주요 작업
-<img src="https://user-images.githubusercontent.com/60434800/190900412-0d67b8b2-a159-48f3-b37d-cba2f39fea59.png" heigh="325">
+<img src="https://user-images.githubusercontent.com/60434800/190900412-0d67b8b2-a159-48f3-b37d-cba2f39fea59.png" width="70%">
 
 ### 3.6. TX2 - AR 글래스 S/W 구성도
-<img src="https://user-images.githubusercontent.com/60434800/190900318-b506bfe9-7c31-477c-949e-89dd99ff9fb7.png" heigh="325">
+<img src="https://user-images.githubusercontent.com/60434800/190900318-b506bfe9-7c31-477c-949e-89dd99ff9fb7.png" width="90%">
 
 
