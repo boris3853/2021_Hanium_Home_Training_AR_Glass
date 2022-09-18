@@ -84,17 +84,22 @@ alt="IMAGE ALT TEXT HERE" width="320" height="240" border="10" /></a>
 - Subscriber 노드에서는 비슷한 TimeStamp를 가진 ROS 메시지를 동기화하여 /Image/PI1 와  /Image/PI2 폴더에 jpg 파일을 저장한다.
 - 
 #### TX2 보드 – AR 글래스 간의WebSocket 통신
-<p align="left">
-<img src="https://user-images.githubusercontent.com/60434800/190901654-da9a3c7e-e72a-4899-98b2-851d535f009a.png" width="35%" height="35%">
-</p>
 
 1) TX2 -> AR 글래스
+
+<p align="left">
+<img src="https://user-images.githubusercontent.com/60434800/190901879-bc3eced4-5c10-4d59-bfaf-1357a9df938b.png" width="35%" height="35%">
+</p>
 
 - [사용자 자세 데이터 / 각 관절별로 올바른지 여부]에 대한 데이터를 Keypoints.msg에 저장한다.
 - TX2 보드에서 rosbridge 서버를 통해 AR 글래스 측의 ROS-Sharp 클라이언트 쪽에 WebSocket 통신을 진행한다.
 - AR 글래스 측에서는 WebSocketSubscriber에서는 WebSocketConnector을 통해 Keypoints.msg를 받는다.
 
 2) AR 글래스 -> TX2
+
+<p align="left">
+<img src="https://user-images.githubusercontent.com/60434800/190901888-aeb844f6-e2c0-4daf-97a0-4be88c6bfaae.png" width="35%" height="35%">
+</p>
 
 - AR 글래스에서 입력받은 운동 종류를 Exercise.msg로 정의하여 TX2 보드에게 해당 메시지를 보낸다.
 
