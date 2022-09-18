@@ -83,7 +83,7 @@ alt="IMAGE ALT TEXT HERE" width="320" height="240" border="10" /></a>
 
 - 라즈베리파이에서 받은 웹캠 이미지 파일을 publisher 노드에서 jpg 파일을 ROS image_msg 형식으로 변환 및 압축해서 Subscriber 노드로 전송한다.
 - Subscriber 노드에서는 비슷한 TimeStamp를 가진 ROS 메시지를 동기화하여 /Image/PI1 와  /Image/PI2 폴더에 jpg 파일을 저장한다.
-- 
+
 #### TX2 보드 – AR 글래스 간의WebSocket 통신
 
 1) TX2 -> AR 글래스
